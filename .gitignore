@@ -1,0 +1,9 @@
+# Ignorer tous les fichiers JSON
+*.json
+
+# Ignorer tous les fichiers CSV
+*.csv
+
+# Ignorer les fichiers JSON et CSV dans tous les sous-dossiers
+**/*.json
+**/*.csv
