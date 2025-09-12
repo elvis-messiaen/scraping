@@ -1,0 +1,432 @@
+[
+  {
+    "nom_categorie": "Voir plus",
+    "nom_fichier": "scraper_voir_plus.py",
+    "url_base": "https://www.amazon.fr/s?n=301061&i=stripbooks&sort=popularity-rank&p_72=4-&ref_=Oct_d_otopr_S&pd_rd_w=b7690&content-id=amzn1.sym.fd35f9f2-1aca-4d5e-befe-a52647ead21e&pf_rd_p=fd35f9f2-1aca-4d5e-befe-a52647ead21e&pf_rd_r=RH369CG6CY05Z7ZRC5V7&pd_rd_wg=TcyWG&pd_rd_r=23c60f36-c6f1-43fb-8fb4-59d764073c73"
+  },
+  {
+    "nom_categorie": "Recevez-le aujourd'hui",
+    "nom_fichier": "scraper_recevez_le_aujourd_hui.py",
+    "url_base": "https://www.amazon.fr/s?i=stripbooks&rh=n%3A301061%2Cp_72%3A184904031%2Cp_90%3A6828315031&s=popularity-rank&dc&content-id=amzn1.sym.fd35f9f2-1aca-4d5e-befe-a52647ead21e&pd_rd_r=23c60f36-c6f1-43fb-8fb4-59d764073c73&pd_rd_w=b7690&pd_rd_wg=TcyWG&pf_rd_p=fd35f9f2-1aca-4d5e-befe-a52647ead21e&pf_rd_r=RH369CG6CY05Z7ZRC5V7&qid=1757686819&rnid=6828314031&ref=sr_nr_p_90_1&ds=v1%3A3NNJnT%2BfxH0TL1tWpl7o139k5d79iJZfxwUtpGmXx1w"
+  },
+  {
+    "nom_categorie": "Recevez-le d'ici demain",
+    "nom_fichier": "scraper_recevez_le_d_ici_demain.py",
+    "url_base": "https://www.amazon.fr/s?i=stripbooks&rh=n%3A301061%2Cp_72%3A184904031%2Cp_90%3A6828316031&s=popularity-rank&dc&content-id=amzn1.sym.fd35f9f2-1aca-4d5e-befe-a52647ead21e&pd_rd_r=23c60f36-c6f1-43fb-8fb4-59d764073c73&pd_rd_w=b7690&pd_rd_wg=TcyWG&pf_rd_p=fd35f9f2-1aca-4d5e-befe-a52647ead21e&pf_rd_r=RH369CG6CY05Z7ZRC5V7&qid=1757686819&rnid=6828314031&ref=sr_nr_p_90_2&ds=v1%3AcUqm3XDEa7YMkSB%2BwM8PatzROtw2FDv3bXNXeFlePx8"
+  },
+  {
+    "nom_categorie": "Actualité, Politique et Société",
+    "nom_fichier": "scraper_actualité_politique_et_société.py",
+    "url_base": "https://www.amazon.fr/s?i=stripbooks&rh=n%3A301061%2Cn%3A689215031%2Cp_72%3A184904031&s=popularity-rank&dc&content-id=amzn1.sym.fd35f9f2-1aca-4d5e-befe-a52647ead21e&pd_rd_r=23c60f36-c6f1-43fb-8fb4-59d764073c73&pd_rd_w=b7690&pd_rd_wg=TcyWG&pf_rd_p=fd35f9f2-1aca-4d5e-befe-a52647ead21e&pf_rd_r=RH369CG6CY05Z7ZRC5V7&qid=1757686819&rnid=301061&ref=sr_nr_n_1&ds=v1%3AGDiWSAwSej2PHWJEw6jHNizJDudN6zmiPgjNFYttuek"
+  },
+  {
+    "nom_categorie": "Adolescents",
+    "nom_fichier": "scraper_adolescents.py",
+    "url_base": "https://www.amazon.fr/s?i=stripbooks&rh=n%3A301061%2Cn%3A4237308031%2Cp_72%3A184904031&s=popularity-rank&dc&content-id=amzn1.sym.fd35f9f2-1aca-4d5e-befe-a52647ead21e&pd_rd_r=23c60f36-c6f1-43fb-8fb4-59d764073c73&pd_rd_w=b7690&pd_rd_wg=TcyWG&pf_rd_p=fd35f9f2-1aca-4d5e-befe-a52647ead21e&pf_rd_r=RH369CG6CY05Z7ZRC5V7&qid=1757686819&rnid=301061&ref=sr_nr_n_2&ds=v1%3AxmIFAM%2BENavivM0jiBETKqK%2BEN0AHq2rVDxnaSnoFrE"
+  },
+  {
+    "nom_categorie": "Arts et photographie",
+    "nom_fichier": "scraper_arts_et_photographie.py",
+    "url_base": "https://www.amazon.fr/s?i=stripbooks&rh=n%3A301061%2Cn%3A301144%2Cp_72%3A184904031&s=popularity-rank&dc&content-id=amzn1.sym.fd35f9f2-1aca-4d5e-befe-a52647ead21e&pd_rd_r=23c60f36-c6f1-43fb-8fb4-59d764073c73&pd_rd_w=b7690&pd_rd_wg=TcyWG&pf_rd_p=fd35f9f2-1aca-4d5e-befe-a52647ead21e&pf_rd_r=RH369CG6CY05Z7ZRC5V7&qid=1757686819&rnid=301061&ref=sr_nr_n_3&ds=v1%3AnzQ3cAG60KwdfG%2BxtOrpiQDVXWBy22C4U5VnfMXmauI"
+  },
+  {
+    "nom_categorie": "Bandes dessinées",
+    "nom_fichier": "scraper_bandes_dessinées.py",
+    "url_base": "https://www.amazon.fr/s?i=stripbooks&rh=n%3A301061%2Cn%3A301133%2Cp_72%3A184904031&s=popularity-rank&dc&content-id=amzn1.sym.fd35f9f2-1aca-4d5e-befe-a52647ead21e&pd_rd_r=23c60f36-c6f1-43fb-8fb4-59d764073c73&pd_rd_w=b7690&pd_rd_wg=TcyWG&pf_rd_p=fd35f9f2-1aca-4d5e-befe-a52647ead21e&pf_rd_r=RH369CG6CY05Z7ZRC5V7&qid=1757686819&rnid=301061&ref=sr_nr_n_4&ds=v1%3AeI4FgIxHK1BK8T%2F8GA23TKib62HJ0w%2F%2F9tXnSoPhS7g"
+  },
+  {
+    "nom_categorie": "Beaux livres",
+    "nom_fichier": "scraper_beaux_livres.py",
+    "url_base": "https://www.amazon.fr/s?i=stripbooks&rh=n%3A301061%2Cn%3A293136011%2Cp_72%3A184904031&s=popularity-rank&dc&content-id=amzn1.sym.fd35f9f2-1aca-4d5e-befe-a52647ead21e&pd_rd_r=23c60f36-c6f1-43fb-8fb4-59d764073c73&pd_rd_w=b7690&pd_rd_wg=TcyWG&pf_rd_p=fd35f9f2-1aca-4d5e-befe-a52647ead21e&pf_rd_r=RH369CG6CY05Z7ZRC5V7&qid=1757686819&rnid=301061&ref=sr_nr_n_5&ds=v1%3A2NzOV%2Fw7BRG4bdTwuakV9pf3p7rav1M8siH5EIZ%2FFDU"
+  },
+  {
+    "nom_categorie": "Calendriers et Agendas",
+    "nom_fichier": "scraper_calendriers_et_agendas.py",
+    "url_base": "https://www.amazon.fr/s?i=stripbooks&rh=n%3A301061%2Cn%3A8434456031%2Cp_72%3A184904031&s=popularity-rank&dc&content-id=amzn1.sym.fd35f9f2-1aca-4d5e-befe-a52647ead21e&pd_rd_r=23c60f36-c6f1-43fb-8fb4-59d764073c73&pd_rd_w=b7690&pd_rd_wg=TcyWG&pf_rd_p=fd35f9f2-1aca-4d5e-befe-a52647ead21e&pf_rd_r=RH369CG6CY05Z7ZRC5V7&qid=1757686819&rnid=301061&ref=sr_nr_n_6&ds=v1%3AFieM3Iw9LgZwPFbUWjIsuszLfU328gj9zw%2BN0NdVHKs"
+  },
+  {
+    "nom_categorie": "Livres de cuisine, cuisine et vins",
+    "nom_fichier": "scraper_livres_de_cuisine_cuisine_et_vins.py",
+    "url_base": "https://www.amazon.fr/s?i=stripbooks&rh=n%3A301061%2Cn%3A302050%2Cp_72%3A184904031&s=popularity-rank&dc&content-id=amzn1.sym.fd35f9f2-1aca-4d5e-befe-a52647ead21e&pd_rd_r=23c60f36-c6f1-43fb-8fb4-59d764073c73&pd_rd_w=b7690&pd_rd_wg=TcyWG&pf_rd_p=fd35f9f2-1aca-4d5e-befe-a52647ead21e&pf_rd_r=RH369CG6CY05Z7ZRC5V7&qid=1757686819&rnid=301061&ref=sr_nr_n_7&ds=v1%3A%2BJ8FFxFjehiiNglXnaAuVvxR5m79DA%2BIuPqF%2F4Au%2FDk"
+  },
+  {
+    "nom_categorie": "Référence",
+    "nom_fichier": "scraper_référence.py",
+    "url_base": "https://www.amazon.fr/s?i=stripbooks&rh=n%3A301061%2Cn%3A301147%2Cp_72%3A184904031&s=popularity-rank&dc&content-id=amzn1.sym.fd35f9f2-1aca-4d5e-befe-a52647ead21e&pd_rd_r=23c60f36-c6f1-43fb-8fb4-59d764073c73&pd_rd_w=b7690&pd_rd_wg=TcyWG&pf_rd_p=fd35f9f2-1aca-4d5e-befe-a52647ead21e&pf_rd_r=RH369CG6CY05Z7ZRC5V7&qid=1757686819&rnid=301061&ref=sr_nr_n_8&ds=v1%3AY0luRM1aiDtruhSaLTrAKOUTrmNtDpL%2FkAhGLwAAp7E"
+  },
+  {
+    "nom_categorie": "Droit",
+    "nom_fichier": "scraper_droit.py",
+    "url_base": "https://www.amazon.fr/s?i=stripbooks&rh=n%3A301061%2Cn%3A301985%2Cp_72%3A184904031&s=popularity-rank&dc&content-id=amzn1.sym.fd35f9f2-1aca-4d5e-befe-a52647ead21e&pd_rd_r=23c60f36-c6f1-43fb-8fb4-59d764073c73&pd_rd_w=b7690&pd_rd_wg=TcyWG&pf_rd_p=fd35f9f2-1aca-4d5e-befe-a52647ead21e&pf_rd_r=RH369CG6CY05Z7ZRC5V7&qid=1757686819&rnid=301061&ref=sr_nr_n_9&ds=v1%3AE0hLOXBDPsiRW8ekdjW6Kx6YxgLB38DQom%2FJxUqA1bM"
+  },
+  {
+    "nom_categorie": "Entreprise et Bourse",
+    "nom_fichier": "scraper_entreprise_et_bourse.py",
+    "url_base": "https://www.amazon.fr/s?i=stripbooks&rh=n%3A301061%2Cn%3A301135%2Cp_72%3A184904031&s=popularity-rank&dc&content-id=amzn1.sym.fd35f9f2-1aca-4d5e-befe-a52647ead21e&pd_rd_r=23c60f36-c6f1-43fb-8fb4-59d764073c73&pd_rd_w=b7690&pd_rd_wg=TcyWG&pf_rd_p=fd35f9f2-1aca-4d5e-befe-a52647ead21e&pf_rd_r=RH369CG6CY05Z7ZRC5V7&qid=1757686819&rnid=301061&ref=sr_nr_n_10&ds=v1%3ARdp5XcRxKy1fLYtYiKBtM03xqoEaIw1%2F8TQhrUP2jf0"
+  },
+  {
+    "nom_categorie": "Érotisme",
+    "nom_fichier": "scraper_érotisme.py",
+    "url_base": "https://www.amazon.fr/s?i=stripbooks&rh=n%3A301061%2Cn%3A573312%2Cp_72%3A184904031&s=popularity-rank&dc&content-id=amzn1.sym.fd35f9f2-1aca-4d5e-befe-a52647ead21e&pd_rd_r=23c60f36-c6f1-43fb-8fb4-59d764073c73&pd_rd_w=b7690&pd_rd_wg=TcyWG&pf_rd_p=fd35f9f2-1aca-4d5e-befe-a52647ead21e&pf_rd_r=RH369CG6CY05Z7ZRC5V7&qid=1757686819&rnid=301061&ref=sr_nr_n_11&ds=v1%3AJuWSVEUHWq79CpeVN5XIHxET7iwT05WHmzLrRTg25d0"
+  },
+  {
+    "nom_categorie": "Études supérieures",
+    "nom_fichier": "scraper_études_supérieures.py",
+    "url_base": "https://www.amazon.fr/s?i=stripbooks&rh=n%3A301061%2Cn%3A3961911%2Cp_72%3A184904031&s=popularity-rank&dc&content-id=amzn1.sym.fd35f9f2-1aca-4d5e-befe-a52647ead21e&pd_rd_r=23c60f36-c6f1-43fb-8fb4-59d764073c73&pd_rd_w=b7690&pd_rd_wg=TcyWG&pf_rd_p=fd35f9f2-1aca-4d5e-befe-a52647ead21e&pf_rd_r=RH369CG6CY05Z7ZRC5V7&qid=1757686819&rnid=301061&ref=sr_nr_n_12&ds=v1%3A8wr7tOFnz7H9vjxNuJgf8PwIX5UyQR6k2OPNncwipeg"
+  },
+  {
+    "nom_categorie": "Famille et bien-être",
+    "nom_fichier": "scraper_famille_et_bien_être.py",
+    "url_base": "https://www.amazon.fr/s?i=stripbooks&rh=n%3A301061%2Cn%3A301142%2Cp_72%3A184904031&s=popularity-rank&dc&content-id=amzn1.sym.fd35f9f2-1aca-4d5e-befe-a52647ead21e&pd_rd_r=23c60f36-c6f1-43fb-8fb4-59d764073c73&pd_rd_w=b7690&pd_rd_wg=TcyWG&pf_rd_p=fd35f9f2-1aca-4d5e-befe-a52647ead21e&pf_rd_r=RH369CG6CY05Z7ZRC5V7&qid=1757686819&rnid=301061&ref=sr_nr_n_13&ds=v1%3A48IuFIU6P6%2F91mHFIGpenHN9mT%2BpWvmW3quZjAN3Cxk"
+  },
+  {
+    "nom_categorie": "Science-fiction et Fantasy",
+    "nom_fichier": "scraper_science_fiction_et_fantasy.py",
+    "url_base": "https://www.amazon.fr/s?i=stripbooks&rh=n%3A301061%2Cn%3A301138%2Cp_72%3A184904031&s=popularity-rank&dc&content-id=amzn1.sym.fd35f9f2-1aca-4d5e-befe-a52647ead21e&pd_rd_r=23c60f36-c6f1-43fb-8fb4-59d764073c73&pd_rd_w=b7690&pd_rd_wg=TcyWG&pf_rd_p=fd35f9f2-1aca-4d5e-befe-a52647ead21e&pf_rd_r=RH369CG6CY05Z7ZRC5V7&qid=1757686819&rnid=301061&ref=sr_nr_n_14&ds=v1%3AM9gP7AsrApyOd6lrBTH2CBHZbHGWMwnSEGXlUQ159ms"
+  },
+  {
+    "nom_categorie": "Histoire",
+    "nom_fichier": "scraper_histoire.py",
+    "url_base": "https://www.amazon.fr/s?i=stripbooks&rh=n%3A301061%2Cn%3A689214031%2Cp_72%3A184904031&s=popularity-rank&dc&content-id=amzn1.sym.fd35f9f2-1aca-4d5e-befe-a52647ead21e&pd_rd_r=23c60f36-c6f1-43fb-8fb4-59d764073c73&pd_rd_w=b7690&pd_rd_wg=TcyWG&pf_rd_p=fd35f9f2-1aca-4d5e-befe-a52647ead21e&pf_rd_r=RH369CG6CY05Z7ZRC5V7&qid=1757686819&rnid=301061&ref=sr_nr_n_15&ds=v1%3AeKclmEP0m%2BMsk0Xds7iX094djXE4wDT8h1lJIiopDak"
+  },
+  {
+    "nom_categorie": "Humour",
+    "nom_fichier": "scraper_humour.py",
+    "url_base": "https://www.amazon.fr/s?i=stripbooks&rh=n%3A301061%2Cn%3A302009%2Cp_72%3A184904031&s=popularity-rank&dc&content-id=amzn1.sym.fd35f9f2-1aca-4d5e-befe-a52647ead21e&pd_rd_r=23c60f36-c6f1-43fb-8fb4-59d764073c73&pd_rd_w=b7690&pd_rd_wg=TcyWG&pf_rd_p=fd35f9f2-1aca-4d5e-befe-a52647ead21e&pf_rd_r=RH369CG6CY05Z7ZRC5V7&qid=1757686819&rnid=301061&ref=sr_nr_n_16&ds=v1%3Ax4n57c7t247KoDddnu6E7x%2FL3rG%2FWBOIsfapbTURmsY"
+  },
+  {
+    "nom_categorie": "Informatique et internet",
+    "nom_fichier": "scraper_informatique_et_internet.py",
+    "url_base": "https://www.amazon.fr/s?i=stripbooks&rh=n%3A301061%2Cn%3A301131%2Cp_72%3A184904031&s=popularity-rank&dc&content-id=amzn1.sym.fd35f9f2-1aca-4d5e-befe-a52647ead21e&pd_rd_r=23c60f36-c6f1-43fb-8fb4-59d764073c73&pd_rd_w=b7690&pd_rd_wg=TcyWG&pf_rd_p=fd35f9f2-1aca-4d5e-befe-a52647ead21e&pf_rd_r=RH369CG6CY05Z7ZRC5V7&qid=1757686819&rnid=301061&ref=sr_nr_n_17&ds=v1%3A8ymvRlEBpE%2BPzSmNlgRfuBoQEX6wvmYzrm7%2BJ0fAk4Q"
+  },
+  {
+    "nom_categorie": "Livres pour enfants",
+    "nom_fichier": "scraper_livres_pour_enfants.py",
+    "url_base": "https://www.amazon.fr/s?i=stripbooks&rh=n%3A301061%2Cn%3A301137%2Cp_72%3A184904031&s=popularity-rank&dc&content-id=amzn1.sym.fd35f9f2-1aca-4d5e-befe-a52647ead21e&pd_rd_r=23c60f36-c6f1-43fb-8fb4-59d764073c73&pd_rd_w=b7690&pd_rd_wg=TcyWG&pf_rd_p=fd35f9f2-1aca-4d5e-befe-a52647ead21e&pf_rd_r=RH369CG6CY05Z7ZRC5V7&qid=1757686819&rnid=301061&ref=sr_nr_n_18&ds=v1%3Aegu6jWMHnjgU7VDIsjyFOSwuDdpjro17ilyYXWEdsYQ"
+  },
+  {
+    "nom_categorie": "Loisirs créatifs, décoration et maison",
+    "nom_fichier": "scraper_loisirs_créatifs_décoration_et_maison.py",
+    "url_base": "https://www.amazon.fr/s?i=stripbooks&rh=n%3A301061%2Cn%3A355635011%2Cp_72%3A184904031&s=popularity-rank&dc&content-id=amzn1.sym.fd35f9f2-1aca-4d5e-befe-a52647ead21e&pd_rd_r=23c60f36-c6f1-43fb-8fb4-59d764073c73&pd_rd_w=b7690&pd_rd_wg=TcyWG&pf_rd_p=fd35f9f2-1aca-4d5e-befe-a52647ead21e&pf_rd_r=RH369CG6CY05Z7ZRC5V7&qid=1757686819&rnid=301061&ref=sr_nr_n_19&ds=v1%3Aqs1Kpka2%2FGI3uinLHCI45d%2FCLS93LFDwdyaOlBqmCQ4"
+  },
+  {
+    "nom_categorie": "Manga",
+    "nom_fichier": "scraper_manga.py",
+    "url_base": "https://www.amazon.fr/s?i=stripbooks&rh=n%3A301061%2Cn%3A302004%2Cp_72%3A184904031&s=popularity-rank&dc&content-id=amzn1.sym.fd35f9f2-1aca-4d5e-befe-a52647ead21e&pd_rd_r=23c60f36-c6f1-43fb-8fb4-59d764073c73&pd_rd_w=b7690&pd_rd_wg=TcyWG&pf_rd_p=fd35f9f2-1aca-4d5e-befe-a52647ead21e&pf_rd_r=RH369CG6CY05Z7ZRC5V7&qid=1757686819&rnid=301061&ref=sr_nr_n_20&ds=v1%3Ayl9c52cM2W7yjohf0PQjLzsPdZnApminFwatlDXIp48"
+  },
+  {
+    "nom_categorie": "Nature et animaux",
+    "nom_fichier": "scraper_nature_et_animaux.py",
+    "url_base": "https://www.amazon.fr/s?i=stripbooks&rh=n%3A301061%2Cn%3A355636011%2Cp_72%3A184904031&s=popularity-rank&dc&content-id=amzn1.sym.fd35f9f2-1aca-4d5e-befe-a52647ead21e&pd_rd_r=23c60f36-c6f1-43fb-8fb4-59d764073c73&pd_rd_w=b7690&pd_rd_wg=TcyWG&pf_rd_p=fd35f9f2-1aca-4d5e-befe-a52647ead21e&pf_rd_r=RH369CG6CY05Z7ZRC5V7&qid=1757686819&rnid=301061&ref=sr_nr_n_21&ds=v1%3AoBzKVRsGwr6zhVq1KJroLnguhbu6pbb3PBL2YXrWdCg"
+  },
+  {
+    "nom_categorie": "Religions et Spiritualités",
+    "nom_fichier": "scraper_religions_et_spiritualités.py",
+    "url_base": "https://www.amazon.fr/s?i=stripbooks&rh=n%3A301061%2Cn%3A301997%2Cp_72%3A184904031&s=popularity-rank&dc&content-id=amzn1.sym.fd35f9f2-1aca-4d5e-befe-a52647ead21e&pd_rd_r=23c60f36-c6f1-43fb-8fb4-59d764073c73&pd_rd_w=b7690&pd_rd_wg=TcyWG&pf_rd_p=fd35f9f2-1aca-4d5e-befe-a52647ead21e&pf_rd_r=RH369CG6CY05Z7ZRC5V7&qid=1757686819&rnid=301061&ref=sr_nr_n_22&ds=v1%3AY0cVyerKBURY4wNpUUl%2FTEZ4TxzJuu10j4XgaDc6%2B6M"
+  },
+  {
+    "nom_categorie": "Romance et littérature sentimentale",
+    "nom_fichier": "scraper_romance_et_littérature_sentimentale.py",
+    "url_base": "https://www.amazon.fr/s?i=stripbooks&rh=n%3A301061%2Cn%3A302042%2Cp_72%3A184904031&s=popularity-rank&dc&content-id=amzn1.sym.fd35f9f2-1aca-4d5e-befe-a52647ead21e&pd_rd_r=23c60f36-c6f1-43fb-8fb4-59d764073c73&pd_rd_w=b7690&pd_rd_wg=TcyWG&pf_rd_p=fd35f9f2-1aca-4d5e-befe-a52647ead21e&pf_rd_r=RH369CG6CY05Z7ZRC5V7&qid=1757686819&rnid=301061&ref=sr_nr_n_23&ds=v1%3A8c9LWP4s8isgXOqN%2BqK0kcxX9EpMrAezp%2FnWxMKqLo0"
+  },
+  {
+    "nom_categorie": "Romans et littérature",
+    "nom_fichier": "scraper_romans_et_littérature.py",
+    "url_base": "https://www.amazon.fr/s?i=stripbooks&rh=n%3A301061%2Cn%3A301132%2Cp_72%3A184904031&s=popularity-rank&dc&content-id=amzn1.sym.fd35f9f2-1aca-4d5e-befe-a52647ead21e&pd_rd_r=23c60f36-c6f1-43fb-8fb4-59d764073c73&pd_rd_w=b7690&pd_rd_wg=TcyWG&pf_rd_p=fd35f9f2-1aca-4d5e-befe-a52647ead21e&pf_rd_r=RH369CG6CY05Z7ZRC5V7&qid=1757686819&rnid=301061&ref=sr_nr_n_24&ds=v1%3ARS4xXIZsk9rZj7dwTCP9otT1gdboYu0auxxFrrR6G%2Bo"
+  },
+  {
+    "nom_categorie": "Mystère et suspense",
+    "nom_fichier": "scraper_mystère_et_suspense.py",
+    "url_base": "https://www.amazon.fr/s?i=stripbooks&rh=n%3A301061%2Cn%3A301134%2Cp_72%3A184904031&s=popularity-rank&dc&content-id=amzn1.sym.fd35f9f2-1aca-4d5e-befe-a52647ead21e&pd_rd_r=23c60f36-c6f1-43fb-8fb4-59d764073c73&pd_rd_w=b7690&pd_rd_wg=TcyWG&pf_rd_p=fd35f9f2-1aca-4d5e-befe-a52647ead21e&pf_rd_r=RH369CG6CY05Z7ZRC5V7&qid=1757686819&rnid=301061&ref=sr_nr_n_25&ds=v1%3Ar4m1iMlIf2qCv4b6u5pdx8Z25nrOfvI8FFa7cvOJk48"
+  },
+  {
+    "nom_categorie": "Santé, Forme et Diététique",
+    "nom_fichier": "scraper_santé_forme_et_diététique.py",
+    "url_base": "https://www.amazon.fr/s?i=stripbooks&rh=n%3A301061%2Cn%3A12641896031%2Cp_72%3A184904031&s=popularity-rank&dc&content-id=amzn1.sym.fd35f9f2-1aca-4d5e-befe-a52647ead21e&pd_rd_r=23c60f36-c6f1-43fb-8fb4-59d764073c73&pd_rd_w=b7690&pd_rd_wg=TcyWG&pf_rd_p=fd35f9f2-1aca-4d5e-befe-a52647ead21e&pf_rd_r=RH369CG6CY05Z7ZRC5V7&qid=1757686819&rnid=301061&ref=sr_nr_n_26&ds=v1%3AdYG3appL%2FwwSZOwRDop3Bu69NCwFpSrD3LAr1pTyfOo"
+  },
+  {
+    "nom_categorie": "Science-Fiction",
+    "nom_fichier": "scraper_science_fiction.py",
+    "url_base": "https://www.amazon.fr/s?i=stripbooks&rh=n%3A301061%2Cn%3A1381962031%2Cp_72%3A184904031&s=popularity-rank&dc&content-id=amzn1.sym.fd35f9f2-1aca-4d5e-befe-a52647ead21e&pd_rd_r=23c60f36-c6f1-43fb-8fb4-59d764073c73&pd_rd_w=b7690&pd_rd_wg=TcyWG&pf_rd_p=fd35f9f2-1aca-4d5e-befe-a52647ead21e&pf_rd_r=RH369CG6CY05Z7ZRC5V7&qid=1757686819&rnid=301061&ref=sr_nr_n_27&ds=v1%3Aeq9xzYxJEKgi1FcXPxZeCG1fsw1YXCPdvtdTa2413KU"
+  },
+  {
+    "nom_categorie": "Sciences, Techniques et Médecine",
+    "nom_fichier": "scraper_sciences_techniques_et_médecine.py",
+    "url_base": "https://www.amazon.fr/s?i=stripbooks&rh=n%3A301061%2Cn%3A301141%2Cp_72%3A184904031&s=popularity-rank&dc&content-id=amzn1.sym.fd35f9f2-1aca-4d5e-befe-a52647ead21e&pd_rd_r=23c60f36-c6f1-43fb-8fb4-59d764073c73&pd_rd_w=b7690&pd_rd_wg=TcyWG&pf_rd_p=fd35f9f2-1aca-4d5e-befe-a52647ead21e&pf_rd_r=RH369CG6CY05Z7ZRC5V7&qid=1757686819&rnid=301061&ref=sr_nr_n_28&ds=v1%3AOhPFA2lfSRoSsamAXtwSW2DSsJqkG9xhpZJ%2BkjbDmYM"
+  },
+  {
+    "nom_categorie": "Sciences humaines",
+    "nom_fichier": "scraper_sciences_humaines.py",
+    "url_base": "https://www.amazon.fr/s?i=stripbooks&rh=n%3A301061%2Cn%3A301139%2Cp_72%3A184904031&s=popularity-rank&dc&content-id=amzn1.sym.fd35f9f2-1aca-4d5e-befe-a52647ead21e&pd_rd_r=23c60f36-c6f1-43fb-8fb4-59d764073c73&pd_rd_w=b7690&pd_rd_wg=TcyWG&pf_rd_p=fd35f9f2-1aca-4d5e-befe-a52647ead21e&pf_rd_r=RH369CG6CY05Z7ZRC5V7&qid=1757686819&rnid=301061&ref=sr_nr_n_29&ds=v1%3A94LPmq%2B4sHJXXIrML7s3QREpPt6V4nYCRepoqSTxREc"
+  },
+  {
+    "nom_categorie": "Scolaire et Parascolaire",
+    "nom_fichier": "scraper_scolaire_et_parascolaire.py",
+    "url_base": "https://www.amazon.fr/s?i=stripbooks&rh=n%3A301061%2Cn%3A301146%2Cp_72%3A184904031&s=popularity-rank&dc&content-id=amzn1.sym.fd35f9f2-1aca-4d5e-befe-a52647ead21e&pd_rd_r=23c60f36-c6f1-43fb-8fb4-59d764073c73&pd_rd_w=b7690&pd_rd_wg=TcyWG&pf_rd_p=fd35f9f2-1aca-4d5e-befe-a52647ead21e&pf_rd_r=RH369CG6CY05Z7ZRC5V7&qid=1757686819&rnid=301061&ref=sr_nr_n_30&ds=v1%3AVk%2BLY4eoYrobOEgcoTph%2BluzRvv7woLBSzJJbxNFCAM"
+  },
+  {
+    "nom_categorie": "Sports et loisirs",
+    "nom_fichier": "scraper_sports_et_loisirs.py",
+    "url_base": "https://www.amazon.fr/s?i=stripbooks&rh=n%3A301061%2Cn%3A302049%2Cp_72%3A184904031&s=popularity-rank&dc&content-id=amzn1.sym.fd35f9f2-1aca-4d5e-befe-a52647ead21e&pd_rd_r=23c60f36-c6f1-43fb-8fb4-59d764073c73&pd_rd_w=b7690&pd_rd_wg=TcyWG&pf_rd_p=fd35f9f2-1aca-4d5e-befe-a52647ead21e&pf_rd_r=RH369CG6CY05Z7ZRC5V7&qid=1757686819&rnid=301061&ref=sr_nr_n_31&ds=v1%3APZPFPiNBfVj%2BrdWjox7EB2p3Y%2FTzs7A0NjNL53sV6ak"
+  },
+  {
+    "nom_categorie": "Tourisme et voyages",
+    "nom_fichier": "scraper_tourisme_et_voyages.py",
+    "url_base": "https://www.amazon.fr/s?i=stripbooks&rh=n%3A301061%2Cn%3A302051%2Cp_72%3A184904031&s=popularity-rank&dc&content-id=amzn1.sym.fd35f9f2-1aca-4d5e-befe-a52647ead21e&pd_rd_r=23c60f36-c6f1-43fb-8fb4-59d764073c73&pd_rd_w=b7690&pd_rd_wg=TcyWG&pf_rd_p=fd35f9f2-1aca-4d5e-befe-a52647ead21e&pf_rd_r=RH369CG6CY05Z7ZRC5V7&qid=1757686819&rnid=301061&ref=sr_nr_n_32&ds=v1%3AzuCeR360JXiTIYzG2LTxPxAZjU7b%2FZGO7fcs%2B2%2FqTEk"
+  },
+  {
+    "nom_categorie": "Neuf",
+    "nom_fichier": "scraper_neuf.py",
+    "url_base": "https://www.amazon.fr/s?i=stripbooks&rh=n%3A301061%2Cp_72%3A184904031%2Cp_n_condition-type%3A15135266031&s=popularity-rank&dc&content-id=amzn1.sym.fd35f9f2-1aca-4d5e-befe-a52647ead21e&pd_rd_r=23c60f36-c6f1-43fb-8fb4-59d764073c73&pd_rd_w=b7690&pd_rd_wg=TcyWG&pf_rd_p=fd35f9f2-1aca-4d5e-befe-a52647ead21e&pf_rd_r=RH369CG6CY05Z7ZRC5V7&qid=1757686819&rnid=15135264031&ref=sr_nr_p_n_condition-type_1&ds=v1%3AxH48gn8E0Qd8%2Bm4XmHeWV8uyXqCKRZT03LCrHrFzivQ"
+  },
+  {
+    "nom_categorie": "D'occasion",
+    "nom_fichier": "scraper_d_occasion.py",
+    "url_base": "https://www.amazon.fr/s?i=stripbooks&rh=n%3A301061%2Cp_72%3A184904031%2Cp_n_condition-type%3A15135267031&s=popularity-rank&dc&content-id=amzn1.sym.fd35f9f2-1aca-4d5e-befe-a52647ead21e&pd_rd_r=23c60f36-c6f1-43fb-8fb4-59d764073c73&pd_rd_w=b7690&pd_rd_wg=TcyWG&pf_rd_p=fd35f9f2-1aca-4d5e-befe-a52647ead21e&pf_rd_r=RH369CG6CY05Z7ZRC5V7&qid=1757686819&rnid=15135264031&ref=sr_nr_p_n_condition-type_2&ds=v1%3Afpe2k82fmJ%2F8oWovABJLq6%2BpYXJP3tMnyrDOiARcJk8"
+  },
+  {
+    "nom_categorie": "Décocher",
+    "nom_fichier": "scraper_décocher.py",
+    "url_base": "https://www.amazon.fr/s?i=stripbooks&rh=n%3A301061&s=popularity-rank&dc&content-id=amzn1.sym.fd35f9f2-1aca-4d5e-befe-a52647ead21e&pd_rd_r=23c60f36-c6f1-43fb-8fb4-59d764073c73&pd_rd_w=b7690&pd_rd_wg=TcyWG&pf_rd_p=fd35f9f2-1aca-4d5e-befe-a52647ead21e&pf_rd_r=RH369CG6CY05Z7ZRC5V7&qid=1757686819&ref=sr_ex_p_72_0&ds=v1%3AGxy6L4w4nRA3mX9juBqxcD7DAdWhEqBEVJ0sMD3c2ZI"
+  },
+  {
+    "nom_categorie": "4 Stars& plus",
+    "nom_fichier": "scraper_4_stars_plus.py",
+    "url_base": "https://www.amazon.fr/s?i=stripbooks&rh=n%3A301061&s=popularity-rank&dc&content-id=amzn1.sym.fd35f9f2-1aca-4d5e-befe-a52647ead21e&pd_rd_r=23c60f36-c6f1-43fb-8fb4-59d764073c73&pd_rd_w=b7690&pd_rd_wg=TcyWG&pf_rd_p=fd35f9f2-1aca-4d5e-befe-a52647ead21e&pf_rd_r=RH369CG6CY05Z7ZRC5V7&qid=1757686819&rnid=184891031&ref=sr_nr_p_72_1&ds=v1%3AfwE5tOrQXJodHdEdMlqGCwCOZM9GtdEJ4G0U%2FFfTlsw"
+  },
+  {
+    "nom_categorie": "Jusqu’à 5 EUR",
+    "nom_fichier": "scraper_jusqu_à_5_eur.py",
+    "url_base": "https://www.amazon.fr/s?i=stripbooks&rh=n%3A301061%2Cp_72%3A184904031%2Cp_36%3A-500&s=popularity-rank&dc&content-id=amzn1.sym.fd35f9f2-1aca-4d5e-befe-a52647ead21e&pd_rd_r=23c60f36-c6f1-43fb-8fb4-59d764073c73&pd_rd_w=b7690&pd_rd_wg=TcyWG&pf_rd_p=fd35f9f2-1aca-4d5e-befe-a52647ead21e&pf_rd_r=RH369CG6CY05Z7ZRC5V7&qid=1757686819&rnid=389153011&ref=sr_nr_p_36_1&ds=v1%3A21E2S9rtnECLuKAzRaRuWtfhV%2BT4jmw1Bxm7WHV%2FGt0"
+  },
+  {
+    "nom_categorie": "de 5 à 10 EUR",
+    "nom_fichier": "scraper_de_5_à_10_eur.py",
+    "url_base": "https://www.amazon.fr/s?i=stripbooks&rh=n%3A301061%2Cp_72%3A184904031%2Cp_36%3A500-1000&s=popularity-rank&dc&content-id=amzn1.sym.fd35f9f2-1aca-4d5e-befe-a52647ead21e&pd_rd_r=23c60f36-c6f1-43fb-8fb4-59d764073c73&pd_rd_w=b7690&pd_rd_wg=TcyWG&pf_rd_p=fd35f9f2-1aca-4d5e-befe-a52647ead21e&pf_rd_r=RH369CG6CY05Z7ZRC5V7&qid=1757686819&rnid=389153011&ref=sr_nr_p_36_2&ds=v1%3A%2BRYFvifIKsR36GUGP%2B1QpBQM5KB8LhAv55CjeD6lgVg"
+  },
+  {
+    "nom_categorie": "de 10 à 20 EUR",
+    "nom_fichier": "scraper_de_10_à_20_eur.py",
+    "url_base": "https://www.amazon.fr/s?i=stripbooks&rh=n%3A301061%2Cp_72%3A184904031%2Cp_36%3A1000-2000&s=popularity-rank&dc&content-id=amzn1.sym.fd35f9f2-1aca-4d5e-befe-a52647ead21e&pd_rd_r=23c60f36-c6f1-43fb-8fb4-59d764073c73&pd_rd_w=b7690&pd_rd_wg=TcyWG&pf_rd_p=fd35f9f2-1aca-4d5e-befe-a52647ead21e&pf_rd_r=RH369CG6CY05Z7ZRC5V7&qid=1757686819&rnid=389153011&ref=sr_nr_p_36_3&ds=v1%3AKBhsv%2B4zxPCDAe1Xd0bRpa6ZxoimrZl820h69vIY%2Bl8"
+  },
+  {
+    "nom_categorie": "20 EUR et plus",
+    "nom_fichier": "scraper_20_eur_et_plus.py",
+    "url_base": "https://www.amazon.fr/s?i=stripbooks&rh=n%3A301061%2Cp_72%3A184904031%2Cp_36%3A2000-&s=popularity-rank&dc&content-id=amzn1.sym.fd35f9f2-1aca-4d5e-befe-a52647ead21e&pd_rd_r=23c60f36-c6f1-43fb-8fb4-59d764073c73&pd_rd_w=b7690&pd_rd_wg=TcyWG&pf_rd_p=fd35f9f2-1aca-4d5e-befe-a52647ead21e&pf_rd_r=RH369CG6CY05Z7ZRC5V7&qid=1757686819&rnid=389153011&ref=sr_nr_p_36_4&ds=v1%3AR5AIBePwU9mUyuoGhxKXV%2F7ktGqIdzCjQvGixFIoqSU"
+  },
+  {
+    "nom_categorie": "Tous les rabais",
+    "nom_fichier": "scraper_tous_les_rabais.py",
+    "url_base": "https://www.amazon.fr/s?i=stripbooks&rh=n%3A301061%2Cp_72%3A184904031%2Cp_n_deal_type%3A26902977031&s=popularity-rank&dc&content-id=amzn1.sym.fd35f9f2-1aca-4d5e-befe-a52647ead21e&pd_rd_r=23c60f36-c6f1-43fb-8fb4-59d764073c73&pd_rd_w=b7690&pd_rd_wg=TcyWG&pf_rd_p=fd35f9f2-1aca-4d5e-befe-a52647ead21e&pf_rd_r=RH369CG6CY05Z7ZRC5V7&qid=1757686819&rnid=26902974031&ref=sr_nr_p_n_deal_type_1&ds=v1%3An%2FGcWOqNnpAzJaAqGafIdmhcVN%2FF%2BRldwOeAcM9UmAU"
+  },
+  {
+    "nom_categorie": "Ventes Flash",
+    "nom_fichier": "scraper_ventes_flash.py",
+    "url_base": "https://www.amazon.fr/s?i=stripbooks&rh=n%3A301061%2Cp_72%3A184904031%2Cp_n_deal_type%3A26902975031&s=popularity-rank&dc&content-id=amzn1.sym.fd35f9f2-1aca-4d5e-befe-a52647ead21e&pd_rd_r=23c60f36-c6f1-43fb-8fb4-59d764073c73&pd_rd_w=b7690&pd_rd_wg=TcyWG&pf_rd_p=fd35f9f2-1aca-4d5e-befe-a52647ead21e&pf_rd_r=RH369CG6CY05Z7ZRC5V7&qid=1757686819&rnid=26902974031&ref=sr_nr_p_n_deal_type_2&ds=v1%3A8dXmmurBUN03qiA2DASqkKLEIkTDAK%2FMlVyDLlYfhlw"
+  },
+  {
+    "nom_categorie": "Collectif Michelin",
+    "nom_fichier": "scraper_collectif_michelin.py",
+    "url_base": "https://www.amazon.fr/s?i=stripbooks&rh=n%3A301061%2Cp_72%3A184904031%2Cp_lbr_books_authors_browse-bin%3ACollectif%2BMichelin&s=popularity-rank&dc&content-id=amzn1.sym.fd35f9f2-1aca-4d5e-befe-a52647ead21e&pd_rd_r=23c60f36-c6f1-43fb-8fb4-59d764073c73&pd_rd_w=b7690&pd_rd_wg=TcyWG&pf_rd_p=fd35f9f2-1aca-4d5e-befe-a52647ead21e&pf_rd_r=RH369CG6CY05Z7ZRC5V7&qid=1757686819&rnid=545982031&ref=sr_nr_p_lbr_books_authors_browse-bin_1&ds=v1%3A2wX0xOkSTBm4UpY1zQ63KBD8YJNG1wAzsRwTHR4BSA8"
+  },
+  {
+    "nom_categorie": "Disney Collectif",
+    "nom_fichier": "scraper_disney_collectif.py",
+    "url_base": "https://www.amazon.fr/s?i=stripbooks&rh=n%3A301061%2Cp_72%3A184904031%2Cp_lbr_books_authors_browse-bin%3ADisney%2BCollectif&s=popularity-rank&dc&content-id=amzn1.sym.fd35f9f2-1aca-4d5e-befe-a52647ead21e&pd_rd_r=23c60f36-c6f1-43fb-8fb4-59d764073c73&pd_rd_w=b7690&pd_rd_wg=TcyWG&pf_rd_p=fd35f9f2-1aca-4d5e-befe-a52647ead21e&pf_rd_r=RH369CG6CY05Z7ZRC5V7&qid=1757686819&rnid=545982031&ref=sr_nr_p_lbr_books_authors_browse-bin_2&ds=v1%3ADXKs74YCigRVMLlwMX4xxAAA%2FZNk2Na3Q4Bb0EmKqDE"
+  },
+  {
+    "nom_categorie": "Collectif d'auteurs",
+    "nom_fichier": "scraper_collectif_d_auteurs.py",
+    "url_base": "https://www.amazon.fr/s?i=stripbooks&rh=n%3A301061%2Cp_72%3A184904031%2Cp_lbr_books_authors_browse-bin%3ACollectif%2Bd%2527auteurs&s=popularity-rank&dc&content-id=amzn1.sym.fd35f9f2-1aca-4d5e-befe-a52647ead21e&pd_rd_r=23c60f36-c6f1-43fb-8fb4-59d764073c73&pd_rd_w=b7690&pd_rd_wg=TcyWG&pf_rd_p=fd35f9f2-1aca-4d5e-befe-a52647ead21e&pf_rd_r=RH369CG6CY05Z7ZRC5V7&qid=1757686819&rnid=545982031&ref=sr_nr_p_lbr_books_authors_browse-bin_3&ds=v1%3Aet%2FClLA%2FowN%2BntmMdlCdYm2qI%2B9PVzRBvDxtjS3czOk"
+  },
+  {
+    "nom_categorie": "D'auteurs Collectif",
+    "nom_fichier": "scraper_d_auteurs_collectif.py",
+    "url_base": "https://www.amazon.fr/s?i=stripbooks&rh=n%3A301061%2Cp_72%3A184904031%2Cp_lbr_books_authors_browse-bin%3AD%2527auteurs%2BCollectif&s=popularity-rank&dc&content-id=amzn1.sym.fd35f9f2-1aca-4d5e-befe-a52647ead21e&pd_rd_r=23c60f36-c6f1-43fb-8fb4-59d764073c73&pd_rd_w=b7690&pd_rd_wg=TcyWG&pf_rd_p=fd35f9f2-1aca-4d5e-befe-a52647ead21e&pf_rd_r=RH369CG6CY05Z7ZRC5V7&qid=1757686819&rnid=545982031&ref=sr_nr_p_lbr_books_authors_browse-bin_4&ds=v1%3AgvO8CJzlaNPagCqzXcjz1ovb88u%2BcX5SrOQMg%2B0kJgg"
+  },
+  {
+    "nom_categorie": "Collectif Collectif",
+    "nom_fichier": "scraper_collectif_collectif.py",
+    "url_base": "https://www.amazon.fr/s?i=stripbooks&rh=n%3A301061%2Cp_72%3A184904031%2Cp_lbr_books_authors_browse-bin%3ACollectif%2BCollectif&s=popularity-rank&dc&content-id=amzn1.sym.fd35f9f2-1aca-4d5e-befe-a52647ead21e&pd_rd_r=23c60f36-c6f1-43fb-8fb4-59d764073c73&pd_rd_w=b7690&pd_rd_wg=TcyWG&pf_rd_p=fd35f9f2-1aca-4d5e-befe-a52647ead21e&pf_rd_r=RH369CG6CY05Z7ZRC5V7&qid=1757686819&rnid=545982031&ref=sr_nr_p_lbr_books_authors_browse-bin_5&ds=v1%3AoNh%2Fp%2FF5LQXFWUTu7QOarjSNJleg1CSGfK1xmbtyh1k"
+  },
+  {
+    "nom_categorie": "Collectif",
+    "nom_fichier": "scraper_collectif.py",
+    "url_base": "https://www.amazon.fr/s?i=stripbooks&rh=n%3A301061%2Cp_72%3A184904031%2Cp_lbr_books_authors_browse-bin%3ACollectif&s=popularity-rank&dc&content-id=amzn1.sym.fd35f9f2-1aca-4d5e-befe-a52647ead21e&pd_rd_r=23c60f36-c6f1-43fb-8fb4-59d764073c73&pd_rd_w=b7690&pd_rd_wg=TcyWG&pf_rd_p=fd35f9f2-1aca-4d5e-befe-a52647ead21e&pf_rd_r=RH369CG6CY05Z7ZRC5V7&qid=1757686819&rnid=545982031&ref=sr_nr_p_lbr_books_authors_browse-bin_6&ds=v1%3AobnMhB1a%2BF89n4iecLkKjbosyvhfsSev%2BAxJeGz%2B3QE"
+  },
+  {
+    "nom_categorie": "Auteurs Collectif",
+    "nom_fichier": "scraper_auteurs_collectif.py",
+    "url_base": "https://www.amazon.fr/s?i=stripbooks&rh=n%3A301061%2Cp_72%3A184904031%2Cp_lbr_books_authors_browse-bin%3AAuteurs%2BCollectif&s=popularity-rank&dc&content-id=amzn1.sym.fd35f9f2-1aca-4d5e-befe-a52647ead21e&pd_rd_r=23c60f36-c6f1-43fb-8fb4-59d764073c73&pd_rd_w=b7690&pd_rd_wg=TcyWG&pf_rd_p=fd35f9f2-1aca-4d5e-befe-a52647ead21e&pf_rd_r=RH369CG6CY05Z7ZRC5V7&qid=1757686819&rnid=545982031&ref=sr_nr_p_lbr_books_authors_browse-bin_7&ds=v1%3A2sKEhOOlVJFrli6aIFsToKf3lyfdtWNnTR6PbwUJdwU"
+  },
+  {
+    "nom_categorie": "D'illustrateurs Collectif",
+    "nom_fichier": "scraper_d_illustrateurs_collectif.py",
+    "url_base": "https://www.amazon.fr/s?i=stripbooks&rh=n%3A301061%2Cp_72%3A184904031%2Cp_lbr_books_authors_browse-bin%3AD%2527illustrateurs%2BCollectif&s=popularity-rank&dc&content-id=amzn1.sym.fd35f9f2-1aca-4d5e-befe-a52647ead21e&pd_rd_r=23c60f36-c6f1-43fb-8fb4-59d764073c73&pd_rd_w=b7690&pd_rd_wg=TcyWG&pf_rd_p=fd35f9f2-1aca-4d5e-befe-a52647ead21e&pf_rd_r=RH369CG6CY05Z7ZRC5V7&qid=1757686819&rnid=545982031&ref=sr_nr_p_lbr_books_authors_browse-bin_8&ds=v1%3ANX6HqnQrkjVzQkfmi%2BPD%2Bx2WBwxBEZqTzpZQZ0QvVgw"
+  },
+  {
+    "nom_categorie": "David Collectif",
+    "nom_fichier": "scraper_david_collectif.py",
+    "url_base": "https://www.amazon.fr/s?i=stripbooks&rh=n%3A301061%2Cp_72%3A184904031%2Cp_lbr_books_authors_browse-bin%3ADavid%2BCollectif&s=popularity-rank&dc&content-id=amzn1.sym.fd35f9f2-1aca-4d5e-befe-a52647ead21e&pd_rd_r=23c60f36-c6f1-43fb-8fb4-59d764073c73&pd_rd_w=b7690&pd_rd_wg=TcyWG&pf_rd_p=fd35f9f2-1aca-4d5e-befe-a52647ead21e&pf_rd_r=RH369CG6CY05Z7ZRC5V7&qid=1757686819&rnid=545982031&ref=sr_nr_p_lbr_books_authors_browse-bin_9&ds=v1%3AFZIqdtyRNeJziUVbQZPcIu51sbbvvox%2ForM7uBK1DWA"
+  },
+  {
+    "nom_categorie": "Freida McFadden",
+    "nom_fichier": "scraper_freida_mcfadden.py",
+    "url_base": "https://www.amazon.fr/s?i=stripbooks&rh=n%3A301061%2Cp_72%3A184904031%2Cp_lbr_books_authors_browse-bin%3AFreida%2BMcFadden&s=popularity-rank&dc&content-id=amzn1.sym.fd35f9f2-1aca-4d5e-befe-a52647ead21e&pd_rd_r=23c60f36-c6f1-43fb-8fb4-59d764073c73&pd_rd_w=b7690&pd_rd_wg=TcyWG&pf_rd_p=fd35f9f2-1aca-4d5e-befe-a52647ead21e&pf_rd_r=RH369CG6CY05Z7ZRC5V7&qid=1757686819&rnid=545982031&ref=sr_nr_p_lbr_books_authors_browse-bin_10&ds=v1%3ADgMmPbWvw7tZXksqk0FH7JBZP78woTJHK%2FVjxkqQcFo"
+  },
+  {
+    "nom_categorie": "Amazon Global Store",
+    "nom_fichier": "scraper_amazon_global_store.py",
+    "url_base": "https://www.amazon.fr/s?i=stripbooks&rh=n%3A301061%2Cp_72%3A184904031%2Cp_n_is-global-store-asin%3A26389255031&s=popularity-rank&dc&content-id=amzn1.sym.fd35f9f2-1aca-4d5e-befe-a52647ead21e&pd_rd_r=23c60f36-c6f1-43fb-8fb4-59d764073c73&pd_rd_w=b7690&pd_rd_wg=TcyWG&pf_rd_p=fd35f9f2-1aca-4d5e-befe-a52647ead21e&pf_rd_r=RH369CG6CY05Z7ZRC5V7&qid=1757686819&rnid=26389254031&ref=sr_nr_p_n_is-global-store-asin_1&ds=v1%3A6d0meqXB0zGOFPLpuaJSgnFvCikSUUxmaf1A27DkABM"
+  },
+  {
+    "nom_categorie": "Depuis 1 mois",
+    "nom_fichier": "scraper_depuis_1_mois.py",
+    "url_base": "https://www.amazon.fr/s?i=stripbooks&rh=n%3A301061%2Cp_72%3A184904031%2Cp_n_publication_date%3A183196031&s=popularity-rank&dc&content-id=amzn1.sym.fd35f9f2-1aca-4d5e-befe-a52647ead21e&pd_rd_r=23c60f36-c6f1-43fb-8fb4-59d764073c73&pd_rd_w=b7690&pd_rd_wg=TcyWG&pf_rd_p=fd35f9f2-1aca-4d5e-befe-a52647ead21e&pf_rd_r=RH369CG6CY05Z7ZRC5V7&qid=1757686819&rnid=183195031&ref=sr_nr_p_n_publication_date_1&ds=v1%3AxJp0TKlGYS8RmpNWUuPbWrgzLyemu4DuoYod5CCvbzU"
+  },
+  {
+    "nom_categorie": "Depuis 3 mois",
+    "nom_fichier": "scraper_depuis_3_mois.py",
+    "url_base": "https://www.amazon.fr/s?i=stripbooks&rh=n%3A301061%2Cp_72%3A184904031%2Cp_n_publication_date%3A183197031&s=popularity-rank&dc&content-id=amzn1.sym.fd35f9f2-1aca-4d5e-befe-a52647ead21e&pd_rd_r=23c60f36-c6f1-43fb-8fb4-59d764073c73&pd_rd_w=b7690&pd_rd_wg=TcyWG&pf_rd_p=fd35f9f2-1aca-4d5e-befe-a52647ead21e&pf_rd_r=RH369CG6CY05Z7ZRC5V7&qid=1757686819&rnid=183195031&ref=sr_nr_p_n_publication_date_2&ds=v1%3AzNyWHSpQ9eduq4C2586oTKKDB2jniez8qf1wl3V73JA"
+  },
+  {
+    "nom_categorie": "Dans les 3 mois à venir",
+    "nom_fichier": "scraper_dans_les_3_mois_à_venir.py",
+    "url_base": "https://www.amazon.fr/s?i=stripbooks&rh=n%3A301061%2Cp_72%3A184904031%2Cp_n_publication_date%3A183198031&s=popularity-rank&dc&content-id=amzn1.sym.fd35f9f2-1aca-4d5e-befe-a52647ead21e&pd_rd_r=23c60f36-c6f1-43fb-8fb4-59d764073c73&pd_rd_w=b7690&pd_rd_wg=TcyWG&pf_rd_p=fd35f9f2-1aca-4d5e-befe-a52647ead21e&pf_rd_r=RH369CG6CY05Z7ZRC5V7&qid=1757686819&rnid=183195031&ref=sr_nr_p_n_publication_date_3&ds=v1%3Atzg0oiDkS%2BPizxbnkb4C3sa9t5pSfsxnKij85ZVOw4w"
+  },
+  {
+    "nom_categorie": "Broché",
+    "nom_fichier": "scraper_broché.py",
+    "url_base": "https://www.amazon.fr/s?i=stripbooks&rh=n%3A301061%2Cp_72%3A184904031%2Cp_n_binding_browse-bin%3A3973586031&s=popularity-rank&dc&content-id=amzn1.sym.fd35f9f2-1aca-4d5e-befe-a52647ead21e&pd_rd_r=23c60f36-c6f1-43fb-8fb4-59d764073c73&pd_rd_w=b7690&pd_rd_wg=TcyWG&pf_rd_p=fd35f9f2-1aca-4d5e-befe-a52647ead21e&pf_rd_r=RH369CG6CY05Z7ZRC5V7&qid=1757686819&rnid=492479011&ref=sr_nr_p_n_binding_browse-bin_1&ds=v1%3AC06iXN7KpKIKwBhQW9vbdiLTcQZbtUX2JadagpLq22o"
+  },
+  {
+    "nom_categorie": "Ebook Kindle",
+    "nom_fichier": "scraper_ebook_kindle.py",
+    "url_base": "https://www.amazon.fr/s?i=stripbooks&rh=n%3A301061%2Cp_72%3A184904031%2Cp_n_binding_browse-bin%3A901116031&s=popularity-rank&dc&content-id=amzn1.sym.fd35f9f2-1aca-4d5e-befe-a52647ead21e&pd_rd_r=23c60f36-c6f1-43fb-8fb4-59d764073c73&pd_rd_w=b7690&pd_rd_wg=TcyWG&pf_rd_p=fd35f9f2-1aca-4d5e-befe-a52647ead21e&pf_rd_r=RH369CG6CY05Z7ZRC5V7&qid=1757686819&rnid=492479011&ref=sr_nr_p_n_binding_browse-bin_2&ds=v1%3A2fo2WyhHjNA1rKlgBEP9%2F%2FqNJk7cwr0OzD31E5HWgeo"
+  },
+  {
+    "nom_categorie": "Poche",
+    "nom_fichier": "scraper_poche.py",
+    "url_base": "https://www.amazon.fr/s?i=stripbooks&rh=n%3A301061%2Cp_72%3A184904031%2Cp_n_binding_browse-bin%3A492481011&s=popularity-rank&dc&content-id=amzn1.sym.fd35f9f2-1aca-4d5e-befe-a52647ead21e&pd_rd_r=23c60f36-c6f1-43fb-8fb4-59d764073c73&pd_rd_w=b7690&pd_rd_wg=TcyWG&pf_rd_p=fd35f9f2-1aca-4d5e-befe-a52647ead21e&pf_rd_r=RH369CG6CY05Z7ZRC5V7&qid=1757686819&rnid=492479011&ref=sr_nr_p_n_binding_browse-bin_3&ds=v1%3ADmju%2BplIcfYrvZdr067s3iZxLxrN13zjuxJRHNl0qqo"
+  },
+  {
+    "nom_categorie": "Relié",
+    "nom_fichier": "scraper_relié.py",
+    "url_base": "https://www.amazon.fr/s?i=stripbooks&rh=n%3A301061%2Cp_72%3A184904031%2Cp_n_binding_browse-bin%3A492480011&s=popularity-rank&dc&content-id=amzn1.sym.fd35f9f2-1aca-4d5e-befe-a52647ead21e&pd_rd_r=23c60f36-c6f1-43fb-8fb4-59d764073c73&pd_rd_w=b7690&pd_rd_wg=TcyWG&pf_rd_p=fd35f9f2-1aca-4d5e-befe-a52647ead21e&pf_rd_r=RH369CG6CY05Z7ZRC5V7&qid=1757686819&rnid=492479011&ref=sr_nr_p_n_binding_browse-bin_4&ds=v1%3AyemSb0%2B%2F%2FNf635PUw8PE9ZiAA7ew7lt%2FBx%2Bs817ifWc"
+  },
+  {
+    "nom_categorie": "Livre audio",
+    "nom_fichier": "scraper_livre_audio.py",
+    "url_base": "https://www.amazon.fr/s?i=stripbooks&rh=n%3A301061%2Cp_72%3A184904031%2Cp_n_binding_browse-bin%3A308871031&s=popularity-rank&dc&content-id=amzn1.sym.fd35f9f2-1aca-4d5e-befe-a52647ead21e&pd_rd_r=23c60f36-c6f1-43fb-8fb4-59d764073c73&pd_rd_w=b7690&pd_rd_wg=TcyWG&pf_rd_p=fd35f9f2-1aca-4d5e-befe-a52647ead21e&pf_rd_r=RH369CG6CY05Z7ZRC5V7&qid=1757686819&rnid=492479011&ref=sr_nr_p_n_binding_browse-bin_5&ds=v1%3A4%2B9yBUcubzBqjeGLHtY9jcAI5gs%2FUrkTFje3KAJ85oc"
+  },
+  {
+    "nom_categorie": "Inclus dans une série",
+    "nom_fichier": "scraper_inclus_dans_une_série.py",
+    "url_base": "https://www.amazon.fr/s?i=stripbooks&rh=n%3A301061%2Cp_72%3A184904031%2Cp_n_feature_twelve_browse-bin%3A100406692031&s=popularity-rank&dc&content-id=amzn1.sym.fd35f9f2-1aca-4d5e-befe-a52647ead21e&pd_rd_r=23c60f36-c6f1-43fb-8fb4-59d764073c73&pd_rd_w=b7690&pd_rd_wg=TcyWG&pf_rd_p=fd35f9f2-1aca-4d5e-befe-a52647ead21e&pf_rd_r=RH369CG6CY05Z7ZRC5V7&qid=1757686819&rnid=100406680031&ref=sr_nr_p_n_feature_twelve_browse-bin_1&ds=v1%3AUNLmCOeqRZ2rCcYnqUS%2BiEWgNTQtdAmoQDWxbm57u98"
+  },
+  {
+    "nom_categorie": "Non inclus dans une série",
+    "nom_fichier": "scraper_non_inclus_dans_une_série.py",
+    "url_base": "https://www.amazon.fr/s?i=stripbooks&rh=n%3A301061%2Cp_72%3A184904031%2Cp_n_feature_twelve_browse-bin%3A100406706031&s=popularity-rank&dc&content-id=amzn1.sym.fd35f9f2-1aca-4d5e-befe-a52647ead21e&pd_rd_r=23c60f36-c6f1-43fb-8fb4-59d764073c73&pd_rd_w=b7690&pd_rd_wg=TcyWG&pf_rd_p=fd35f9f2-1aca-4d5e-befe-a52647ead21e&pf_rd_r=RH369CG6CY05Z7ZRC5V7&qid=1757686819&rnid=100406680031&ref=sr_nr_p_n_feature_twelve_browse-bin_2&ds=v1%3Aw1A9l7ilz2xQ1N%2BAuG%2FRjl4T%2Fsgn7dUFKxxNClpMLK0"
+  },
+  {
+    "nom_categorie": "Premier de la série",
+    "nom_fichier": "scraper_premier_de_la_série.py",
+    "url_base": "https://www.amazon.fr/s?i=stripbooks&rh=n%3A301061%2Cp_72%3A184904031%2Cp_n_feature_twelve_browse-bin%3A100406699031&s=popularity-rank&dc&content-id=amzn1.sym.fd35f9f2-1aca-4d5e-befe-a52647ead21e&pd_rd_r=23c60f36-c6f1-43fb-8fb4-59d764073c73&pd_rd_w=b7690&pd_rd_wg=TcyWG&pf_rd_p=fd35f9f2-1aca-4d5e-befe-a52647ead21e&pf_rd_r=RH369CG6CY05Z7ZRC5V7&qid=1757686819&rnid=100406680031&ref=sr_nr_p_n_feature_twelve_browse-bin_3&ds=v1%3AGkFYhHapxIUzpEgGm0jJtEmo8fw%2F6zw3nAuM29LyhNM"
+  },
+  {
+    "nom_categorie": "Français",
+    "nom_fichier": "scraper_français.py",
+    "url_base": "https://www.amazon.fr/s?i=stripbooks&rh=n%3A301061%2Cp_72%3A184904031%2Cp_n_feature_browse-bin%3A5272956031&s=popularity-rank&dc&content-id=amzn1.sym.fd35f9f2-1aca-4d5e-befe-a52647ead21e&pd_rd_r=23c60f36-c6f1-43fb-8fb4-59d764073c73&pd_rd_w=b7690&pd_rd_wg=TcyWG&pf_rd_p=fd35f9f2-1aca-4d5e-befe-a52647ead21e&pf_rd_r=RH369CG6CY05Z7ZRC5V7&qid=1757686819&rnid=5272947031&ref=sr_nr_p_n_feature_browse-bin_1&ds=v1%3ANz26ptakfy9GTRCy1A9Y8Cp9S8JiX7AG1xlL4LAK5VU"
+  },
+  {
+    "nom_categorie": "Anglais",
+    "nom_fichier": "scraper_anglais.py",
+    "url_base": "https://www.amazon.fr/s?i=stripbooks&rh=n%3A301061%2Cp_72%3A184904031%2Cp_n_feature_browse-bin%3A5272949031&s=popularity-rank&dc&content-id=amzn1.sym.fd35f9f2-1aca-4d5e-befe-a52647ead21e&pd_rd_r=23c60f36-c6f1-43fb-8fb4-59d764073c73&pd_rd_w=b7690&pd_rd_wg=TcyWG&pf_rd_p=fd35f9f2-1aca-4d5e-befe-a52647ead21e&pf_rd_r=RH369CG6CY05Z7ZRC5V7&qid=1757686819&rnid=5272947031&ref=sr_nr_p_n_feature_browse-bin_2&ds=v1%3AheWCtZnJjfnqCXDviLHWh0eX4OZPn7ezh2NCf%2FtrGzI"
+  },
+  {
+    "nom_categorie": "Espagnol",
+    "nom_fichier": "scraper_espagnol.py",
+    "url_base": "https://www.amazon.fr/s?i=stripbooks&rh=n%3A301061%2Cp_72%3A184904031%2Cp_n_feature_browse-bin%3A5272954031&s=popularity-rank&dc&content-id=amzn1.sym.fd35f9f2-1aca-4d5e-befe-a52647ead21e&pd_rd_r=23c60f36-c6f1-43fb-8fb4-59d764073c73&pd_rd_w=b7690&pd_rd_wg=TcyWG&pf_rd_p=fd35f9f2-1aca-4d5e-befe-a52647ead21e&pf_rd_r=RH369CG6CY05Z7ZRC5V7&qid=1757686819&rnid=5272947031&ref=sr_nr_p_n_feature_browse-bin_3&ds=v1%3AQgk7CgVcbjI1ExzRVvqjostl%2B9akPFCWuWURpl8tVbI"
+  },
+  {
+    "nom_categorie": "Allemand",
+    "nom_fichier": "scraper_allemand.py",
+    "url_base": "https://www.amazon.fr/s?i=stripbooks&rh=n%3A301061%2Cp_72%3A184904031%2Cp_n_feature_browse-bin%3A5272948031&s=popularity-rank&dc&content-id=amzn1.sym.fd35f9f2-1aca-4d5e-befe-a52647ead21e&pd_rd_r=23c60f36-c6f1-43fb-8fb4-59d764073c73&pd_rd_w=b7690&pd_rd_wg=TcyWG&pf_rd_p=fd35f9f2-1aca-4d5e-befe-a52647ead21e&pf_rd_r=RH369CG6CY05Z7ZRC5V7&qid=1757686819&rnid=5272947031&ref=sr_nr_p_n_feature_browse-bin_4&ds=v1%3AWhW%2FXJC77x%2F%2F9c5R1WQ0yoErJzbS9lS9zmQKZBu8KfQ"
+  },
+  {
+    "nom_categorie": "Arabe",
+    "nom_fichier": "scraper_arabe.py",
+    "url_base": "https://www.amazon.fr/s?i=stripbooks&rh=n%3A301061%2Cp_72%3A184904031%2Cp_n_feature_browse-bin%3A5272950031&s=popularity-rank&dc&content-id=amzn1.sym.fd35f9f2-1aca-4d5e-befe-a52647ead21e&pd_rd_r=23c60f36-c6f1-43fb-8fb4-59d764073c73&pd_rd_w=b7690&pd_rd_wg=TcyWG&pf_rd_p=fd35f9f2-1aca-4d5e-befe-a52647ead21e&pf_rd_r=RH369CG6CY05Z7ZRC5V7&qid=1757686819&rnid=5272947031&ref=sr_nr_p_n_feature_browse-bin_5&ds=v1%3Aa3jRsuvCLahW6%2FFfmzu7I5PmHEDNjJIbAYrm%2BKh2fIc"
+  },
+  {
+    "nom_categorie": "Catalan",
+    "nom_fichier": "scraper_catalan.py",
+    "url_base": "https://www.amazon.fr/s?i=stripbooks&rh=n%3A301061%2Cp_72%3A184904031%2Cp_n_feature_browse-bin%3A15424978031&s=popularity-rank&dc&content-id=amzn1.sym.fd35f9f2-1aca-4d5e-befe-a52647ead21e&pd_rd_r=23c60f36-c6f1-43fb-8fb4-59d764073c73&pd_rd_w=b7690&pd_rd_wg=TcyWG&pf_rd_p=fd35f9f2-1aca-4d5e-befe-a52647ead21e&pf_rd_r=RH369CG6CY05Z7ZRC5V7&qid=1757686819&rnid=5272947031&ref=sr_nr_p_n_feature_browse-bin_6&ds=v1%3A4WJlJLXeRoBwT6R83o%2FdkiTk%2FKewGa9hUxwOYOIdoZI"
+  },
+  {
+    "nom_categorie": "Chinois",
+    "nom_fichier": "scraper_chinois.py",
+    "url_base": "https://www.amazon.fr/s?i=stripbooks&rh=n%3A301061%2Cp_72%3A184904031%2Cp_n_feature_browse-bin%3A5272951031&s=popularity-rank&dc&content-id=amzn1.sym.fd35f9f2-1aca-4d5e-befe-a52647ead21e&pd_rd_r=23c60f36-c6f1-43fb-8fb4-59d764073c73&pd_rd_w=b7690&pd_rd_wg=TcyWG&pf_rd_p=fd35f9f2-1aca-4d5e-befe-a52647ead21e&pf_rd_r=RH369CG6CY05Z7ZRC5V7&qid=1757686819&rnid=5272947031&ref=sr_nr_p_n_feature_browse-bin_7&ds=v1%3AYX49FsBg2jldtgJ3OJ2m30aLm1vKhKtDPQXgMmNMV3o"
+  },
+  {
+    "nom_categorie": "Danois",
+    "nom_fichier": "scraper_danois.py",
+    "url_base": "https://www.amazon.fr/s?i=stripbooks&rh=n%3A301061%2Cp_72%3A184904031%2Cp_n_feature_browse-bin%3A5272953031&s=popularity-rank&dc&content-id=amzn1.sym.fd35f9f2-1aca-4d5e-befe-a52647ead21e&pd_rd_r=23c60f36-c6f1-43fb-8fb4-59d764073c73&pd_rd_w=b7690&pd_rd_wg=TcyWG&pf_rd_p=fd35f9f2-1aca-4d5e-befe-a52647ead21e&pf_rd_r=RH369CG6CY05Z7ZRC5V7&qid=1757686819&rnid=5272947031&ref=sr_nr_p_n_feature_browse-bin_8&ds=v1%3AtDScnCH7CC4DBsRce2BtFFCCejJOlSMm6yIaKytLXuU"
+  },
+  {
+    "nom_categorie": "Grec",
+    "nom_fichier": "scraper_grec.py",
+    "url_base": "https://www.amazon.fr/s?i=stripbooks&rh=n%3A301061%2Cp_72%3A184904031%2Cp_n_feature_browse-bin%3A5272957031&s=popularity-rank&dc&content-id=amzn1.sym.fd35f9f2-1aca-4d5e-befe-a52647ead21e&pd_rd_r=23c60f36-c6f1-43fb-8fb4-59d764073c73&pd_rd_w=b7690&pd_rd_wg=TcyWG&pf_rd_p=fd35f9f2-1aca-4d5e-befe-a52647ead21e&pf_rd_r=RH369CG6CY05Z7ZRC5V7&qid=1757686819&rnid=5272947031&ref=sr_nr_p_n_feature_browse-bin_9&ds=v1%3Amj60mLUXL1AcfbKSe8DiKVZn%2B3d%2BNAW6tM%2BP8kg2mcQ"
+  },
+  {
+    "nom_categorie": "Hébreu",
+    "nom_fichier": "scraper_hébreu.py",
+    "url_base": "https://www.amazon.fr/s?i=stripbooks&rh=n%3A301061%2Cp_72%3A184904031%2Cp_n_feature_browse-bin%3A5272960031&s=popularity-rank&dc&content-id=amzn1.sym.fd35f9f2-1aca-4d5e-befe-a52647ead21e&pd_rd_r=23c60f36-c6f1-43fb-8fb4-59d764073c73&pd_rd_w=b7690&pd_rd_wg=TcyWG&pf_rd_p=fd35f9f2-1aca-4d5e-befe-a52647ead21e&pf_rd_r=RH369CG6CY05Z7ZRC5V7&qid=1757686819&rnid=5272947031&ref=sr_nr_p_n_feature_browse-bin_10&ds=v1%3Ad0748nL5OQoNFFKkZC35xuyj0JFEkd6PGXPIg%2B7fO1A"
+  },
+  {
+    "nom_categorie": "Hindi",
+    "nom_fichier": "scraper_hindi.py",
+    "url_base": "https://www.amazon.fr/s?i=stripbooks&rh=n%3A301061%2Cp_72%3A184904031%2Cp_n_feature_browse-bin%3A15424989031&s=popularity-rank&dc&content-id=amzn1.sym.fd35f9f2-1aca-4d5e-befe-a52647ead21e&pd_rd_r=23c60f36-c6f1-43fb-8fb4-59d764073c73&pd_rd_w=b7690&pd_rd_wg=TcyWG&pf_rd_p=fd35f9f2-1aca-4d5e-befe-a52647ead21e&pf_rd_r=RH369CG6CY05Z7ZRC5V7&qid=1757686819&rnid=5272947031&ref=sr_nr_p_n_feature_browse-bin_11&ds=v1%3AGIIAB0MBHcZkryCKv2FPDNCT5OROWztQq7LdaqWBGhI"
+  },
+  {
+    "nom_categorie": "Néerlandais",
+    "nom_fichier": "scraper_néerlandais.py",
+    "url_base": "https://www.amazon.fr/s?i=stripbooks&rh=n%3A301061%2Cp_72%3A184904031%2Cp_n_feature_browse-bin%3A5332143031&s=popularity-rank&dc&content-id=amzn1.sym.fd35f9f2-1aca-4d5e-befe-a52647ead21e&pd_rd_r=23c60f36-c6f1-43fb-8fb4-59d764073c73&pd_rd_w=b7690&pd_rd_wg=TcyWG&pf_rd_p=fd35f9f2-1aca-4d5e-befe-a52647ead21e&pf_rd_r=RH369CG6CY05Z7ZRC5V7&qid=1757686819&rnid=5272947031&ref=sr_nr_p_n_feature_browse-bin_12&ds=v1%3A0PUgtMWaYstCh28U0wAxB4rVTktr%2B6Yg5Pfw4f1qXak"
+  },
+  {
+    "nom_categorie": "Italien",
+    "nom_fichier": "scraper_italien.py",
+    "url_base": "https://www.amazon.fr/s?i=stripbooks&rh=n%3A301061%2Cp_72%3A184904031%2Cp_n_feature_browse-bin%3A5272961031&s=popularity-rank&dc&content-id=amzn1.sym.fd35f9f2-1aca-4d5e-befe-a52647ead21e&pd_rd_r=23c60f36-c6f1-43fb-8fb4-59d764073c73&pd_rd_w=b7690&pd_rd_wg=TcyWG&pf_rd_p=fd35f9f2-1aca-4d5e-befe-a52647ead21e&pf_rd_r=RH369CG6CY05Z7ZRC5V7&qid=1757686819&rnid=5272947031&ref=sr_nr_p_n_feature_browse-bin_13&ds=v1%3AYZS2RDlRb9AhJeRjrDaOVPm0wunfpKO4kBYUwZ3RIqA"
+  },
+  {
+    "nom_categorie": "Japonais",
+    "nom_fichier": "scraper_japonais.py",
+    "url_base": "https://www.amazon.fr/s?i=stripbooks&rh=n%3A301061%2Cp_72%3A184904031%2Cp_n_feature_browse-bin%3A5272962031&s=popularity-rank&dc&content-id=amzn1.sym.fd35f9f2-1aca-4d5e-befe-a52647ead21e&pd_rd_r=23c60f36-c6f1-43fb-8fb4-59d764073c73&pd_rd_w=b7690&pd_rd_wg=TcyWG&pf_rd_p=fd35f9f2-1aca-4d5e-befe-a52647ead21e&pf_rd_r=RH369CG6CY05Z7ZRC5V7&qid=1757686819&rnid=5272947031&ref=sr_nr_p_n_feature_browse-bin_14&ds=v1%3AX7KSATXJyb7Edx2lGp%2FBIwZdoOlNSXzLJMiDTnVRyzk"
+  },
+  {
+    "nom_categorie": "Latin",
+    "nom_fichier": "scraper_latin.py",
+    "url_base": "https://www.amazon.fr/s?i=stripbooks&rh=n%3A301061%2Cp_72%3A184904031%2Cp_n_feature_browse-bin%3A5272963031&s=popularity-rank&dc&content-id=amzn1.sym.fd35f9f2-1aca-4d5e-befe-a52647ead21e&pd_rd_r=23c60f36-c6f1-43fb-8fb4-59d764073c73&pd_rd_w=b7690&pd_rd_wg=TcyWG&pf_rd_p=fd35f9f2-1aca-4d5e-befe-a52647ead21e&pf_rd_r=RH369CG6CY05Z7ZRC5V7&qid=1757686819&rnid=5272947031&ref=sr_nr_p_n_feature_browse-bin_15&ds=v1%3AiEI%2BGHEVz1Mvy%2F8W%2BgkmgJMrGjJr8s6IvyEU1HYcl7A"
+  },
+  {
+    "nom_categorie": "Polonais",
+    "nom_fichier": "scraper_polonais.py",
+    "url_base": "https://www.amazon.fr/s?i=stripbooks&rh=n%3A301061%2Cp_72%3A184904031%2Cp_n_feature_browse-bin%3A5272965031&s=popularity-rank&dc&content-id=amzn1.sym.fd35f9f2-1aca-4d5e-befe-a52647ead21e&pd_rd_r=23c60f36-c6f1-43fb-8fb4-59d764073c73&pd_rd_w=b7690&pd_rd_wg=TcyWG&pf_rd_p=fd35f9f2-1aca-4d5e-befe-a52647ead21e&pf_rd_r=RH369CG6CY05Z7ZRC5V7&qid=1757686819&rnid=5272947031&ref=sr_nr_p_n_feature_browse-bin_16&ds=v1%3AeVBCwAaV7lg0nL0TvVMT3WSLwTzHLrkNuAu73nM9h6s"
+  },
+  {
+    "nom_categorie": "Portugais",
+    "nom_fichier": "scraper_portugais.py",
+    "url_base": "https://www.amazon.fr/s?i=stripbooks&rh=n%3A301061%2Cp_72%3A184904031%2Cp_n_feature_browse-bin%3A5272966031&s=popularity-rank&dc&content-id=amzn1.sym.fd35f9f2-1aca-4d5e-befe-a52647ead21e&pd_rd_r=23c60f36-c6f1-43fb-8fb4-59d764073c73&pd_rd_w=b7690&pd_rd_wg=TcyWG&pf_rd_p=fd35f9f2-1aca-4d5e-befe-a52647ead21e&pf_rd_r=RH369CG6CY05Z7ZRC5V7&qid=1757686819&rnid=5272947031&ref=sr_nr_p_n_feature_browse-bin_17&ds=v1%3A38jRvtHHMG94mRNN5W%2F%2BFKYJ5ikiSdrabQwt%2BSaB5Fw"
+  },
+  {
+    "nom_categorie": "Russe",
+    "nom_fichier": "scraper_russe.py",
+    "url_base": "https://www.amazon.fr/s?i=stripbooks&rh=n%3A301061%2Cp_72%3A184904031%2Cp_n_feature_browse-bin%3A5272968031&s=popularity-rank&dc&content-id=amzn1.sym.fd35f9f2-1aca-4d5e-befe-a52647ead21e&pd_rd_r=23c60f36-c6f1-43fb-8fb4-59d764073c73&pd_rd_w=b7690&pd_rd_wg=TcyWG&pf_rd_p=fd35f9f2-1aca-4d5e-befe-a52647ead21e&pf_rd_r=RH369CG6CY05Z7ZRC5V7&qid=1757686819&rnid=5272947031&ref=sr_nr_p_n_feature_browse-bin_18&ds=v1%3AwRg9CK4eyB7v7VXv%2BpLZ20WiX4vaZSjM6NWjNU3zc4c"
+  },
+  {
+    "nom_categorie": "Turc",
+    "nom_fichier": "scraper_turc.py",
+    "url_base": "https://www.amazon.fr/s?i=stripbooks&rh=n%3A301061%2Cp_72%3A184904031%2Cp_n_feature_browse-bin%3A5272970031&s=popularity-rank&dc&content-id=amzn1.sym.fd35f9f2-1aca-4d5e-befe-a52647ead21e&pd_rd_r=23c60f36-c6f1-43fb-8fb4-59d764073c73&pd_rd_w=b7690&pd_rd_wg=TcyWG&pf_rd_p=fd35f9f2-1aca-4d5e-befe-a52647ead21e&pf_rd_r=RH369CG6CY05Z7ZRC5V7&qid=1757686819&rnid=5272947031&ref=sr_nr_p_n_feature_browse-bin_19&ds=v1%3AwCaEQN%2BuorvllBeaJPgMwN83Pdpku4j3eWnwkqU%2FPPg"
+  }
+]

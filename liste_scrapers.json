@@ -1,0 +1,1272 @@
+[
+  {
+    "nom_categorie": "20 Eur Et Plus",
+    "nom_fichier": "scraper_20_eur_et_plus.py",
+    "url_base": "https://www.amazon.fr/s?k=20+eur+et+plus&i=stripbooks"
+  },
+  {
+    "nom_categorie": "4 Stars Plus",
+    "nom_fichier": "scraper_4_stars_plus.py",
+    "url_base": "https://www.amazon.fr/s?k=4+stars+plus&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Actualité Politique Et Société",
+    "nom_fichier": "scraper_actualité_politique_et_société.py",
+    "url_base": "https://www.amazon.fr/s?k=actualité+politique+et+société&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Adolescents",
+    "nom_fichier": "scraper_adolescents.py",
+    "url_base": "https://www.amazon.fr/s?k=adolescents&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Ados",
+    "nom_fichier": "scraper_ados.py",
+    "url_base": "https://www.amazon.fr/s?k=ados&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Adulte",
+    "nom_fichier": "scraper_adulte.py",
+    "url_base": "https://www.amazon.fr/s?k=adulte&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Agendas De Poche",
+    "nom_fichier": "scraper_agendas_de_poche.py",
+    "url_base": "https://www.amazon.fr/s?k=agendas+de+poche&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Agendas Fresh",
+    "nom_fichier": "scraper_agendas_fresh.py",
+    "url_base": "https://www.amazon.fr/s?k=agendas+fresh&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Album",
+    "nom_fichier": "scraper_album.py",
+    "url_base": "https://www.amazon.fr/s?k=album&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Alimentation Regimes Et Dietet",
+    "nom_fichier": "scraper_alimentation_regimes_et_dietet.py",
+    "url_base": "https://www.amazon.fr/s?k=alimentation+regimes+et+dietet&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Alimentation Regimes Et Dietetique",
+    "nom_fichier": "scraper_alimentation_regimes_et_dietetique.py",
+    "url_base": "https://www.amazon.fr/s?k=alimentation+regimes+et+dietetique&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Allemand",
+    "nom_fichier": "scraper_allemand.py",
+    "url_base": "https://www.amazon.fr/s?k=allemand&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Amazon Global Store",
+    "nom_fichier": "scraper_amazon_global_store.py",
+    "url_base": "https://www.amazon.fr/s?k=amazon+global+store&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Anglais",
+    "nom_fichier": "scraper_anglais.py",
+    "url_base": "https://www.amazon.fr/s?k=anglais&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Anthropologie",
+    "nom_fichier": "scraper_anthropologie.py",
+    "url_base": "https://www.amazon.fr/s?k=anthropologie&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Arabe",
+    "nom_fichier": "scraper_arabe.py",
+    "url_base": "https://www.amazon.fr/s?k=arabe&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Architecture",
+    "nom_fichier": "scraper_architecture.py",
+    "url_base": "https://www.amazon.fr/s?k=architecture&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Architecture Ultime",
+    "nom_fichier": "scraper_architecture_ultime.py",
+    "url_base": "https://www.amazon.fr/s?k=architecture+ultime&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Architecture Ultra Simple",
+    "nom_fichier": "scraper_architecture_ultra_simple.py",
+    "url_base": "https://www.amazon.fr/s?k=architecture+ultra+simple&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Art",
+    "nom_fichier": "scraper_art.py",
+    "url_base": "https://www.amazon.fr/s?k=art&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Art De La Table Fetes Et Recep",
+    "nom_fichier": "scraper_art_de_la_table_fetes_et_recep.py",
+    "url_base": "https://www.amazon.fr/s?k=art+de+la+table+fetes+et+recep&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Art Test",
+    "nom_fichier": "scraper_art_test.py",
+    "url_base": "https://www.amazon.fr/s?k=art+test&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Arts Et Photographie",
+    "nom_fichier": "scraper_arts_et_photographie.py",
+    "url_base": "https://www.amazon.fr/s?k=arts+et+photographie&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Astronomie",
+    "nom_fichier": "scraper_astronomie.py",
+    "url_base": "https://www.amazon.fr/s?k=astronomie&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Athletisme Gymnastique Et Fitness",
+    "nom_fichier": "scraper_athletisme_gymnastique_et_fitness.py",
+    "url_base": "https://www.amazon.fr/s?k=athletisme+gymnastique+et+fitness&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Auteurs Collectif",
+    "nom_fichier": "scraper_auteurs_collectif.py",
+    "url_base": "https://www.amazon.fr/s?k=auteurs+collectif&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Autobiographie",
+    "nom_fichier": "scraper_autobiographie.py",
+    "url_base": "https://www.amazon.fr/s?k=autobiographie&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Aventure",
+    "nom_fichier": "scraper_aventure.py",
+    "url_base": "https://www.amazon.fr/s?k=aventure&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Bande Dessinee",
+    "nom_fichier": "scraper_bande_dessinee.py",
+    "url_base": "https://www.amazon.fr/s?k=bande+dessinee&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Bandes Dessinees",
+    "nom_fichier": "scraper_bandes_dessinees.py",
+    "url_base": "https://www.amazon.fr/s?k=bandes+dessinees&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Bandes Dessinées",
+    "nom_fichier": "scraper_bandes_dessinées.py",
+    "url_base": "https://www.amazon.fr/s?k=bandes+dessinées&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Bd",
+    "nom_fichier": "scraper_bd.py",
+    "url_base": "https://www.amazon.fr/s?k=bd&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Bd Adultes",
+    "nom_fichier": "scraper_bd_adultes.py",
+    "url_base": "https://www.amazon.fr/s?k=bd+adultes&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Bd Jeunesse",
+    "nom_fichier": "scraper_bd_jeunesse.py",
+    "url_base": "https://www.amazon.fr/s?k=bd+jeunesse&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Beaux Livres",
+    "nom_fichier": "scraper_beaux_livres.py",
+    "url_base": "https://www.amazon.fr/s?k=beaux+livres&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Bien Etre",
+    "nom_fichier": "scraper_bien_etre.py",
+    "url_base": "https://www.amazon.fr/s?k=bien+etre&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Biographie",
+    "nom_fichier": "scraper_biographie.py",
+    "url_base": "https://www.amazon.fr/s?k=biographie&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Biographie Et Autofiction",
+    "nom_fichier": "scraper_biographie_et_autofiction.py",
+    "url_base": "https://www.amazon.fr/s?k=biographie+et+autofiction&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Biographies",
+    "nom_fichier": "scraper_biographies.py",
+    "url_base": "https://www.amazon.fr/s?k=biographies&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Biologie",
+    "nom_fichier": "scraper_biologie.py",
+    "url_base": "https://www.amazon.fr/s?k=biologie&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Bricolage",
+    "nom_fichier": "scraper_bricolage.py",
+    "url_base": "https://www.amazon.fr/s?k=bricolage&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Broché",
+    "nom_fichier": "scraper_broché.py",
+    "url_base": "https://www.amazon.fr/s?k=broché&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Calendriers De Lavent",
+    "nom_fichier": "scraper_calendriers_de_lavent.py",
+    "url_base": "https://www.amazon.fr/s?k=calendriers+de+lavent&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Calendriers Et Agendas",
+    "nom_fichier": "scraper_calendriers_et_agendas.py",
+    "url_base": "https://www.amazon.fr/s?k=calendriers+et+agendas&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Calendriers Muraux",
+    "nom_fichier": "scraper_calendriers_muraux.py",
+    "url_base": "https://www.amazon.fr/s?k=calendriers+muraux&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Catalan",
+    "nom_fichier": "scraper_catalan.py",
+    "url_base": "https://www.amazon.fr/s?k=catalan&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Chimie",
+    "nom_fichier": "scraper_chimie.py",
+    "url_base": "https://www.amazon.fr/s?k=chimie&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Chinois",
+    "nom_fichier": "scraper_chinois.py",
+    "url_base": "https://www.amazon.fr/s?k=chinois&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Christianisme",
+    "nom_fichier": "scraper_christianisme.py",
+    "url_base": "https://www.amazon.fr/s?k=christianisme&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Cinema",
+    "nom_fichier": "scraper_cinema.py",
+    "url_base": "https://www.amazon.fr/s?k=cinema&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Collectif",
+    "nom_fichier": "scraper_collectif.py",
+    "url_base": "https://www.amazon.fr/s?k=collectif&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Collectif Collectif",
+    "nom_fichier": "scraper_collectif_collectif.py",
+    "url_base": "https://www.amazon.fr/s?k=collectif+collectif&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Collectif D Auteurs",
+    "nom_fichier": "scraper_collectif_d_auteurs.py",
+    "url_base": "https://www.amazon.fr/s?k=collectif+d+auteurs&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Collectif Michelin",
+    "nom_fichier": "scraper_collectif_michelin.py",
+    "url_base": "https://www.amazon.fr/s?k=collectif+michelin&i=stripbooks"
+  },
+  {
+    "nom_categorie": "College",
+    "nom_fichier": "scraper_college.py",
+    "url_base": "https://www.amazon.fr/s?k=college&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Comic",
+    "nom_fichier": "scraper_comic.py",
+    "url_base": "https://www.amazon.fr/s?k=comic&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Comics",
+    "nom_fichier": "scraper_comics.py",
+    "url_base": "https://www.amazon.fr/s?k=comics&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Construction",
+    "nom_fichier": "scraper_construction.py",
+    "url_base": "https://www.amazon.fr/s?k=construction&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Contes Et Legendes",
+    "nom_fichier": "scraper_contes_et_legendes.py",
+    "url_base": "https://www.amazon.fr/s?k=contes+et+legendes&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Correspondance",
+    "nom_fichier": "scraper_correspondance.py",
+    "url_base": "https://www.amazon.fr/s?k=correspondance&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Coréen",
+    "nom_fichier": "scraper_coréen.py",
+    "url_base": "https://www.amazon.fr/s?k=coréen&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Cours",
+    "nom_fichier": "scraper_cours.py",
+    "url_base": "https://www.amazon.fr/s?k=cours&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Cuisine",
+    "nom_fichier": "scraper_cuisine.py",
+    "url_base": "https://www.amazon.fr/s?k=cuisine&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Cuisine Au Quotidien",
+    "nom_fichier": "scraper_cuisine_au_quotidien.py",
+    "url_base": "https://www.amazon.fr/s?k=cuisine+au+quotidien&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Cuisine Old Backup",
+    "nom_fichier": "scraper_cuisine_old_backup.py",
+    "url_base": "https://www.amazon.fr/s?k=cuisine+old+backup&i=stripbooks"
+  },
+  {
+    "nom_categorie": "D Auteurs Collectif",
+    "nom_fichier": "scraper_d_auteurs_collectif.py",
+    "url_base": "https://www.amazon.fr/s?k=d+auteurs+collectif&i=stripbooks"
+  },
+  {
+    "nom_categorie": "D Illustrateurs Collectif",
+    "nom_fichier": "scraper_d_illustrateurs_collectif.py",
+    "url_base": "https://www.amazon.fr/s?k=d+illustrateurs+collectif&i=stripbooks"
+  },
+  {
+    "nom_categorie": "D Occasion",
+    "nom_fichier": "scraper_d_occasion.py",
+    "url_base": "https://www.amazon.fr/s?k=d+occasion&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Dans Les 3 Mois À Venir",
+    "nom_fichier": "scraper_dans_les_3_mois_à_venir.py",
+    "url_base": "https://www.amazon.fr/s?k=dans+les+3+mois+à+venir&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Danse",
+    "nom_fichier": "scraper_danse.py",
+    "url_base": "https://www.amazon.fr/s?k=danse&i=stripbooks"
+  },
+  {
+    "nom_categorie": "David Collectif",
+    "nom_fichier": "scraper_david_collectif.py",
+    "url_base": "https://www.amazon.fr/s?k=david+collectif&i=stripbooks"
+  },
+  {
+    "nom_categorie": "De 10 À 20 Eur",
+    "nom_fichier": "scraper_de_10_à_20_eur.py",
+    "url_base": "https://www.amazon.fr/s?k=de+10+à+20+eur&i=stripbooks"
+  },
+  {
+    "nom_categorie": "De 5 À 10 Eur",
+    "nom_fichier": "scraper_de_5_à_10_eur.py",
+    "url_base": "https://www.amazon.fr/s?k=de+5+à+10+eur&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Depuis 1 Mois",
+    "nom_fichier": "scraper_depuis_1_mois.py",
+    "url_base": "https://www.amazon.fr/s?k=depuis+1+mois&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Depuis 3 Mois",
+    "nom_fichier": "scraper_depuis_3_mois.py",
+    "url_base": "https://www.amazon.fr/s?k=depuis+3+mois&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Design",
+    "nom_fichier": "scraper_design.py",
+    "url_base": "https://www.amazon.fr/s?k=design&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Developpement Economique Et Entrepreneuriat",
+    "nom_fichier": "scraper_developpement_economique_et_entrepreneuriat.py",
+    "url_base": "https://www.amazon.fr/s?k=developpement+economique+et+entrepreneuriat&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Developpement Personnel",
+    "nom_fichier": "scraper_developpement_personnel.py",
+    "url_base": "https://www.amazon.fr/s?k=developpement+personnel&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Dictionnaire",
+    "nom_fichier": "scraper_dictionnaire.py",
+    "url_base": "https://www.amazon.fr/s?k=dictionnaire&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Dictionnaires",
+    "nom_fichier": "scraper_dictionnaires.py",
+    "url_base": "https://www.amazon.fr/s?k=dictionnaires&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Disney Collectif",
+    "nom_fichier": "scraper_disney_collectif.py",
+    "url_base": "https://www.amazon.fr/s?k=disney+collectif&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Droit",
+    "nom_fichier": "scraper_droit.py",
+    "url_base": "https://www.amazon.fr/s?k=droit&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Décocher",
+    "nom_fichier": "scraper_décocher.py",
+    "url_base": "https://www.amazon.fr/s?k=décocher&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Ebook Kindle",
+    "nom_fichier": "scraper_ebook_kindle.py",
+    "url_base": "https://www.amazon.fr/s?k=ebook+kindle&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Economie",
+    "nom_fichier": "scraper_economie.py",
+    "url_base": "https://www.amazon.fr/s?k=economie&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Electronique",
+    "nom_fichier": "scraper_electronique.py",
+    "url_base": "https://www.amazon.fr/s?k=electronique&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Encyclopedie",
+    "nom_fichier": "scraper_encyclopedie.py",
+    "url_base": "https://www.amazon.fr/s?k=encyclopedie&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Encyclopedies",
+    "nom_fichier": "scraper_encyclopedies.py",
+    "url_base": "https://www.amazon.fr/s?k=encyclopedies&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Encyclopédies",
+    "nom_fichier": "scraper_encyclopédies.py",
+    "url_base": "https://www.amazon.fr/s?k=encyclopédies&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Enfants",
+    "nom_fichier": "scraper_enfants.py",
+    "url_base": "https://www.amazon.fr/s?k=enfants&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Entreprise Et Bourse",
+    "nom_fichier": "scraper_entreprise_et_bourse.py",
+    "url_base": "https://www.amazon.fr/s?k=entreprise+et+bourse&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Esoterisme Et Paranormal",
+    "nom_fichier": "scraper_esoterisme_et_paranormal.py",
+    "url_base": "https://www.amazon.fr/s?k=esoterisme+et+paranormal&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Espagnol",
+    "nom_fichier": "scraper_espagnol.py",
+    "url_base": "https://www.amazon.fr/s?k=espagnol&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Essai",
+    "nom_fichier": "scraper_essai.py",
+    "url_base": "https://www.amazon.fr/s?k=essai&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Essais",
+    "nom_fichier": "scraper_essais.py",
+    "url_base": "https://www.amazon.fr/s?k=essais&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Europe",
+    "nom_fichier": "scraper_europe.py",
+    "url_base": "https://www.amazon.fr/s?k=europe&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Exercice Et Fitness",
+    "nom_fichier": "scraper_exercice_et_fitness.py",
+    "url_base": "https://www.amazon.fr/s?k=exercice+et+fitness&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Famille Et Bien Être",
+    "nom_fichier": "scraper_famille_et_bien_être.py",
+    "url_base": "https://www.amazon.fr/s?k=famille+et+bien+être&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Fantastique",
+    "nom_fichier": "scraper_fantastique.py",
+    "url_base": "https://www.amazon.fr/s?k=fantastique&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Fantastique Et Terreur",
+    "nom_fichier": "scraper_fantastique_et_terreur.py",
+    "url_base": "https://www.amazon.fr/s?k=fantastique+et+terreur&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Fantasy",
+    "nom_fichier": "scraper_fantasy.py",
+    "url_base": "https://www.amazon.fr/s?k=fantasy&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Français",
+    "nom_fichier": "scraper_français.py",
+    "url_base": "https://www.amazon.fr/s?k=français&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Freida Mcfadden",
+    "nom_fichier": "scraper_freida_mcfadden.py",
+    "url_base": "https://www.amazon.fr/s?k=freida+mcfadden&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Geographie",
+    "nom_fichier": "scraper_geographie.py",
+    "url_base": "https://www.amazon.fr/s?k=geographie&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Geologie",
+    "nom_fichier": "scraper_geologie.py",
+    "url_base": "https://www.amazon.fr/s?k=geologie&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Grands Succes",
+    "nom_fichier": "scraper_grands_succes.py",
+    "url_base": "https://www.amazon.fr/s?k=grands+succes&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Guide",
+    "nom_fichier": "scraper_guide.py",
+    "url_base": "https://www.amazon.fr/s?k=guide&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Guides Pratiques",
+    "nom_fichier": "scraper_guides_pratiques.py",
+    "url_base": "https://www.amazon.fr/s?k=guides+pratiques&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Géologie",
+    "nom_fichier": "scraper_géologie.py",
+    "url_base": "https://www.amazon.fr/s?k=géologie&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Heroc Fantasy",
+    "nom_fichier": "scraper_heroc_fantasy.py",
+    "url_base": "https://www.amazon.fr/s?k=heroc+fantasy&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Heroic Fantasy",
+    "nom_fichier": "scraper_heroic_fantasy.py",
+    "url_base": "https://www.amazon.fr/s?k=heroic+fantasy&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Hindi",
+    "nom_fichier": "scraper_hindi.py",
+    "url_base": "https://www.amazon.fr/s?k=hindi&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Histoire",
+    "nom_fichier": "scraper_histoire.py",
+    "url_base": "https://www.amazon.fr/s?k=histoire&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Historique",
+    "nom_fichier": "scraper_historique.py",
+    "url_base": "https://www.amazon.fr/s?k=historique&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Horreur",
+    "nom_fichier": "scraper_horreur.py",
+    "url_base": "https://www.amazon.fr/s?k=horreur&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Humour",
+    "nom_fichier": "scraper_humour.py",
+    "url_base": "https://www.amazon.fr/s?k=humour&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Hébreu",
+    "nom_fichier": "scraper_hébreu.py",
+    "url_base": "https://www.amazon.fr/s?k=hébreu&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Inclus Dans Une Série",
+    "nom_fichier": "scraper_inclus_dans_une_série.py",
+    "url_base": "https://www.amazon.fr/s?k=inclus+dans+une+série&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Informatique",
+    "nom_fichier": "scraper_informatique.py",
+    "url_base": "https://www.amazon.fr/s?k=informatique&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Informatique Et Internet",
+    "nom_fichier": "scraper_informatique_et_internet.py",
+    "url_base": "https://www.amazon.fr/s?k=informatique+et+internet&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Ingenierie",
+    "nom_fichier": "scraper_ingenierie.py",
+    "url_base": "https://www.amazon.fr/s?k=ingenierie&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Italien",
+    "nom_fichier": "scraper_italien.py",
+    "url_base": "https://www.amazon.fr/s?k=italien&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Japonais",
+    "nom_fichier": "scraper_japonais.py",
+    "url_base": "https://www.amazon.fr/s?k=japonais&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Jardinage",
+    "nom_fichier": "scraper_jardinage.py",
+    "url_base": "https://www.amazon.fr/s?k=jardinage&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Jeunesse",
+    "nom_fichier": "scraper_jeunesse.py",
+    "url_base": "https://www.amazon.fr/s?k=jeunesse&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Jeux Arts Et Creation",
+    "nom_fichier": "scraper_jeux_arts_et_creation.py",
+    "url_base": "https://www.amazon.fr/s?k=jeux+arts+et+creation&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Josei",
+    "nom_fichier": "scraper_josei.py",
+    "url_base": "https://www.amazon.fr/s?k=josei&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Journal",
+    "nom_fichier": "scraper_journal.py",
+    "url_base": "https://www.amazon.fr/s?k=journal&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Jusqu À 5 Eur",
+    "nom_fichier": "scraper_jusqu_à_5_eur.py",
+    "url_base": "https://www.amazon.fr/s?k=jusqu+à+5+eur&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Le Livre Autrement",
+    "nom_fichier": "scraper_le_livre_autrement.py",
+    "url_base": "https://www.amazon.fr/s?k=le+livre+autrement&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Light Novels",
+    "nom_fichier": "scraper_light_novels.py",
+    "url_base": "https://www.amazon.fr/s?k=light+novels&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Litterature Etrangere",
+    "nom_fichier": "scraper_litterature_etrangere.py",
+    "url_base": "https://www.amazon.fr/s?k=litterature+etrangere&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Litterature Francaise",
+    "nom_fichier": "scraper_litterature_francaise.py",
+    "url_base": "https://www.amazon.fr/s?k=litterature+francaise&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Littérature Française",
+    "nom_fichier": "scraper_littérature_française.py",
+    "url_base": "https://www.amazon.fr/s?k=littérature+française&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Littérature Étrangère",
+    "nom_fichier": "scraper_littérature_étrangère.py",
+    "url_base": "https://www.amazon.fr/s?k=littérature+étrangère&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Livre Audio",
+    "nom_fichier": "scraper_livre_audio.py",
+    "url_base": "https://www.amazon.fr/s?k=livre+audio&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Livre En Langues Etrangeres",
+    "nom_fichier": "scraper_livre_en_langues_etrangeres.py",
+    "url_base": "https://www.amazon.fr/s?k=livre+en+langues+etrangeres&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Livres",
+    "nom_fichier": "scraper_livres.py",
+    "url_base": "https://www.amazon.fr/s?k=livres&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Livres De Cuisine Cuisine Et V",
+    "nom_fichier": "scraper_livres_de_cuisine_cuisine_et_v.py",
+    "url_base": "https://www.amazon.fr/s?k=livres+de+cuisine+cuisine+et+v&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Livres De Cuisine Cuisine Et Vins",
+    "nom_fichier": "scraper_livres_de_cuisine_cuisine_et_vins.py",
+    "url_base": "https://www.amazon.fr/s?k=livres+de+cuisine+cuisine+et+vins&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Livres De Cuisine Pour Regimes",
+    "nom_fichier": "scraper_livres_de_cuisine_pour_regimes.py",
+    "url_base": "https://www.amazon.fr/s?k=livres+de+cuisine+pour+regimes&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Livres De Cuisine Pour Regimes Speciaux",
+    "nom_fichier": "scraper_livres_de_cuisine_pour_regimes_speciaux.py",
+    "url_base": "https://www.amazon.fr/s?k=livres+de+cuisine+pour+regimes+speciaux&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Livres En Langues Etrangeres",
+    "nom_fichier": "scraper_livres_en_langues_etrangeres.py",
+    "url_base": "https://www.amazon.fr/s?k=livres+en+langues+etrangeres&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Livres Pour Enfants",
+    "nom_fichier": "scraper_livres_pour_enfants.py",
+    "url_base": "https://www.amazon.fr/s?k=livres+pour+enfants&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Loisirs Créatifs Décoration Et Maison",
+    "nom_fichier": "scraper_loisirs_créatifs_décoration_et_maison.py",
+    "url_base": "https://www.amazon.fr/s?k=loisirs+créatifs+décoration+et+maison&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Manga",
+    "nom_fichier": "scraper_manga.py",
+    "url_base": "https://www.amazon.fr/s?k=manga&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Mangas Shojo",
+    "nom_fichier": "scraper_mangas_shojo.py",
+    "url_base": "https://www.amazon.fr/s?k=mangas+shojo&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Mangas Shonen",
+    "nom_fichier": "scraper_mangas_shonen.py",
+    "url_base": "https://www.amazon.fr/s?k=mangas+shonen&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Manuel",
+    "nom_fichier": "scraper_manuel.py",
+    "url_base": "https://www.amazon.fr/s?k=manuel&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Manuels",
+    "nom_fichier": "scraper_manuels.py",
+    "url_base": "https://www.amazon.fr/s?k=manuels&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Marketing Et Publicite",
+    "nom_fichier": "scraper_marketing_et_publicite.py",
+    "url_base": "https://www.amazon.fr/s?k=marketing+et+publicite&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Maternelle",
+    "nom_fichier": "scraper_maternelle.py",
+    "url_base": "https://www.amazon.fr/s?k=maternelle&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Mathematiques",
+    "nom_fichier": "scraper_mathematiques.py",
+    "url_base": "https://www.amazon.fr/s?k=mathematiques&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Mecanique",
+    "nom_fichier": "scraper_mecanique.py",
+    "url_base": "https://www.amazon.fr/s?k=mecanique&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Medecine",
+    "nom_fichier": "scraper_medecine.py",
+    "url_base": "https://www.amazon.fr/s?k=medecine&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Memoires",
+    "nom_fichier": "scraper_memoires.py",
+    "url_base": "https://www.amazon.fr/s?k=memoires&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Mode",
+    "nom_fichier": "scraper_mode.py",
+    "url_base": "https://www.amazon.fr/s?k=mode&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Monde",
+    "nom_fichier": "scraper_monde.py",
+    "url_base": "https://www.amazon.fr/s?k=monde&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Musique",
+    "nom_fichier": "scraper_musique.py",
+    "url_base": "https://www.amazon.fr/s?k=musique&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Mystere",
+    "nom_fichier": "scraper_mystere.py",
+    "url_base": "https://www.amazon.fr/s?k=mystere&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Mystere Et Suspense",
+    "nom_fichier": "scraper_mystere_et_suspense.py",
+    "url_base": "https://www.amazon.fr/s?k=mystere+et+suspense&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Mystère Et Suspense",
+    "nom_fichier": "scraper_mystère_et_suspense.py",
+    "url_base": "https://www.amazon.fr/s?k=mystère+et+suspense&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Mécanique",
+    "nom_fichier": "scraper_mécanique.py",
+    "url_base": "https://www.amazon.fr/s?k=mécanique&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Nature Et Animaux",
+    "nom_fichier": "scraper_nature_et_animaux.py",
+    "url_base": "https://www.amazon.fr/s?k=nature+et+animaux&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Neuf",
+    "nom_fichier": "scraper_neuf.py",
+    "url_base": "https://www.amazon.fr/s?k=neuf&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Non Inclus Dans Une Série",
+    "nom_fichier": "scraper_non_inclus_dans_une_série.py",
+    "url_base": "https://www.amazon.fr/s?k=non+inclus+dans+une+série&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Nouvelle",
+    "nom_fichier": "scraper_nouvelle.py",
+    "url_base": "https://www.amazon.fr/s?k=nouvelle&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Néerlandais",
+    "nom_fichier": "scraper_néerlandais.py",
+    "url_base": "https://www.amazon.fr/s?k=néerlandais&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Ouvrages De Reference",
+    "nom_fichier": "scraper_ouvrages_de_reference.py",
+    "url_base": "https://www.amazon.fr/s?k=ouvrages+de+reference&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Paranormal Et Parapsychologie",
+    "nom_fichier": "scraper_paranormal_et_parapsychologie.py",
+    "url_base": "https://www.amazon.fr/s?k=paranormal+et+parapsychologie&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Peinture",
+    "nom_fichier": "scraper_peinture.py",
+    "url_base": "https://www.amazon.fr/s?k=peinture&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Philosophie",
+    "nom_fichier": "scraper_philosophie.py",
+    "url_base": "https://www.amazon.fr/s?k=philosophie&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Photographie",
+    "nom_fichier": "scraper_photographie.py",
+    "url_base": "https://www.amazon.fr/s?k=photographie&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Photographie Et Video",
+    "nom_fichier": "scraper_photographie_et_video.py",
+    "url_base": "https://www.amazon.fr/s?k=photographie+et+video&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Physique",
+    "nom_fichier": "scraper_physique.py",
+    "url_base": "https://www.amazon.fr/s?k=physique&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Physique Sciences De La Matiere",
+    "nom_fichier": "scraper_physique_sciences_de_la_matiere.py",
+    "url_base": "https://www.amazon.fr/s?k=physique+sciences+de+la+matiere&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Poche",
+    "nom_fichier": "scraper_poche.py",
+    "url_base": "https://www.amazon.fr/s?k=poche&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Poesie",
+    "nom_fichier": "scraper_poesie.py",
+    "url_base": "https://www.amazon.fr/s?k=poesie&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Polar Et Thriller",
+    "nom_fichier": "scraper_polar_et_thriller.py",
+    "url_base": "https://www.amazon.fr/s?k=polar+et+thriller&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Policier",
+    "nom_fichier": "scraper_policier.py",
+    "url_base": "https://www.amazon.fr/s?k=policier&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Politique",
+    "nom_fichier": "scraper_politique.py",
+    "url_base": "https://www.amazon.fr/s?k=politique&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Portugais",
+    "nom_fichier": "scraper_portugais.py",
+    "url_base": "https://www.amazon.fr/s?k=portugais&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Post Apocalyptique",
+    "nom_fichier": "scraper_post_apocalyptique.py",
+    "url_base": "https://www.amazon.fr/s?k=post+apocalyptique&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Premier De La Série",
+    "nom_fichier": "scraper_premier_de_la_série.py",
+    "url_base": "https://www.amazon.fr/s?k=premier+de+la+série&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Primaire",
+    "nom_fichier": "scraper_primaire.py",
+    "url_base": "https://www.amazon.fr/s?k=primaire&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Professionnel",
+    "nom_fichier": "scraper_professionnel.py",
+    "url_base": "https://www.amazon.fr/s?k=professionnel&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Psychologie",
+    "nom_fichier": "scraper_psychologie.py",
+    "url_base": "https://www.amazon.fr/s?k=psychologie&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Questions De Societe",
+    "nom_fichier": "scraper_questions_de_societe.py",
+    "url_base": "https://www.amazon.fr/s?k=questions+de+societe&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Recevez Le Aujourd Hui",
+    "nom_fichier": "scraper_recevez_le_aujourd_hui.py",
+    "url_base": "https://www.amazon.fr/s?k=recevez+le+aujourd+hui&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Recevez Le D Ici Demain",
+    "nom_fichier": "scraper_recevez_le_d_ici_demain.py",
+    "url_base": "https://www.amazon.fr/s?k=recevez+le+d+ici+demain&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Recits De Voyages",
+    "nom_fichier": "scraper_recits_de_voyages.py",
+    "url_base": "https://www.amazon.fr/s?k=recits+de+voyages&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Reference",
+    "nom_fichier": "scraper_reference.py",
+    "url_base": "https://www.amazon.fr/s?k=reference&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Religion",
+    "nom_fichier": "scraper_religion.py",
+    "url_base": "https://www.amazon.fr/s?k=religion&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Religions Et Spiritualites",
+    "nom_fichier": "scraper_religions_et_spiritualites.py",
+    "url_base": "https://www.amazon.fr/s?k=religions+et+spiritualites&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Religions Et Spiritualités",
+    "nom_fichier": "scraper_religions_et_spiritualités.py",
+    "url_base": "https://www.amazon.fr/s?k=religions+et+spiritualités&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Relié",
+    "nom_fichier": "scraper_relié.py",
+    "url_base": "https://www.amazon.fr/s?k=relié&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Roman",
+    "nom_fichier": "scraper_roman.py",
+    "url_base": "https://www.amazon.fr/s?k=roman&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Romance",
+    "nom_fichier": "scraper_romance.py",
+    "url_base": "https://www.amazon.fr/s?k=romance&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Romance Et Littérature Sentimentale",
+    "nom_fichier": "scraper_romance_et_littérature_sentimentale.py",
+    "url_base": "https://www.amazon.fr/s?k=romance+et+littérature+sentimentale&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Romans",
+    "nom_fichier": "scraper_romans.py",
+    "url_base": "https://www.amazon.fr/s?k=romans&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Romans Et Litterature",
+    "nom_fichier": "scraper_romans_et_litterature.py",
+    "url_base": "https://www.amazon.fr/s?k=romans+et+litterature&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Romans Et Littérature",
+    "nom_fichier": "scraper_romans_et_littérature.py",
+    "url_base": "https://www.amazon.fr/s?k=romans+et+littérature&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Romans Graphiques",
+    "nom_fichier": "scraper_romans_graphiques.py",
+    "url_base": "https://www.amazon.fr/s?k=romans+graphiques&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Romans Historiques",
+    "nom_fichier": "scraper_romans_historiques.py",
+    "url_base": "https://www.amazon.fr/s?k=romans+historiques&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Romans Policiers",
+    "nom_fichier": "scraper_romans_policiers.py",
+    "url_base": "https://www.amazon.fr/s?k=romans+policiers&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Référence",
+    "nom_fichier": "scraper_référence.py",
+    "url_base": "https://www.amazon.fr/s?k=référence&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Sante",
+    "nom_fichier": "scraper_sante.py",
+    "url_base": "https://www.amazon.fr/s?k=sante&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Sante Des Femmes",
+    "nom_fichier": "scraper_sante_des_femmes.py",
+    "url_base": "https://www.amazon.fr/s?k=sante+des+femmes&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Sante Forme Et Dietetique",
+    "nom_fichier": "scraper_sante_forme_et_dietetique.py",
+    "url_base": "https://www.amazon.fr/s?k=sante+forme+et+dietetique&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Santé Forme Et Diététique",
+    "nom_fichier": "scraper_santé_forme_et_diététique.py",
+    "url_base": "https://www.amazon.fr/s?k=santé+forme+et+diététique&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Science Fiction",
+    "nom_fichier": "scraper_science_fiction.py",
+    "url_base": "https://www.amazon.fr/s?k=science+fiction&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Science Fiction Et Fantasy",
+    "nom_fichier": "scraper_science_fiction_et_fantasy.py",
+    "url_base": "https://www.amazon.fr/s?k=science+fiction+et+fantasy&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Sciences",
+    "nom_fichier": "scraper_sciences.py",
+    "url_base": "https://www.amazon.fr/s?k=sciences&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Sciences Humaines",
+    "nom_fichier": "scraper_sciences_humaines.py",
+    "url_base": "https://www.amazon.fr/s?k=sciences+humaines&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Sciences Techniques Et Medecine",
+    "nom_fichier": "scraper_sciences_techniques_et_medecine.py",
+    "url_base": "https://www.amazon.fr/s?k=sciences+techniques+et+medecine&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Sciences Techniques Et Médecine",
+    "nom_fichier": "scraper_sciences_techniques_et_médecine.py",
+    "url_base": "https://www.amazon.fr/s?k=sciences+techniques+et+médecine&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Scientifiques",
+    "nom_fichier": "scraper_scientifiques.py",
+    "url_base": "https://www.amazon.fr/s?k=scientifiques&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Scolaire",
+    "nom_fichier": "scraper_scolaire.py",
+    "url_base": "https://www.amazon.fr/s?k=scolaire&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Scolaire Et Parascolaire",
+    "nom_fichier": "scraper_scolaire_et_parascolaire.py",
+    "url_base": "https://www.amazon.fr/s?k=scolaire+et+parascolaire&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Sculpture",
+    "nom_fichier": "scraper_sculpture.py",
+    "url_base": "https://www.amazon.fr/s?k=sculpture&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Seinen",
+    "nom_fichier": "scraper_seinen.py",
+    "url_base": "https://www.amazon.fr/s?k=seinen&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Seniors",
+    "nom_fichier": "scraper_seniors.py",
+    "url_base": "https://www.amazon.fr/s?k=seniors&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Simple Alimentation",
+    "nom_fichier": "scraper_simple_alimentation.py",
+    "url_base": "https://www.amazon.fr/s?k=simple+alimentation&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Sociologie",
+    "nom_fichier": "scraper_sociologie.py",
+    "url_base": "https://www.amazon.fr/s?k=sociologie&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Space Opera",
+    "nom_fichier": "scraper_space_opera.py",
+    "url_base": "https://www.amazon.fr/s?k=space+opera&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Spiritualite",
+    "nom_fichier": "scraper_spiritualite.py",
+    "url_base": "https://www.amazon.fr/s?k=spiritualite&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Sport",
+    "nom_fichier": "scraper_sport.py",
+    "url_base": "https://www.amazon.fr/s?k=sport&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Sports Et Loisirs",
+    "nom_fichier": "scraper_sports_et_loisirs.py",
+    "url_base": "https://www.amazon.fr/s?k=sports+et+loisirs&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Sports Pour Enfants Et Jeunes",
+    "nom_fichier": "scraper_sports_pour_enfants_et_jeunes.py",
+    "url_base": "https://www.amazon.fr/s?k=sports+pour+enfants+et+jeunes&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Suspense",
+    "nom_fichier": "scraper_suspense.py",
+    "url_base": "https://www.amazon.fr/s?k=suspense&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Suédois",
+    "nom_fichier": "scraper_suédois.py",
+    "url_base": "https://www.amazon.fr/s?k=suédois&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Technologie",
+    "nom_fichier": "scraper_technologie.py",
+    "url_base": "https://www.amazon.fr/s?k=technologie&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Theatre",
+    "nom_fichier": "scraper_theatre.py",
+    "url_base": "https://www.amazon.fr/s?k=theatre&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Themes Et Concepts",
+    "nom_fichier": "scraper_themes_et_concepts.py",
+    "url_base": "https://www.amazon.fr/s?k=themes+et+concepts&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Thetre",
+    "nom_fichier": "scraper_thetre.py",
+    "url_base": "https://www.amazon.fr/s?k=thetre&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Thriller",
+    "nom_fichier": "scraper_thriller.py",
+    "url_base": "https://www.amazon.fr/s?k=thriller&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Thriller Et Suspense",
+    "nom_fichier": "scraper_thriller_et_suspense.py",
+    "url_base": "https://www.amazon.fr/s?k=thriller+et+suspense&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Thrillers",
+    "nom_fichier": "scraper_thrillers.py",
+    "url_base": "https://www.amazon.fr/s?k=thrillers&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Titres Dans L Abonnement Kindle",
+    "nom_fichier": "scraper_titres_dans_l_abonnement_kindle.py",
+    "url_base": "https://www.amazon.fr/s?k=titres+dans+l+abonnement+kindle&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Titres Dans Prime Reading",
+    "nom_fichier": "scraper_titres_dans_prime_reading.py",
+    "url_base": "https://www.amazon.fr/s?k=titres+dans+prime+reading&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Tourisme",
+    "nom_fichier": "scraper_tourisme.py",
+    "url_base": "https://www.amazon.fr/s?k=tourisme&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Tourisme Et Voyages",
+    "nom_fichier": "scraper_tourisme_et_voyages.py",
+    "url_base": "https://www.amazon.fr/s?k=tourisme+et+voyages&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Tous Les Rabais",
+    "nom_fichier": "scraper_tous_les_rabais.py",
+    "url_base": "https://www.amazon.fr/s?k=tous+les+rabais&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Ultime Asyncio Redis",
+    "nom_fichier": "scraper_ultime_asyncio_redis.py",
+    "url_base": "https://www.amazon.fr/s?k=ultime+asyncio+redis&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Universitaire",
+    "nom_fichier": "scraper_universitaire.py",
+    "url_base": "https://www.amazon.fr/s?k=universitaire&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Ventes Flash",
+    "nom_fichier": "scraper_ventes_flash.py",
+    "url_base": "https://www.amazon.fr/s?k=ventes+flash&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Voir Plus",
+    "nom_fichier": "scraper_voir_plus.py",
+    "url_base": "https://www.amazon.fr/s?k=voir+plus&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Voyage",
+    "nom_fichier": "scraper_voyage.py",
+    "url_base": "https://www.amazon.fr/s?k=voyage&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Voyages Thematiques",
+    "nom_fichier": "scraper_voyages_thematiques.py",
+    "url_base": "https://www.amazon.fr/s?k=voyages+thematiques&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Word Wise Activé",
+    "nom_fichier": "scraper_word_wise_activé.py",
+    "url_base": "https://www.amazon.fr/s?k=word+wise+activé&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Électronique",
+    "nom_fichier": "scraper_électronique.py",
+    "url_base": "https://www.amazon.fr/s?k=électronique&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Érotisme",
+    "nom_fichier": "scraper_érotisme.py",
+    "url_base": "https://www.amazon.fr/s?k=érotisme&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Ésotérisme Et Paranormal",
+    "nom_fichier": "scraper_ésotérisme_et_paranormal.py",
+    "url_base": "https://www.amazon.fr/s?k=ésotérisme+et+paranormal&i=stripbooks"
+  },
+  {
+    "nom_categorie": "Études Supérieures",
+    "nom_fichier": "scraper_études_supérieures.py",
+    "url_base": "https://www.amazon.fr/s?k=études+supérieures&i=stripbooks"
+  }
+]

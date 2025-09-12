@@ -1,0 +1,1091 @@
+[2025-09-11 09:21:50] 🎯 103 scrapers à traiter
+[2025-09-11 09:21:50] 📊 [1/103] 1.0%
+[2025-09-11 09:21:50] 🚀 Lancement: Roman (scraper_roman.py)
+[2025-09-11 09:22:17] ✅ Roman - Terminé avec succès (0.5min)
+[2025-09-11 09:22:17] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-11 09:22:47] 📊 [2/103] 1.9%
+[2025-09-11 09:22:47] 🚀 Lancement: Poésie (scraper_poesie.py)
+[2025-09-11 09:23:14] ✅ Poésie - Terminé avec succès (0.4min)
+[2025-09-11 09:23:14] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-11 09:23:44] 📊 [3/103] 2.9%
+[2025-09-11 09:23:44] 🚀 Lancement: Théâtre (scraper_thetre.py)
+[2025-09-11 09:25:05] 🎯 103 scrapers à traiter
+[2025-09-11 09:25:05] 📊 [3/103] 2.9%
+[2025-09-11 09:25:05] 🚀 Lancement: Théâtre (scraper_thetre.py)
+[2025-09-11 09:25:12] ⏸️  Arrêt demandé par l'utilisateur
+[2025-09-11 09:25:12] 📍 Arrêt à la position: 2
+[2025-09-11 09:25:12] 💡 Relancez le script pour reprendre
+[2025-09-11 09:25:12] 📄 Rapport sauvegardé: rapport_lanceur_20250911_092512.txt
+[2025-09-12 08:59:13] ⚠️  Seulement 9 scrapers trouvés, régénération nécessaire...
+[2025-09-12 08:59:13] 🔄 Génération des scrapers depuis JSON existant...
+[2025-09-12 08:59:13] 🔨 ÉTAPE 2/2: Génération des scrapers...
+[2025-09-12 08:59:13] 📁 ÉTAPE 3/2: Création des dossiers LIVRES...
+[2025-09-12 08:59:13] ✅ Génération des scrapers terminée avec succès
+[2025-09-12 08:59:13] 🎯 9 scrapers à traiter
+[2025-09-12 08:59:13] 📊 [3/9] 33.3%
+[2025-09-12 08:59:13] 🚀 Lancement: Livre en Langues Etrangères (scraper_livre_en_langues_etrangeres.py)
+[2025-09-12 08:59:19] ✅ Livre en Langues Etrangères - Terminé avec succès (0.1min)
+[2025-09-12 08:59:19] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 08:59:49] 📊 [4/9] 44.4%
+[2025-09-12 08:59:49] 🚀 Lancement: Livres (scraper_livres.py)
+[2025-09-12 08:59:55] ✅ Livres - Terminé avec succès (0.1min)
+[2025-09-12 08:59:55] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 09:00:25] 📊 [5/9] 55.6%
+[2025-09-12 09:00:25] 🚀 Lancement: Livres pour enfants (scraper_livres_pour_enfants.py)
+[2025-09-12 09:00:48] ✅ Livres pour enfants - Terminé avec succès (0.4min)
+[2025-09-12 09:00:48] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 09:01:18] 📊 [6/9] 66.7%
+[2025-09-12 09:01:18] 🚀 Lancement: Livres en langues étrangères (scraper_livres_en_langues_etrangeres.py)
+[2025-09-12 09:15:00] ⏸️  Arrêt demandé par l'utilisateur
+[2025-09-12 09:15:00] 📍 Arrêt à la position: 5
+[2025-09-12 09:15:00] 💡 Relancez le script pour reprendre
+[2025-09-12 09:15:00] 📄 Rapport sauvegardé: rapport_lanceur_20250912_091500.txt
+[2025-09-12 14:49:35] 🎯 1104 scrapers à traiter
+[2025-09-12 14:49:35] 📊 [6/1104] 0.5%
+[2025-09-12 14:49:35] 🚀 Lancement: Livres de cuisine, cuisine et vins (scraper_livres_de_cuisine_cuisine_et_v.py)
+[2025-09-12 14:49:37] ✅ Livres de cuisine, cuisine et vins - Terminé avec succès (0.0min)
+[2025-09-12 14:49:37] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 14:50:07] 📊 [7/1104] 0.6%
+[2025-09-12 14:50:07] 🚀 Lancement: Livres de cuisine pour régimes spéciaux (scraper_livres_de_cuisine_pour_regimes.py)
+[2025-09-12 14:50:08] ✅ Livres de cuisine pour régimes spéciaux - Terminé avec succès (0.0min)
+[2025-09-12 14:50:08] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 14:50:38] 📊 [8/1104] 0.7%
+[2025-09-12 14:50:38] 🚀 Lancement: Le livre autrement (scraper_le_livre_autrement.py)
+[2025-09-12 14:50:39] ✅ Le livre autrement - Terminé avec succès (0.0min)
+[2025-09-12 14:50:39] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 14:51:09] 📊 [9/1104] 0.8%
+[2025-09-12 14:51:09] 🚀 Lancement: Tous les Livres Audio (scraper_tous_les_livres_audio.py)
+[2025-09-12 14:51:09] ❌ Tous les Livres Audio - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_tous_les_livres_audio.py
+[2025-09-12 14:51:09] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 14:51:39] 📊 [10/1104] 0.9%
+[2025-09-12 14:51:39] 🚀 Lancement: Livres en langues étrangères (scraper_livres_en_langues_etrangeres.py)
+[2025-09-12 14:51:41] ✅ Livres en langues étrangères - Terminé avec succès (0.0min)
+[2025-09-12 14:51:41] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 14:52:11] 📊 [11/1104] 1.0%
+[2025-09-12 14:52:11] 🚀 Lancement: Actualité, Politique et Société (scraper_actualite_politique_et_societe.py)
+[2025-09-12 14:52:11] ❌ Actualité, Politique et Société - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_actualite_politique_et_societe.py
+[2025-09-12 14:52:11] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 14:52:41] 📊 [12/1104] 1.1%
+[2025-09-12 14:52:41] 🚀 Lancement: Adolescents (scraper_adolescents.py)
+[2025-09-12 14:52:41] ❌ Adolescents - Échec (code 1)
+[2025-09-12 14:52:41]    Erreur: Traceback (most recent call last):
+  File "/Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_adolescents.py", line 485, in <module>
+    scraper = ScraperAmazonAdos()
+              ^^^^^^^...
+[2025-09-12 14:52:41] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 14:53:11] 📊 [13/1104] 1.2%
+[2025-09-12 14:53:11] 🚀 Lancement: Arts et photographie (scraper_arts_et_photographie.py)
+[2025-09-12 14:53:12] ✅ Arts et photographie - Terminé avec succès (0.0min)
+[2025-09-12 14:53:12] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 14:53:42] 📊 [14/1104] 1.3%
+[2025-09-12 14:53:42] 🚀 Lancement: Bandes dessinées (scraper_bandes_dessinees.py)
+[2025-09-12 14:53:43] ✅ Bandes dessinées - Terminé avec succès (0.0min)
+[2025-09-12 14:53:43] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 14:54:13] 📊 [15/1104] 1.4%
+[2025-09-12 14:54:13] 🚀 Lancement: Beaux livres (scraper_beaux_livres.py)
+[2025-09-12 14:54:14] ❌ Beaux livres - Échec (code 1)
+[2025-09-12 14:54:14]    Erreur: Traceback (most recent call last):
+  File "/Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_beaux_livres.py", line 485, in <module>
+    scraper = ScraperAmazonAdos()
+              ^^^^^^...
+[2025-09-12 14:54:14] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 14:54:44] 📊 [16/1104] 1.4%
+[2025-09-12 14:54:44] 🚀 Lancement: Calendriers et Agendas (scraper_calendriers_et_agendas.py)
+[2025-09-12 14:54:45] ✅ Calendriers et Agendas - Terminé avec succès (0.0min)
+[2025-09-12 14:54:45] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 14:55:15] 📊 [17/1104] 1.5%
+[2025-09-12 14:55:15] 🚀 Lancement: Référence (scraper_reference.py)
+[2025-09-12 14:55:16] ✅ Référence - Terminé avec succès (0.0min)
+[2025-09-12 14:55:16] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 14:55:46] 📊 [18/1104] 1.6%
+[2025-09-12 14:55:46] 🚀 Lancement: Droit (scraper_droit.py)
+[2025-09-12 14:55:47] ✅ Droit - Terminé avec succès (0.0min)
+[2025-09-12 14:55:47] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 14:56:17] 📊 [19/1104] 1.7%
+[2025-09-12 14:56:17] 🚀 Lancement: Entreprise et Bourse (scraper_entreprise_et_bourse.py)
+[2025-09-12 14:56:20] ✅ Entreprise et Bourse - Terminé avec succès (0.0min)
+[2025-09-12 14:56:20] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 14:56:50] 📊 [20/1104] 1.8%
+[2025-09-12 14:56:50] 🚀 Lancement: Érotisme (scraper_erotisme.py)
+[2025-09-12 14:56:50] ❌ Érotisme - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_erotisme.py
+[2025-09-12 14:56:50] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 14:57:20] 📊 [21/1104] 1.9%
+[2025-09-12 14:57:20] 🚀 Lancement: Études supérieures (scraper_etudes_superieures.py)
+[2025-09-12 14:57:20] ❌ Études supérieures - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_etudes_superieures.py
+[2025-09-12 14:57:20] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 14:57:50] 📊 [22/1104] 2.0%
+[2025-09-12 14:57:50] 🚀 Lancement: Famille et bien-être (scraper_famille_et_bien_etre.py)
+[2025-09-12 14:57:50] ❌ Famille et bien-être - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_famille_et_bien_etre.py
+[2025-09-12 14:57:50] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 14:58:20] 📊 [23/1104] 2.1%
+[2025-09-12 14:58:20] 🚀 Lancement: Science-fiction et Fantasy (scraper_science_fiction_et_fantasy.py)
+[2025-09-12 14:58:21] ✅ Science-fiction et Fantasy - Terminé avec succès (0.0min)
+[2025-09-12 14:58:21] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 14:58:51] 📊 [24/1104] 2.2%
+[2025-09-12 14:58:51] 🚀 Lancement: Histoire (scraper_histoire.py)
+[2025-09-12 14:58:54] ✅ Histoire - Terminé avec succès (0.0min)
+[2025-09-12 14:58:54] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 14:59:24] 📊 [25/1104] 2.3%
+[2025-09-12 14:59:24] 🚀 Lancement: Humour (scraper_humour.py)
+[2025-09-12 14:59:25] ✅ Humour - Terminé avec succès (0.0min)
+[2025-09-12 14:59:25] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 14:59:55] 📊 [26/1104] 2.4%
+[2025-09-12 14:59:55] 🚀 Lancement: Informatique et internet (scraper_informatique_et_internet.py)
+[2025-09-12 14:59:56] ❌ Informatique et internet - Échec (code 1)
+[2025-09-12 14:59:56]    Erreur: Traceback (most recent call last):
+  File "/Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_informatique_et_internet.py", line 485, in <module>
+    scraper = ScraperAmazonAdos()
+        ...
+[2025-09-12 14:59:56] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:00:26] 📊 [27/1104] 2.4%
+[2025-09-12 15:00:26] 🚀 Lancement: Loisirs créatifs, décoration et maison (scraper_loisirs_creatifs_decoration_et.py)
+[2025-09-12 15:00:26] ❌ Loisirs créatifs, décoration et maison - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_loisirs_creatifs_decoration_et.py
+[2025-09-12 15:00:26] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:00:56] 📊 [28/1104] 2.5%
+[2025-09-12 15:00:56] 🚀 Lancement: Manga (scraper_manga.py)
+[2025-09-12 15:00:57] ✅ Manga - Terminé avec succès (0.0min)
+[2025-09-12 15:00:57] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:01:27] 📊 [29/1104] 2.6%
+[2025-09-12 15:01:27] 🚀 Lancement: Nature et animaux (scraper_nature_et_animaux.py)
+[2025-09-12 15:01:27] ❌ Nature et animaux - Échec (code 1)
+[2025-09-12 15:01:27]    Erreur: Traceback (most recent call last):
+  File "/Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_nature_et_animaux.py", line 485, in <module>
+    scraper = ScraperAmazonAdos()
+              ^...
+[2025-09-12 15:01:27] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:01:57] 📊 [30/1104] 2.7%
+[2025-09-12 15:01:57] 🚀 Lancement: Religions et Spiritualités (scraper_religions_et_spiritualites.py)
+[2025-09-12 15:02:00] ✅ Religions et Spiritualités - Terminé avec succès (0.0min)
+[2025-09-12 15:02:00] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:02:30] 📊 [31/1104] 2.8%
+[2025-09-12 15:02:30] 🚀 Lancement: Romance et littérature sentimentale (scraper_romance_et_litterature_sentime.py)
+[2025-09-12 15:02:30] ❌ Romance et littérature sentimentale - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_romance_et_litterature_sentime.py
+[2025-09-12 15:02:30] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:03:00] 📊 [32/1104] 2.9%
+[2025-09-12 15:03:00] 🚀 Lancement: Romans et littérature (scraper_romans_et_litterature.py)
+[2025-09-12 15:03:03] ✅ Romans et littérature - Terminé avec succès (0.1min)
+[2025-09-12 15:03:03] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:03:33] 📊 [33/1104] 3.0%
+[2025-09-12 15:03:33] 🚀 Lancement: Mystère et suspense (scraper_mystere_et_suspense.py)
+[2025-09-12 15:03:34] ✅ Mystère et suspense - Terminé avec succès (0.0min)
+[2025-09-12 15:03:34] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:04:04] 📊 [34/1104] 3.1%
+[2025-09-12 15:04:04] 🚀 Lancement: Santé, Forme et Diététique (scraper_sante_forme_et_dietetique.py)
+[2025-09-12 15:04:06] ✅ Santé, Forme et Diététique - Terminé avec succès (0.0min)
+[2025-09-12 15:04:06] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:04:36] 📊 [35/1104] 3.2%
+[2025-09-12 15:04:36] 🚀 Lancement: Science-Fiction (scraper_science_fiction.py)
+[2025-09-12 15:04:37] ✅ Science-Fiction - Terminé avec succès (0.0min)
+[2025-09-12 15:04:37] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:05:07] 📊 [36/1104] 3.3%
+[2025-09-12 15:05:07] 🚀 Lancement: Sciences, Techniques et Médecine (scraper_sciences_techniques_et_medecin.py)
+[2025-09-12 15:05:07] ❌ Sciences, Techniques et Médecine - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_sciences_techniques_et_medecin.py
+[2025-09-12 15:05:07] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:05:37] 📊 [37/1104] 3.4%
+[2025-09-12 15:05:37] 🚀 Lancement: Sciences humaines (scraper_sciences_humaines.py)
+[2025-09-12 15:05:38] ✅ Sciences humaines - Terminé avec succès (0.0min)
+[2025-09-12 15:05:38] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:06:08] 📊 [38/1104] 3.4%
+[2025-09-12 15:06:08] 🚀 Lancement: Scolaire et Parascolaire (scraper_scolaire_et_parascolaire.py)
+[2025-09-12 15:06:10] ✅ Scolaire et Parascolaire - Terminé avec succès (0.0min)
+[2025-09-12 15:06:10] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:06:16] 🎯 1104 scrapers à traiter
+[2025-09-12 15:06:16] 📊 [38/1104] 3.4%
+[2025-09-12 15:06:16] ⏭️  Scolaire et Parascolaire - Déjà terminé
+[2025-09-12 15:06:16] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:06:40] 📊 [39/1104] 3.5%
+[2025-09-12 15:06:40] 🚀 Lancement: Sports et loisirs (scraper_sports_et_loisirs.py)
+[2025-09-12 15:06:41] ✅ Sports et loisirs - Terminé avec succès (0.0min)
+[2025-09-12 15:06:41] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:06:46] 📊 [39/1104] 3.5%
+[2025-09-12 15:06:46] 🚀 Lancement: Sports et loisirs (scraper_sports_et_loisirs.py)
+[2025-09-12 15:06:47] ✅ Sports et loisirs - Terminé avec succès (0.0min)
+[2025-09-12 15:06:47] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:07:11] 📊 [40/1104] 3.6%
+[2025-09-12 15:07:11] 🚀 Lancement: Tourisme et voyages (scraper_tourisme_et_voyages.py)
+[2025-09-12 15:07:13] ✅ Tourisme et voyages - Terminé avec succès (0.0min)
+[2025-09-12 15:07:13] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:07:17] 📊 [40/1104] 3.6%
+[2025-09-12 15:07:17] 🚀 Lancement: Tourisme et voyages (scraper_tourisme_et_voyages.py)
+[2025-09-12 15:07:19] ✅ Tourisme et voyages - Terminé avec succès (0.0min)
+[2025-09-12 15:07:19] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:07:43] 📊 [41/1104] 3.7%
+[2025-09-12 15:07:43] 🚀 Lancement: Français (scraper_francais.py)
+[2025-09-12 15:07:43] ❌ Français - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_francais.py
+[2025-09-12 15:07:43] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:07:49] 📊 [41/1104] 3.7%
+[2025-09-12 15:07:49] 🚀 Lancement: Français (scraper_francais.py)
+[2025-09-12 15:07:49] ❌ Français - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_francais.py
+[2025-09-12 15:07:49] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:08:13] 📊 [42/1104] 3.8%
+[2025-09-12 15:08:13] 🚀 Lancement: Anglais (scraper_anglais.py)
+[2025-09-12 15:08:14] ❌ Anglais - Échec (code 1)
+[2025-09-12 15:08:14]    Erreur: Traceback (most recent call last):
+  File "/Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_anglais.py", line 485, in <module>
+    scraper = ScraperAmazonAdos()
+              ^^^^^^^^^^^...
+[2025-09-12 15:08:14] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:08:44] 📊 [43/1104] 3.9%
+[2025-09-12 15:08:44] 🚀 Lancement: Allemand (scraper_allemand.py)
+[2025-09-12 15:08:44] ❌ Allemand - Échec (code 1)
+[2025-09-12 15:08:44]    Erreur: Traceback (most recent call last):
+  File "/Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_allemand.py", line 485, in <module>
+    scraper = ScraperAmazonAdos()
+              ^^^^^^^^^^...
+[2025-09-12 15:08:44] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:09:14] 📊 [44/1104] 4.0%
+[2025-09-12 15:09:14] 🚀 Lancement: Arabe (scraper_arabe.py)
+[2025-09-12 15:09:14] ❌ Arabe - Échec (code 1)
+[2025-09-12 15:09:14]    Erreur: Traceback (most recent call last):
+  File "/Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_arabe.py", line 485, in <module>
+    scraper = ScraperAmazonAdos()
+              ^^^^^^^^^^^^^...
+[2025-09-12 15:09:14] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:09:44] 📊 [45/1104] 4.1%
+[2025-09-12 15:09:44] 🚀 Lancement: Espagnol (scraper_espagnol.py)
+[2025-09-12 15:09:45] ❌ Espagnol - Échec (code 1)
+[2025-09-12 15:09:45]    Erreur: Traceback (most recent call last):
+  File "/Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_espagnol.py", line 485, in <module>
+    scraper = ScraperAmazonAdos()
+              ^^^^^^^^^^...
+[2025-09-12 15:09:45] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:10:15] 📊 [46/1104] 4.2%
+[2025-09-12 15:10:15] 🚀 Lancement: Néerlandais (scraper_neerlandais.py)
+[2025-09-12 15:10:15] ❌ Néerlandais - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_neerlandais.py
+[2025-09-12 15:10:15] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:10:45] 📊 [47/1104] 4.3%
+[2025-09-12 15:10:45] 🚀 Lancement: Italien (scraper_italien.py)
+[2025-09-12 15:10:45] ❌ Italien - Échec (code 1)
+[2025-09-12 15:10:45]    Erreur: Traceback (most recent call last):
+  File "/Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_italien.py", line 485, in <module>
+    scraper = ScraperAmazonAdos()
+              ^^^^^^^^^^^...
+[2025-09-12 15:10:45] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:11:15] 📊 [48/1104] 4.3%
+[2025-09-12 15:11:15] 🚀 Lancement: Japonais (scraper_japonais.py)
+[2025-09-12 15:11:15] ❌ Japonais - Échec (code 1)
+[2025-09-12 15:11:15]    Erreur: Traceback (most recent call last):
+  File "/Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_japonais.py", line 485, in <module>
+    scraper = ScraperAmazonAdos()
+              ^^^^^^^^^^...
+[2025-09-12 15:11:15] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:11:45] 📊 [49/1104] 4.4%
+[2025-09-12 15:11:45] 🚀 Lancement: Latin (scraper_latin.py)
+[2025-09-12 15:11:45] ❌ Latin - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_latin.py
+[2025-09-12 15:11:45] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:12:15] 📊 [50/1104] 4.5%
+[2025-09-12 15:12:15] 🚀 Lancement: Portugais (scraper_portugais.py)
+[2025-09-12 15:12:16] ❌ Portugais - Échec (code 1)
+[2025-09-12 15:12:16]    Erreur: Traceback (most recent call last):
+  File "/Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_portugais.py", line 485, in <module>
+    scraper = ScraperAmazonAdos()
+              ^^^^^^^^^...
+[2025-09-12 15:12:16] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:12:46] 📊 [51/1104] 4.6%
+[2025-09-12 15:12:46] 🚀 Lancement: Russe (scraper_russe.py)
+[2025-09-12 15:12:46] ❌ Russe - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_russe.py
+[2025-09-12 15:12:46] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:13:16] 📊 [52/1104] 4.7%
+[2025-09-12 15:13:16] 🚀 Lancement: Suédois (scraper_suedois.py)
+[2025-09-12 15:13:16] ❌ Suédois - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_suedois.py
+[2025-09-12 15:13:16] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:13:46] 📊 [53/1104] 4.8%
+[2025-09-12 15:13:46] 🚀 Lancement: Swahili (scraper_swahili.py)
+[2025-09-12 15:13:46] ❌ Swahili - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_swahili.py
+[2025-09-12 15:13:46] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:14:16] 📊 [54/1104] 4.9%
+[2025-09-12 15:14:16] 🚀 Lancement: Turc (scraper_turc.py)
+[2025-09-12 15:14:16] ❌ Turc - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_turc.py
+[2025-09-12 15:14:16] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:14:46] 📊 [55/1104] 5.0%
+[2025-09-12 15:14:46] 🚀 Lancement: Ebook Kindle (scraper_ebook_kindle.py)
+[2025-09-12 15:14:46] ❌ Ebook Kindle - Échec (code 1)
+[2025-09-12 15:14:46]    Erreur: Traceback (most recent call last):
+  File "/Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_ebook_kindle.py", line 485, in <module>
+    scraper = ScraperAmazonAdos()
+              ^^^^^^...
+[2025-09-12 15:14:46] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:15:16] 📊 [56/1104] 5.1%
+[2025-09-12 15:15:16] 🚀 Lancement: Broché (scraper_broche.py)
+[2025-09-12 15:15:16] ❌ Broché - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_broche.py
+[2025-09-12 15:15:16] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:15:46] 📊 [57/1104] 5.2%
+[2025-09-12 15:15:46] 🚀 Lancement: Poche (scraper_poche.py)
+[2025-09-12 15:15:46] ❌ Poche - Échec (code 1)
+[2025-09-12 15:15:46]    Erreur: Traceback (most recent call last):
+  File "/Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_poche.py", line 485, in <module>
+    scraper = ScraperAmazonAdos()
+              ^^^^^^^^^^^^^...
+[2025-09-12 15:15:46] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:16:16] 📊 [58/1104] 5.3%
+[2025-09-12 15:16:16] 🚀 Lancement: Relié (scraper_relie.py)
+[2025-09-12 15:16:16] ❌ Relié - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_relie.py
+[2025-09-12 15:16:16] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:16:46] 📊 [59/1104] 5.3%
+[2025-09-12 15:16:46] 🚀 Lancement: Livre audio (scraper_livre_audio.py)
+[2025-09-12 15:16:47] ❌ Livre audio - Échec (code 1)
+[2025-09-12 15:16:47]    Erreur: Traceback (most recent call last):
+  File "/Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_livre_audio.py", line 485, in <module>
+    scraper = ScraperAmazonAdos()
+              ^^^^^^^...
+[2025-09-12 15:16:47] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:17:17] 📊 [60/1104] 5.4%
+[2025-09-12 15:17:17] 🚀 Lancement: 4 Stars
+& plus (scraper_4_starset_plus.py)
+[2025-09-12 15:17:17] ❌ 4 Stars
+& plus - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_4_starset_plus.py
+[2025-09-12 15:17:17] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:17:47] 📊 [61/1104] 5.5%
+[2025-09-12 15:17:47] 🚀 Lancement: Depuis 1 mois (scraper_depuis_1_mois.py)
+[2025-09-12 15:17:47] ❌ Depuis 1 mois - Échec (code 1)
+[2025-09-12 15:17:47]    Erreur: Traceback (most recent call last):
+  File "/Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_depuis_1_mois.py", line 485, in <module>
+    scraper = ScraperAmazonAdos()
+              ^^^^^...
+[2025-09-12 15:17:47] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:18:17] 📊 [62/1104] 5.6%
+[2025-09-12 15:18:17] 🚀 Lancement: Depuis 3 mois (scraper_depuis_3_mois.py)
+[2025-09-12 15:18:18] ❌ Depuis 3 mois - Échec (code 1)
+[2025-09-12 15:18:18]    Erreur: Traceback (most recent call last):
+  File "/Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_depuis_3_mois.py", line 485, in <module>
+    scraper = ScraperAmazonAdos()
+              ^^^^^...
+[2025-09-12 15:18:18] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:18:48] 📊 [63/1104] 5.7%
+[2025-09-12 15:18:48] 🚀 Lancement: Dans les 3 mois à venir (scraper_dans_les_3_mois_a_venir.py)
+[2025-09-12 15:18:48] ❌ Dans les 3 mois à venir - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_dans_les_3_mois_a_venir.py
+[2025-09-12 15:18:48] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:19:18] 📊 [64/1104] 5.8%
+[2025-09-12 15:19:18] 🚀 Lancement: Jusqu’à 5 EUR (scraper_jusqua_5eur.py)
+[2025-09-12 15:19:18] ❌ Jusqu’à 5 EUR - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_jusqua_5eur.py
+[2025-09-12 15:19:18] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:19:48] 📊 [65/1104] 5.9%
+[2025-09-12 15:19:48] 🚀 Lancement: de 5 à 10 EUR (scraper_de_5_a_10eur.py)
+[2025-09-12 15:19:48] ❌ de 5 à 10 EUR - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_de_5_a_10eur.py
+[2025-09-12 15:19:48] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:20:18] 📊 [66/1104] 6.0%
+[2025-09-12 15:20:18] 🚀 Lancement: de 10 à 15 EUR (scraper_de_10_a_15eur.py)
+[2025-09-12 15:20:18] ❌ de 10 à 15 EUR - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_de_10_a_15eur.py
+[2025-09-12 15:20:18] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:20:48] 📊 [67/1104] 6.1%
+[2025-09-12 15:20:48] 🚀 Lancement: 15 EUR et plus (scraper_15_euret_plus.py)
+[2025-09-12 15:20:48] ❌ 15 EUR et plus - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_15_euret_plus.py
+[2025-09-12 15:20:48] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:21:18] 📊 [68/1104] 6.2%
+[2025-09-12 15:21:18] 🚀 Lancement: Tous les rabais (scraper_tous_les_rabais.py)
+[2025-09-12 15:21:18] ❌ Tous les rabais - Échec (code 1)
+[2025-09-12 15:21:18]    Erreur: Traceback (most recent call last):
+  File "/Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_tous_les_rabais.py", line 485, in <module>
+    scraper = ScraperAmazonAdos()
+              ^^^...
+[2025-09-12 15:21:18] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:21:48] 📊 [69/1104] 6.2%
+[2025-09-12 15:21:48] 🚀 Lancement: Ventes Flash (scraper_ventes_flash.py)
+[2025-09-12 15:21:49] ❌ Ventes Flash - Échec (code 1)
+[2025-09-12 15:21:49]    Erreur: Traceback (most recent call last):
+  File "/Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_ventes_flash.py", line 485, in <module>
+    scraper = ScraperAmazonAdos()
+              ^^^^^^...
+[2025-09-12 15:21:49] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:22:19] 📊 [70/1104] 6.3%
+[2025-09-12 15:22:19] 🚀 Lancement: Titres dans Prime Reading (scraper_titres_dans_prime_reading.py)
+[2025-09-12 15:22:19] ❌ Titres dans Prime Reading - Échec (code 1)
+[2025-09-12 15:22:19]    Erreur: Traceback (most recent call last):
+  File "/Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_titres_dans_prime_reading.py", line 485, in <module>
+    scraper = ScraperAmazonAdos()
+       ...
+[2025-09-12 15:22:19] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:22:49] 📊 [71/1104] 6.4%
+[2025-09-12 15:22:49] 🚀 Lancement: Neuf (scraper_neuf.py)
+[2025-09-12 15:22:49] ❌ Neuf - Échec (code 1)
+[2025-09-12 15:22:49]    Erreur: Traceback (most recent call last):
+  File "/Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_neuf.py", line 485, in <module>
+    scraper = ScraperAmazonAdos()
+              ^^^^^^^^^^^^^^...
+[2025-09-12 15:22:49] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:23:19] 📊 [72/1104] 6.5%
+[2025-09-12 15:23:19] 🚀 Lancement: D'occasion (scraper_doccasion.py)
+[2025-09-12 15:23:19] ❌ D'occasion - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_doccasion.py
+[2025-09-12 15:23:19] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:23:49] 📊 [73/1104] 6.6%
+[2025-09-12 15:23:49] 🚀 Lancement: Shelley Read (scraper_shelley_read.py)
+[2025-09-12 15:23:49] ❌ Shelley Read - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_shelley_read.py
+[2025-09-12 15:23:49] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:24:19] 📊 [74/1104] 6.7%
+[2025-09-12 15:24:19] 🚀 Lancement: Virginie Grimaldi (scraper_virginie_grimaldi.py)
+[2025-09-12 15:24:19] ❌ Virginie Grimaldi - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_virginie_grimaldi.py
+[2025-09-12 15:24:19] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:24:49] 📊 [75/1104] 6.8%
+[2025-09-12 15:24:49] 🚀 Lancement: Freida McFadden (scraper_freida_mcfadden.py)
+[2025-09-12 15:24:50] ❌ Freida McFadden - Échec (code 1)
+[2025-09-12 15:24:50]    Erreur: Traceback (most recent call last):
+  File "/Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_freida_mcfadden.py", line 485, in <module>
+    scraper = ScraperAmazonAdos()
+              ^^^...
+[2025-09-12 15:24:50] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:25:20] 📊 [76/1104] 6.9%
+[2025-09-12 15:25:20] 🚀 Lancement: Claire McGowan (scraper_claire_mcgowan.py)
+[2025-09-12 15:25:20] ❌ Claire McGowan - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_claire_mcgowan.py
+[2025-09-12 15:25:20] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:25:50] 📊 [77/1104] 7.0%
+[2025-09-12 15:25:50] 🚀 Lancement: Mario Escobar (scraper_mario_escobar.py)
+[2025-09-12 15:25:50] ❌ Mario Escobar - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_mario_escobar.py
+[2025-09-12 15:25:50] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:26:20] 📊 [78/1104] 7.1%
+[2025-09-12 15:26:20] 🚀 Lancement: Toshikazu Kawaguchi (scraper_toshikazu_kawaguchi.py)
+[2025-09-12 15:26:20] ❌ Toshikazu Kawaguchi - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_toshikazu_kawaguchi.py
+[2025-09-12 15:26:20] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:26:50] 📊 [79/1104] 7.2%
+[2025-09-12 15:26:50] 🚀 Lancement: Danielle Steel (scraper_danielle_steel.py)
+[2025-09-12 15:26:50] ❌ Danielle Steel - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_danielle_steel.py
+[2025-09-12 15:26:50] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:27:20] 📊 [80/1104] 7.2%
+[2025-09-12 15:27:20] 🚀 Lancement: Inclus dans une série (scraper_inclus_dans_une_serie.py)
+[2025-09-12 15:27:20] ❌ Inclus dans une série - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_inclus_dans_une_serie.py
+[2025-09-12 15:27:20] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:27:50] 📊 [81/1104] 7.3%
+[2025-09-12 15:27:50] 🚀 Lancement: Non inclus dans une série (scraper_non_inclus_dans_une_serie.py)
+[2025-09-12 15:27:50] ❌ Non inclus dans une série - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_non_inclus_dans_une_serie.py
+[2025-09-12 15:27:50] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:28:20] 📊 [82/1104] 7.4%
+[2025-09-12 15:28:20] 🚀 Lancement: Premier de la série (scraper_premier_de_la_serie.py)
+[2025-09-12 15:28:20] ❌ Premier de la série - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_premier_de_la_serie.py
+[2025-09-12 15:28:20] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:28:50] 📊 [83/1104] 7.5%
+[2025-09-12 15:28:50] 🚀 Lancement: Amazon Global Store (scraper_amazon_global_store.py)
+[2025-09-12 15:28:50] ❌ Amazon Global Store - Échec (code 1)
+[2025-09-12 15:28:50]    Erreur: Traceback (most recent call last):
+  File "/Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_amazon_global_store.py", line 485, in <module>
+    scraper = ScraperAmazonAdos()
+             ...
+[2025-09-12 15:28:50] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:29:20] 📊 [84/1104] 7.6%
+[2025-09-12 15:29:20] 🚀 Lancement: Recevez-le aujourd'hui (scraper_recevez_le_aujourdhui.py)
+[2025-09-12 15:29:20] ❌ Recevez-le aujourd'hui - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_recevez_le_aujourdhui.py
+[2025-09-12 15:29:20] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:29:50] 📊 [85/1104] 7.7%
+[2025-09-12 15:29:50] 🚀 Lancement: Recevez-le d'ici demain (scraper_recevez_le_dici_demain.py)
+[2025-09-12 15:29:50] ❌ Recevez-le d'ici demain - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_recevez_le_dici_demain.py
+[2025-09-12 15:29:50] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:30:20] 📊 [86/1104] 7.8%
+[2025-09-12 15:30:20] 🚀 Lancement: Basque (scraper_basque.py)
+[2025-09-12 15:30:20] ❌ Basque - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_basque.py
+[2025-09-12 15:30:20] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:30:50] 📊 [87/1104] 7.9%
+[2025-09-12 15:30:50] 🚀 Lancement: Catalan (scraper_catalan.py)
+[2025-09-12 15:30:50] ❌ Catalan - Échec (code 1)
+[2025-09-12 15:30:50]    Erreur: Traceback (most recent call last):
+  File "/Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_catalan.py", line 485, in <module>
+    scraper = ScraperAmazonAdos()
+              ^^^^^^^^^^^...
+[2025-09-12 15:30:50] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:31:20] 📊 [88/1104] 8.0%
+[2025-09-12 15:31:20] 🚀 Lancement: Chinois (scraper_chinois.py)
+[2025-09-12 15:31:21] ❌ Chinois - Échec (code 1)
+[2025-09-12 15:31:21]    Erreur: Traceback (most recent call last):
+  File "/Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_chinois.py", line 485, in <module>
+    scraper = ScraperAmazonAdos()
+              ^^^^^^^^^^^...
+[2025-09-12 15:31:21] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:31:51] 📊 [89/1104] 8.1%
+[2025-09-12 15:31:51] 🚀 Lancement: Danois (scraper_danois.py)
+[2025-09-12 15:31:51] ❌ Danois - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_danois.py
+[2025-09-12 15:31:51] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:32:21] 📊 [90/1104] 8.2%
+[2025-09-12 15:32:21] 🚀 Lancement: Finnois (scraper_finnois.py)
+[2025-09-12 15:32:21] ❌ Finnois - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_finnois.py
+[2025-09-12 15:32:21] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:32:51] 📊 [91/1104] 8.2%
+[2025-09-12 15:32:51] 🚀 Lancement: Irlandais (scraper_irlandais.py)
+[2025-09-12 15:32:51] ❌ Irlandais - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_irlandais.py
+[2025-09-12 15:32:51] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:33:21] 📊 [92/1104] 8.3%
+[2025-09-12 15:33:21] 🚀 Lancement: Norvégien (scraper_norvegien.py)
+[2025-09-12 15:33:21] ❌ Norvégien - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_norvegien.py
+[2025-09-12 15:33:21] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:33:51] 📊 [93/1104] 8.4%
+[2025-09-12 15:33:51] 🚀 Lancement: Polonais (scraper_polonais.py)
+[2025-09-12 15:33:51] ❌ Polonais - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_polonais.py
+[2025-09-12 15:33:51] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:34:21] 📊 [94/1104] 8.5%
+[2025-09-12 15:34:21] 🚀 Lancement: Vietnamien (scraper_vietnamien.py)
+[2025-09-12 15:34:21] ❌ Vietnamien - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_vietnamien.py
+[2025-09-12 15:34:21] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:34:51] 📊 [95/1104] 8.6%
+[2025-09-12 15:34:51] 🚀 Lancement: Yûki Tabata (scraper_yki_tabata.py)
+[2025-09-12 15:34:51] ❌ Yûki Tabata - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_yki_tabata.py
+[2025-09-12 15:34:51] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:35:21] 📊 [96/1104] 8.7%
+[2025-09-12 15:35:21] 🚀 Lancement: Itsuki Nanao (scraper_itsuki_nanao.py)
+[2025-09-12 15:35:21] ❌ Itsuki Nanao - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_itsuki_nanao.py
+[2025-09-12 15:35:21] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:35:51] 📊 [97/1104] 8.8%
+[2025-09-12 15:35:51] 🚀 Lancement: Hibiki Ai (scraper_hibiki_ai.py)
+[2025-09-12 15:35:51] ❌ Hibiki Ai - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_hibiki_ai.py
+[2025-09-12 15:35:51] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:36:21] 📊 [98/1104] 8.9%
+[2025-09-12 15:36:21] 🚀 Lancement: Ai Hibiki (scraper_ai_hibiki.py)
+[2025-09-12 15:36:21] ❌ Ai Hibiki - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_ai_hibiki.py
+[2025-09-12 15:36:21] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:36:51] 📊 [99/1104] 9.0%
+[2025-09-12 15:36:51] 🚀 Lancement: Takeru Hokazono (scraper_takeru_hokazono.py)
+[2025-09-12 15:36:51] ❌ Takeru Hokazono - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_takeru_hokazono.py
+[2025-09-12 15:36:51] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:37:21] 📊 [100/1104] 9.1%
+[2025-09-12 15:37:21] 🚀 Lancement: Naoya Matsumoto (scraper_naoya_matsumoto.py)
+[2025-09-12 15:37:21] ❌ Naoya Matsumoto - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_naoya_matsumoto.py
+[2025-09-12 15:37:21] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:37:51] 📊 [101/1104] 9.1%
+[2025-09-12 15:37:51] 🚀 Lancement: Koyoharu Gotouge (scraper_koyoharu_gotouge.py)
+[2025-09-12 15:37:51] ❌ Koyoharu Gotouge - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_koyoharu_gotouge.py
+[2025-09-12 15:37:51] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:38:21] 📊 [102/1104] 9.2%
+[2025-09-12 15:38:21] 🚀 Lancement: de 10 à 20 EUR (scraper_de_10_a_20eur.py)
+[2025-09-12 15:38:21] ❌ de 10 à 20 EUR - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_de_10_a_20eur.py
+[2025-09-12 15:38:21] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:38:51] 📊 [103/1104] 9.3%
+[2025-09-12 15:38:51] 🚀 Lancement: 20 EUR et plus (scraper_20_euret_plus.py)
+[2025-09-12 15:38:51] ❌ 20 EUR et plus - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_20_euret_plus.py
+[2025-09-12 15:38:51] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:39:21] 📊 [104/1104] 9.4%
+[2025-09-12 15:39:21] 🚀 Lancement: Albanais (scraper_albanais.py)
+[2025-09-12 15:39:21] ❌ Albanais - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_albanais.py
+[2025-09-12 15:39:21] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:39:51] 📊 [105/1104] 9.5%
+[2025-09-12 15:39:51] 🚀 Lancement: Bulgare (scraper_bulgare.py)
+[2025-09-12 15:39:51] ❌ Bulgare - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_bulgare.py
+[2025-09-12 15:39:51] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:40:21] 📊 [106/1104] 9.6%
+[2025-09-12 15:40:21] 🚀 Lancement: Coréen (scraper_coreen.py)
+[2025-09-12 15:40:21] ❌ Coréen - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_coreen.py
+[2025-09-12 15:40:21] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:40:51] 📊 [107/1104] 9.7%
+[2025-09-12 15:40:51] 🚀 Lancement: Estonien (scraper_estonien.py)
+[2025-09-12 15:40:51] ❌ Estonien - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_estonien.py
+[2025-09-12 15:40:51] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:41:21] 📊 [108/1104] 9.8%
+[2025-09-12 15:41:21] 🚀 Lancement: Grec (scraper_grec.py)
+[2025-09-12 15:41:21] ❌ Grec - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_grec.py
+[2025-09-12 15:41:21] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:41:51] 📊 [109/1104] 9.9%
+[2025-09-12 15:41:51] 🚀 Lancement: Islandais (scraper_islandais.py)
+[2025-09-12 15:41:51] ❌ Islandais - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_islandais.py
+[2025-09-12 15:41:51] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:42:21] 📊 [110/1104] 10.0%
+[2025-09-12 15:42:21] 🚀 Lancement: Lituanien (scraper_lituanien.py)
+[2025-09-12 15:42:21] ❌ Lituanien - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_lituanien.py
+[2025-09-12 15:42:21] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:42:51] 📊 [111/1104] 10.1%
+[2025-09-12 15:42:51] 🚀 Lancement: Malais (scraper_malais.py)
+[2025-09-12 15:42:51] ❌ Malais - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_malais.py
+[2025-09-12 15:42:51] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:43:21] 📊 [112/1104] 10.1%
+[2025-09-12 15:43:21] 🚀 Lancement: Roumain (scraper_roumain.py)
+[2025-09-12 15:43:21] ❌ Roumain - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_roumain.py
+[2025-09-12 15:43:21] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:43:51] 📊 [113/1104] 10.2%
+[2025-09-12 15:43:51] 🚀 Lancement: Serbe (scraper_serbe.py)
+[2025-09-12 15:43:51] ❌ Serbe - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_serbe.py
+[2025-09-12 15:43:51] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:44:21] 📊 [114/1104] 10.3%
+[2025-09-12 15:44:21] 🚀 Lancement: Slovène (scraper_slovene.py)
+[2025-09-12 15:44:21] ❌ Slovène - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_slovene.py
+[2025-09-12 15:44:21] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:44:51] 📊 [115/1104] 10.4%
+[2025-09-12 15:44:51] 🚀 Lancement: Tamil (scraper_tamil.py)
+[2025-09-12 15:44:51] ❌ Tamil - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_tamil.py
+[2025-09-12 15:44:51] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:45:21] 📊 [116/1104] 10.5%
+[2025-09-12 15:45:21] 🚀 Lancement: Tchèque (scraper_tcheque.py)
+[2025-09-12 15:45:21] ❌ Tchèque - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_tcheque.py
+[2025-09-12 15:45:21] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:45:51] 📊 [117/1104] 10.6%
+[2025-09-12 15:45:51] 🚀 Lancement: Ukrainien (scraper_ukrainien.py)
+[2025-09-12 15:45:51] ❌ Ukrainien - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_ukrainien.py
+[2025-09-12 15:45:51] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:46:21] 📊 [118/1104] 10.7%
+[2025-09-12 15:46:21] 🚀 Lancement: Collectif Michelin (scraper_collectif_michelin.py)
+[2025-09-12 15:46:21] ❌ Collectif Michelin - Échec (code 1)
+[2025-09-12 15:46:21]    Erreur: Traceback (most recent call last):
+  File "/Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_collectif_michelin.py", line 485, in <module>
+    scraper = ScraperAmazonAdos()
+              ...
+[2025-09-12 15:46:21] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:46:51] 📊 [119/1104] 10.8%
+[2025-09-12 15:46:51] 🚀 Lancement: Collectif Collectif (scraper_collectif_collectif.py)
+[2025-09-12 15:46:51] ❌ Collectif Collectif - Échec (code 1)
+[2025-09-12 15:46:51]    Erreur: Traceback (most recent call last):
+  File "/Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_collectif_collectif.py", line 485, in <module>
+    scraper = ScraperAmazonAdos()
+             ...
+[2025-09-12 15:46:51] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:47:21] 📊 [120/1104] 10.9%
+[2025-09-12 15:47:21] 🚀 Lancement: Collectif (scraper_collectif.py)
+[2025-09-12 15:47:22] ❌ Collectif - Échec (code 1)
+[2025-09-12 15:47:22]    Erreur: Traceback (most recent call last):
+  File "/Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_collectif.py", line 485, in <module>
+    scraper = ScraperAmazonAdos()
+              ^^^^^^^^^...
+[2025-09-12 15:47:22] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:47:52] 📊 [121/1104] 11.0%
+[2025-09-12 15:47:52] 🚀 Lancement: Auteurs Collectif (scraper_auteurs_collectif.py)
+[2025-09-12 15:47:52] ❌ Auteurs Collectif - Échec (code 1)
+[2025-09-12 15:47:52]    Erreur: Traceback (most recent call last):
+  File "/Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_auteurs_collectif.py", line 485, in <module>
+    scraper = ScraperAmazonAdos()
+              ^...
+[2025-09-12 15:47:52] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:48:22] 📊 [122/1104] 11.1%
+[2025-09-12 15:48:22] 🚀 Lancement: David Collectif (scraper_david_collectif.py)
+[2025-09-12 15:48:23] ❌ David Collectif - Échec (code 1)
+[2025-09-12 15:48:23]    Erreur: Traceback (most recent call last):
+  File "/Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_david_collectif.py", line 485, in <module>
+    scraper = ScraperAmazonAdos()
+              ^^^...
+[2025-09-12 15:48:23] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:48:53] 📊 [123/1104] 11.1%
+[2025-09-12 15:48:53] 🚀 Lancement: Collectif d'auteurs (scraper_collectif_dauteurs.py)
+[2025-09-12 15:48:53] ❌ Collectif d'auteurs - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_collectif_dauteurs.py
+[2025-09-12 15:48:53] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:49:23] 📊 [124/1104] 11.2%
+[2025-09-12 15:49:23] 🚀 Lancement: Disney Collectif (scraper_disney_collectif.py)
+[2025-09-12 15:49:23] ❌ Disney Collectif - Échec (code 1)
+[2025-09-12 15:49:23]    Erreur: Traceback (most recent call last):
+  File "/Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_disney_collectif.py", line 485, in <module>
+    scraper = ScraperAmazonAdos()
+              ^^...
+[2025-09-12 15:49:23] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:49:53] 📊 [125/1104] 11.3%
+[2025-09-12 15:49:53] 🚀 Lancement: D'auteurs Collectif (scraper_dauteurs_collectif.py)
+[2025-09-12 15:49:53] ❌ D'auteurs Collectif - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_dauteurs_collectif.py
+[2025-09-12 15:49:53] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:50:23] 📊 [126/1104] 11.4%
+[2025-09-12 15:50:23] 🚀 Lancement: D'illustrateurs Collectif (scraper_dillustrateurs_collectif.py)
+[2025-09-12 15:50:23] ❌ D'illustrateurs Collectif - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_dillustrateurs_collectif.py
+[2025-09-12 15:50:23] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:50:53] 📊 [127/1104] 11.5%
+[2025-09-12 15:50:53] 🚀 Lancement: René Goscinny (scraper_rene_goscinny.py)
+[2025-09-12 15:50:53] ❌ René Goscinny - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_rene_goscinny.py
+[2025-09-12 15:50:53] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:51:23] 📊 [128/1104] 11.6%
+[2025-09-12 15:51:23] 🚀 Lancement: Guide de l’acheteur (scraper_guide_de_lacheteur.py)
+[2025-09-12 15:51:23] ❌ Guide de l’acheteur - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_guide_de_lacheteur.py
+[2025-09-12 15:51:23] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:51:53] 📊 [129/1104] 11.7%
+[2025-09-12 15:51:53] 🚀 Lancement: Cartes cadeaux (scraper_cartes_cadeaux.py)
+[2025-09-12 15:51:53] ❌ Cartes cadeaux - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_cartes_cadeaux.py
+[2025-09-12 15:51:53] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:52:23] 📊 [130/1104] 11.8%
+[2025-09-12 15:52:23] 🚀 Lancement: Cuisine et maison (scraper_cuisine_et_maison.py)
+[2025-09-12 15:52:23] ❌ Cuisine et maison - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_cuisine_et_maison.py
+[2025-09-12 15:52:23] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:52:53] 📊 [131/1104] 11.9%
+[2025-09-12 15:52:53] 🚀 Lancement: High-Tech (scraper_high_tech.py)
+[2025-09-12 15:52:53] ❌ High-Tech - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_high_tech.py
+[2025-09-12 15:52:53] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:53:23] 📊 [132/1104] 12.0%
+[2025-09-12 15:53:23] 🚀 Lancement: Jeux vidéo (scraper_jeux_video.py)
+[2025-09-12 15:53:23] ❌ Jeux vidéo - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_jeux_video.py
+[2025-09-12 15:53:23] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:53:53] 📊 [133/1104] 12.0%
+[2025-09-12 15:53:53] 🚀 Lancement: Jeux et Jouets (scraper_jeux_et_jouets.py)
+[2025-09-12 15:53:53] ❌ Jeux et Jouets - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_jeux_et_jouets.py
+[2025-09-12 15:53:53] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:54:23] 📊 [134/1104] 12.1%
+[2025-09-12 15:54:23] 🚀 Lancement: Bébé (scraper_bebe.py)
+[2025-09-12 15:54:23] ❌ Bébé - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_bebe.py
+[2025-09-12 15:54:23] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:54:53] 📊 [135/1104] 12.2%
+[2025-09-12 15:54:53] 🚀 Lancement: Audible (scraper_audible.py)
+[2025-09-12 15:54:53] ❌ Audible - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_audible.py
+[2025-09-12 15:54:53] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:55:23] 📊 [136/1104] 12.3%
+[2025-09-12 15:55:23] 🚀 Lancement: Informatique (scraper_informatique.py)
+[2025-09-12 15:55:25] ✅ Informatique - Terminé avec succès (0.0min)
+[2025-09-12 15:55:25] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:55:55] 📊 [137/1104] 12.4%
+[2025-09-12 15:55:55] 🚀 Lancement: Produits personnalisés (scraper_produits_personnalises.py)
+[2025-09-12 15:55:55] ❌ Produits personnalisés - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_produits_personnalises.py
+[2025-09-12 15:55:55] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:56:25] 📊 [138/1104] 12.5%
+[2025-09-12 15:56:25] 🚀 Lancement: Santé et produits d’hygiène (scraper_sante_et_produits_dhygiene.py)
+[2025-09-12 15:56:25] ❌ Santé et produits d’hygiène - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_sante_et_produits_dhygiene.py
+[2025-09-12 15:56:25] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:56:55] 📊 [139/1104] 12.6%
+[2025-09-12 15:56:55] 🚀 Lancement: Sports & Activités en plein-air (scraper_sports_et_activites_en_plein_a.py)
+[2025-09-12 15:56:55] ❌ Sports & Activités en plein-air - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_sports_et_activites_en_plein_a.py
+[2025-09-12 15:56:55] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:57:25] 📊 [140/1104] 12.7%
+[2025-09-12 15:57:25] 🚀 Lancement: Auto et moto (scraper_auto_et_moto.py)
+[2025-09-12 15:57:25] ❌ Auto et moto - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_auto_et_moto.py
+[2025-09-12 15:57:25] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 15:57:30] ⏸️  Arrêt demandé par l'utilisateur
+[2025-09-12 15:57:30] 📍 Arrêt à la position: 139
+[2025-09-12 15:57:30] 💡 Relancez le script pour reprendre
+[2025-09-12 15:57:30] 📄 Rapport sauvegardé: rapport_lanceur_20250912_155730.txt
+[2025-09-12 16:00:04] 🎯 1104 scrapers à traiter
+[2025-09-12 16:00:04] 📊 [140/1104] 12.7%
+[2025-09-12 16:00:04] 🚀 Lancement: Auto et moto (scraper_auto_et_moto.py)
+[2025-09-12 16:00:04] ❌ Auto et moto - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_auto_et_moto.py
+[2025-09-12 16:00:04] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 16:00:34] 📊 [141/1104] 12.8%
+[2025-09-12 16:00:34] 🚀 Lancement: Beauté (scraper_beaute.py)
+[2025-09-12 16:00:34] ❌ Beauté - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_beaute.py
+[2025-09-12 16:00:34] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 16:01:04] 📊 [142/1104] 12.9%
+[2025-09-12 16:01:04] 🚀 Lancement: Recherche détaillée (scraper_recherche_detaillee.py)
+[2025-09-12 16:01:04] ❌ Recherche détaillée - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_recherche_detaillee.py
+[2025-09-12 16:01:04] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 16:01:34] 📊 [143/1104] 13.0%
+[2025-09-12 16:01:34] 🚀 Lancement: Nouveautés (scraper_nouveautes.py)
+[2025-09-12 16:01:34] ❌ Nouveautés - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_nouveautes.py
+[2025-09-12 16:01:34] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 16:02:04] 📊 [144/1104] 13.0%
+[2025-09-12 16:02:04] 🚀 Lancement: Romans et polars (scraper_romans_et_polars.py)
+[2025-09-12 16:02:04] ❌ Romans et polars - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_romans_et_polars.py
+[2025-09-12 16:02:04] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 16:02:34] 📊 [145/1104] 13.1%
+[2025-09-12 16:02:34] 🚀 Lancement: BD et Mangas (scraper_bd_et_mangas.py)
+[2025-09-12 16:02:34] ❌ BD et Mangas - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_bd_et_mangas.py
+[2025-09-12 16:02:34] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 16:03:04] 📊 [146/1104] 13.2%
+[2025-09-12 16:03:04] 🚀 Lancement: Enfants et ados (scraper_enfants_et_ados.py)
+[2025-09-12 16:03:04] ❌ Enfants et ados - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_enfants_et_ados.py
+[2025-09-12 16:03:04] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 16:03:34] 📊 [147/1104] 13.3%
+[2025-09-12 16:03:34] 🚀 Lancement: Scolaire et études (scraper_scolaire_et_etudes.py)
+[2025-09-12 16:03:34] ❌ Scolaire et études - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_scolaire_et_etudes.py
+[2025-09-12 16:03:34] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 16:04:04] 📊 [148/1104] 13.4%
+[2025-09-12 16:04:04] 🚀 Lancement: Santé et bien-être (scraper_sante_et_bien_etre.py)
+[2025-09-12 16:04:04] ❌ Santé et bien-être - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_sante_et_bien_etre.py
+[2025-09-12 16:04:04] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 16:04:34] 📊 [149/1104] 13.5%
+[2025-09-12 16:04:34] 🚀 Lancement: Loisirs et culture (scraper_loisirs_et_culture.py)
+[2025-09-12 16:04:34] ❌ Loisirs et culture - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_loisirs_et_culture.py
+[2025-09-12 16:04:34] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 16:05:04] 📊 [150/1104] 13.6%
+[2025-09-12 16:05:04] 🚀 Lancement: Mode (scraper_mode.py)
+[2025-09-12 16:05:06] ✅ Mode - Terminé avec succès (0.0min)
+[2025-09-12 16:05:06] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 16:05:36] 📊 [151/1104] 13.7%
+[2025-09-12 16:05:36] 🚀 Lancement: Prime Video (scraper_prime_video.py)
+[2025-09-12 16:05:36] ❌ Prime Video - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_prime_video.py
+[2025-09-12 16:05:36] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 16:06:06] 📊 [152/1104] 13.8%
+[2025-09-12 16:06:06] 🚀 Lancement: Livraison gratuite (scraper_livraison_gratuite.py)
+[2025-09-12 16:06:06] ❌ Livraison gratuite - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_livraison_gratuite.py
+[2025-09-12 16:06:06] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 16:06:36] 📊 [153/1104] 13.9%
+[2025-09-12 16:06:36] 🚀 Lancement: Créer un compte professionnel gratuit (scraper_creer_un_compte_professionnel_.py)
+[2025-09-12 16:06:36] ❌ Créer un compte professionnel gratuit - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_creer_un_compte_professionnel_.py
+[2025-09-12 16:06:36] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 16:07:06] 📊 [154/1104] 13.9%
+[2025-09-12 16:07:06] 🚀 Lancement: Carrières (scraper_carrieres.py)
+[2025-09-12 16:07:06] ❌ Carrières - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_carrieres.py
+[2025-09-12 16:07:06] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 16:07:36] 📊 [155/1104] 14.0%
+[2025-09-12 16:07:36] 🚀 Lancement: Recharge en point de vente (scraper_recharge_en_point_de_vente.py)
+[2025-09-12 16:07:36] ❌ Recharge en point de vente - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_recharge_en_point_de_vente.py
+[2025-09-12 16:07:36] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 16:08:06] 📊 [156/1104] 14.1%
+[2025-09-12 16:08:06] 🚀 Lancement: Recyclage (y compris les équipements électriques et électroniques) (scraper_recyclage_y_compris_les_equipe.py)
+[2025-09-12 16:08:06] ❌ Recyclage (y compris les équipements électriques et électroniques) - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_recyclage_y_compris_les_equipe.py
+[2025-09-12 16:08:06] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 16:08:36] 📊 [157/1104] 14.2%
+[2025-09-12 16:08:36] 🚀 Lancement: Recevez-le aujourd'hui
+
+
+Recevez-le aujourd'hui (scraper_recevez_le_aujourdhuirecevez_l.py)
+[2025-09-12 16:08:36] ❌ Recevez-le aujourd'hui
+
+
+Recevez-le aujourd'hui - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_recevez_le_aujourdhuirecevez_l.py
+[2025-09-12 16:08:36] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 16:09:06] 📊 [158/1104] 14.3%
+[2025-09-12 16:09:06] 🚀 Lancement: Recevez-le d'ici demain
+
+
+Recevez-le d'ici demain (scraper_recevez_le_dici_demainrecevez_.py)
+[2025-09-12 16:09:06] ❌ Recevez-le d'ici demain
+
+
+Recevez-le d'ici demain - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_recevez_le_dici_demainrecevez_.py
+[2025-09-12 16:09:06] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 16:09:36] 📊 [159/1104] 14.4%
+[2025-09-12 16:09:36] 🚀 Lancement: Neuf
+
+
+Neuf (scraper_neufneuf.py)
+[2025-09-12 16:09:36] ❌ Neuf
+
+
+Neuf - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_neufneuf.py
+[2025-09-12 16:09:36] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 16:10:06] 📊 [160/1104] 14.5%
+[2025-09-12 16:10:06] 🚀 Lancement: D'occasion
+
+
+D'occasion (scraper_doccasiondoccasion.py)
+[2025-09-12 16:10:06] ❌ D'occasion
+
+
+D'occasion - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_doccasiondoccasion.py
+[2025-09-12 16:10:06] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 16:10:36] 📊 [161/1104] 14.6%
+[2025-09-12 16:10:36] 🚀 Lancement: Jusqu'à 5 EUR
+
+
+Jusqu'à 5 EUR (scraper_jusqua_5_eurjusqua_5_eur.py)
+[2025-09-12 16:10:36] ❌ Jusqu'à 5 EUR
+
+
+Jusqu'à 5 EUR - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_jusqua_5_eurjusqua_5_eur.py
+[2025-09-12 16:10:36] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 16:11:06] 📊 [162/1104] 14.7%
+[2025-09-12 16:11:06] 🚀 Lancement: 5 à 10 EUR
+
+
+5 à 10 EUR (scraper_5_a_10_eur5_a_10_eur.py)
+[2025-09-12 16:11:06] ❌ 5 à 10 EUR
+
+
+5 à 10 EUR - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_5_a_10_eur5_a_10_eur.py
+[2025-09-12 16:11:06] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 16:11:36] 📊 [163/1104] 14.8%
+[2025-09-12 16:11:36] 🚀 Lancement: 10 à 20 EUR
+
+
+10 à 20 EUR (scraper_10_a_20_eur10_a_20_eur.py)
+[2025-09-12 16:11:36] ❌ 10 à 20 EUR
+
+
+10 à 20 EUR - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_10_a_20_eur10_a_20_eur.py
+[2025-09-12 16:11:36] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 16:12:06] 📊 [164/1104] 14.9%
+[2025-09-12 16:12:06] 🚀 Lancement: 20 à 50 EUR
+
+
+20 à 50 EUR (scraper_20_a_50_eur20_a_50_eur.py)
+[2025-09-12 16:12:06] ❌ 20 à 50 EUR
+
+
+20 à 50 EUR - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_20_a_50_eur20_a_50_eur.py
+[2025-09-12 16:12:06] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 16:12:36] 📊 [165/1104] 14.9%
+[2025-09-12 16:12:36] 🚀 Lancement: Broché
+
+
+Broché (scraper_brochebroche.py)
+[2025-09-12 16:12:36] ❌ Broché
+
+
+Broché - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_brochebroche.py
+[2025-09-12 16:12:36] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 16:12:38] 🎯 254 scrapers à traiter
+[2025-09-12 16:12:38] 📊 [165/254] 65.0%
+[2025-09-12 16:12:38] 🚀 Lancement: Neuf (scraper_neuf.py)
+[2025-09-12 16:12:39] ❌ Neuf - Échec (code 1)
+[2025-09-12 16:12:39]    Erreur: Traceback (most recent call last):
+  File "/Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_neuf.py", line 485, in <module>
+    scraper = ScraperAmazonAdos()
+              ^^^^^^^^^^^^^^...
+[2025-09-12 16:12:39] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 16:13:06] 📊 [166/1104] 15.0%
+[2025-09-12 16:13:06] 🚀 Lancement: Relié
+
+
+Relié (scraper_relierelie.py)
+[2025-09-12 16:13:06] ❌ Relié
+
+
+Relié - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_relierelie.py
+[2025-09-12 16:13:06] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 16:13:09] 📊 [166/254] 65.4%
+[2025-09-12 16:13:09] 🚀 Lancement: Non Inclus Dans Une Série (scraper_non_inclus_dans_une_série.py)
+[2025-09-12 16:13:09] ❌ Non Inclus Dans Une Série - Échec (code 1)
+[2025-09-12 16:13:09]    Erreur: Traceback (most recent call last):
+  File "/Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_non_inclus_dans_une_série.py", line 485, in <module>
+    scraper = ScraperAmazonAdos()
+       ...
+[2025-09-12 16:13:09] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 16:13:36] 📊 [167/1104] 15.1%
+[2025-09-12 16:13:36] 🚀 Lancement: Livre audio
+
+
+Livre audio (scraper_livre_audiolivre_audio.py)
+[2025-09-12 16:13:36] ❌ Livre audio
+
+
+Livre audio - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_livre_audiolivre_audio.py
+[2025-09-12 16:13:36] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 16:13:39] 📊 [167/254] 65.7%
+[2025-09-12 16:13:39] 🚀 Lancement: Nouvelle (scraper_nouvelle.py)
+[2025-09-12 16:13:42] ✅ Nouvelle - Terminé avec succès (0.0min)
+[2025-09-12 16:13:42] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 16:14:06] 📊 [168/1104] 15.2%
+[2025-09-12 16:14:06] 🚀 Lancement: Poche
+
+
+Poche (scraper_pochepoche.py)
+[2025-09-12 16:14:06] ❌ Poche
+
+
+Poche - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_pochepoche.py
+[2025-09-12 16:14:06] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 16:14:12] 📊 [168/254] 66.1%
+[2025-09-12 16:14:12] 🚀 Lancement: Néerlandais (scraper_néerlandais.py)
+[2025-09-12 16:14:12] ❌ Néerlandais - Échec (code 1)
+[2025-09-12 16:14:12]    Erreur: Traceback (most recent call last):
+  File "/Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_néerlandais.py", line 485, in <module>
+    scraper = ScraperAmazonAdos()
+              ^^^^^^^...
+[2025-09-12 16:14:12] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 16:14:36] 📊 [169/1104] 15.3%
+[2025-09-12 16:14:36] 🚀 Lancement: Collectif Michelin
+
+
+Collectif Michelin (scraper_collectif_michelincollectif_mi.py)
+[2025-09-12 16:14:36] ❌ Collectif Michelin
+
+
+Collectif Michelin - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_collectif_michelincollectif_mi.py
+[2025-09-12 16:14:36] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 16:15:06] 📊 [170/1104] 15.4%
+[2025-09-12 16:15:06] 🚀 Lancement: Disney Collectif
+
+
+Disney Collectif (scraper_disney_collectifdisney_collect.py)
+[2025-09-12 16:15:06] ❌ Disney Collectif
+
+
+Disney Collectif - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_disney_collectifdisney_collect.py
+[2025-09-12 16:15:06] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 16:15:36] 📊 [171/1104] 15.5%
+[2025-09-12 16:15:36] 🚀 Lancement: Collectif d'auteurs
+
+
+Collectif d'auteurs (scraper_collectif_dauteurscollectif_da.py)
+[2025-09-12 16:15:36] ❌ Collectif d'auteurs
+
+
+Collectif d'auteurs - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_collectif_dauteurscollectif_da.py
+[2025-09-12 16:15:36] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 16:16:06] 📊 [172/1104] 15.6%
+[2025-09-12 16:16:06] 🚀 Lancement: D'auteurs Collectif
+
+
+D'auteurs Collectif (scraper_dauteurs_collectifdauteurs_col.py)
+[2025-09-12 16:16:06] ❌ D'auteurs Collectif
+
+
+D'auteurs Collectif - Fichier introuvable: /Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_dauteurs_collectifdauteurs_col.py
+[2025-09-12 16:16:06] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 16:16:23] ⏸️  Arrêt demandé par l'utilisateur
+[2025-09-12 16:16:23] 📍 Arrêt à la position: 171
+[2025-09-12 16:16:23] 💡 Relancez le script pour reprendre
+[2025-09-12 16:16:23] 📄 Rapport sauvegardé: rapport_lanceur_20250912_161623.txt
+[2025-09-12 16:16:27] 🎯 254 scrapers à traiter
+[2025-09-12 16:16:27] 📊 [172/254] 67.7%
+[2025-09-12 16:16:27] 🚀 Lancement: Philosophie (scraper_philosophie.py)
+[2025-09-12 16:16:28] ✅ Philosophie - Terminé avec succès (0.0min)
+[2025-09-12 16:16:28] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 16:16:36] ⏸️  Arrêt demandé par l'utilisateur
+[2025-09-12 16:16:36] 📍 Arrêt à la position: 171
+[2025-09-12 16:16:36] 💡 Relancez le script pour reprendre
+[2025-09-12 16:16:36] 📄 Rapport sauvegardé: rapport_lanceur_20250912_161636.txt
+[2025-09-12 16:21:37] 🎯 254 scrapers à traiter
+[2025-09-12 16:21:37] 📊 [172/254] 67.7%
+[2025-09-12 16:21:37] ⏭️  Philosophie - Déjà terminé
+[2025-09-12 16:21:37] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 16:22:07] 📊 [173/254] 68.1%
+[2025-09-12 16:22:07] 🚀 Lancement: Photographie (scraper_photographie.py)
+[2025-09-12 16:22:08] ✅ Photographie - Terminé avec succès (0.0min)
+[2025-09-12 16:22:08] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 16:22:38] 📊 [174/254] 68.5%
+[2025-09-12 16:22:38] 🚀 Lancement: Photographie Et Video (scraper_photographie_et_video.py)
+[2025-09-12 16:22:40] ✅ Photographie Et Video - Terminé avec succès (0.0min)
+[2025-09-12 16:22:40] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 16:23:10] 📊 [175/254] 68.9%
+[2025-09-12 16:23:10] 🚀 Lancement: Physique (scraper_physique.py)
+[2025-09-12 16:23:11] ✅ Physique - Terminé avec succès (0.0min)
+[2025-09-12 16:23:11] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 16:25:01] 🎯 254 scrapers à traiter
+[2025-09-12 16:25:01] 📊 [175/254] 68.9%
+[2025-09-12 16:25:01] ⏭️  Physique - Déjà terminé
+[2025-09-12 16:25:01] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 16:25:31] 📊 [176/254] 69.3%
+[2025-09-12 16:25:31] 🚀 Lancement: Physique Sciences De La Matiere (scraper_physique_sciences_de_la_matiere.py)
+[2025-09-12 16:25:33] ✅ Physique Sciences De La Matiere - Terminé avec succès (0.0min)
+[2025-09-12 16:25:33] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 16:26:03] 📊 [177/254] 69.7%
+[2025-09-12 16:26:03] 🚀 Lancement: Poche (scraper_poche.py)
+[2025-09-12 16:26:03] ❌ Poche - Échec (code 1)
+[2025-09-12 16:26:03]    Erreur: Traceback (most recent call last):
+  File "/Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_poche.py", line 485, in <module>
+    scraper = ScraperAmazonAdos()
+              ^^^^^^^^^^^^^...
+[2025-09-12 16:26:03] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 16:26:33] 📊 [178/254] 70.1%
+[2025-09-12 16:26:33] ⏭️  Poesie - Déjà terminé
+[2025-09-12 16:26:33] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 16:27:03] 📊 [179/254] 70.5%
+[2025-09-12 16:27:03] 🚀 Lancement: Polar Et Thriller (scraper_polar_et_thriller.py)
+[2025-09-12 16:27:04] ✅ Polar Et Thriller - Terminé avec succès (0.0min)
+[2025-09-12 16:27:04] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 16:27:34] 📊 [180/254] 70.9%
+[2025-09-12 16:27:34] 🚀 Lancement: Policier (scraper_policier.py)
+[2025-09-12 16:27:35] ✅ Policier - Terminé avec succès (0.0min)
+[2025-09-12 16:27:35] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 16:28:05] 📊 [181/254] 71.3%
+[2025-09-12 16:28:05] 🚀 Lancement: Politique (scraper_politique.py)
+[2025-09-12 16:28:06] ✅ Politique - Terminé avec succès (0.0min)
+[2025-09-12 16:28:06] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 16:28:36] 🎯 254 scrapers à traiter
+[2025-09-12 16:28:36] 📊 [181/254] 71.3%
+[2025-09-12 16:28:36] ⏭️  Politique - Déjà terminé
+[2025-09-12 16:28:36] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 16:28:45] ⏸️  Arrêt demandé par l'utilisateur
+[2025-09-12 16:28:45] 📍 Arrêt à la position: 180
+[2025-09-12 16:28:45] 💡 Relancez le script pour reprendre
+[2025-09-12 16:28:45] 📄 Rapport sauvegardé: rapport_lanceur_20250912_162845.txt
+[2025-09-12 16:28:49] 🎯 254 scrapers à traiter
+[2025-09-12 16:28:49] 📊 [181/254] 71.3%
+[2025-09-12 16:28:49] ⏭️  Politique - Déjà terminé
+[2025-09-12 16:28:49] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 16:28:52] ⏸️  Arrêt demandé par l'utilisateur
+[2025-09-12 16:28:52] 📍 Arrêt à la position: 180
+[2025-09-12 16:28:52] 💡 Relancez le script pour reprendre
+[2025-09-12 16:28:52] 📄 Rapport sauvegardé: rapport_lanceur_20250912_162852.txt
+[2025-09-12 16:49:39] 🎯 254 scrapers à traiter
+[2025-09-12 16:49:39] 📊 [181/254] 71.3%
+[2025-09-12 16:49:39] 🚀 Lancement: Politique (scraper_politique.py)
+[2025-09-12 16:49:39] ❌ Politique - Échec (code 1)
+[2025-09-12 16:49:39]    Erreur:   File "/Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_politique.py", line 51
+    \1
+     ^
+SyntaxError: unexpected character after line continuation character
+...
+[2025-09-12 16:49:39] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 16:50:09] 📊 [182/254] 71.7%
+[2025-09-12 16:50:09] 🚀 Lancement: Portugais (scraper_portugais.py)
+[2025-09-12 16:50:09] ❌ Portugais - Échec (code 1)
+[2025-09-12 16:50:09]    Erreur:   File "/Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_portugais.py", line 51
+    \1
+     ^
+SyntaxError: unexpected character after line continuation character
+...
+[2025-09-12 16:50:09] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 16:50:39] 📊 [183/254] 72.0%
+[2025-09-12 16:50:39] 🚀 Lancement: Post Apocalyptique (scraper_post_apocalyptique.py)
+[2025-09-12 16:50:39] ❌ Post Apocalyptique - Échec (code 1)
+[2025-09-12 16:50:39]    Erreur:   File "/Users/Simplon/Cours/workspacePython/Scraping/SCRAPERS/scraper_post_apocalyptique.py", line 51
+    \1
+     ^
+SyntaxError: unexpected character after line continuation character
+...
+[2025-09-12 16:50:39] ⏳ Délai de 30s avant le scraper suivant...
+[2025-09-12 16:50:44] ⏸️  Arrêt demandé par l'utilisateur
+[2025-09-12 16:50:44] 📍 Arrêt à la position: 182
+[2025-09-12 16:50:44] 💡 Relancez le script pour reprendre
+[2025-09-12 16:50:44] 📄 Rapport sauvegardé: rapport_lanceur_20250912_165044.txt

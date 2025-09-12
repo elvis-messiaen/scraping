@@ -1,0 +1,202 @@
+#!/usr/bin/env python3
+
+"""
+SCRAPER AMAZON SIMPLE - Alimentation régimes et diététique
+Version ultra-simplifiée qui FONCTIONNE
+"""
+
+import os
+import json
+import time
+from datetime import datetime
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+from bs4 import BeautifulSoup
+
+# Import système d'APIs gratuites
+try:
+    from apis_gratuites_optimisation import APIGratuitesOptimiseur, obtenir_config_ultra_rapide
+    APIS_DISPONIBLES = True
+except ImportError:
+    print("⚠️ Module APIs gratuites non trouvé - fonctionnement standard")
+    APIS_DISPONIBLES = False
+
+class ScraperSimpleAlimentation:
+    def __init__(self):
+        self.nom_categorie = "Alimentation regimes et dietetique"
+        self.nom_fichier = "alimentation_regimes_et_dietet"
+        self.url_base = "https://www.amazon.fr/s?k=alimentation+regimes+dietetique&i=stripbooks"
+        
+        self.livres_scraped = []
+        self.driver = None
+        
+        # Créer dossiers et fichiers
+        self.creer_dossiers()
+        self.charger_livres_existants()
+    
+    def creer_dossiers(self):
+        """Crée le dossier et les fichiers nécessaires"""
+        self.dossier_livres = os.path.join('..', 'LIVRES', self.nom_fichier)
+        os.makedirs(self.dossier_livres, exist_ok=True)
+        
+        self.fichier_json = os.path.join(self.dossier_livres, f"{self.nom_fichier}_livres.json")
+        self.fichier_progres = os.path.join(self.dossier_livres, f"{self.nom_fichier}_progres.json")
+        
+        # Créer fichier JSON vide si n'existe pas
+        if not os.path.exists(self.fichier_json):
+            with open(self.fichier_json, 'w', encoding='utf-8') as f:
+                json.dump([], f, ensure_ascii=False, indent=2)
+            print(f"✅ Fichier JSON créé vide")
+    
+    def charger_livres_existants(self):
+        """Charge les livres existants depuis le fichier JSON"""
+        try:
+            with open(self.fichier_json, 'r', encoding='utf-8') as f:
+                self.livres_scraped = json.load(f)
+                print(f"📚 Chargé {len(self.livres_scraped)} livres existants")
+        except:
+            self.livres_scraped = []
+            print("📚 Démarrage à zéro - aucun livre existant")
+    
+    def setup_driver(self):
+        """Configure le driver Chrome"""
+        options = Options()
+        options.add_argument("--headless")
+        options.add_argument("--no-sandbox")
+        options.add_argument("--disable-dev-shm-usage")
+        
+        self.driver = webdriver.Chrome(options=options)
+        self.driver.set_page_load_timeout(15)
+        self.driver.implicitly_wait(3)
+        print("🚗 Driver Chrome configuré")
+    
+    def sauvegarder(self):
+        """Sauvegarde les livres en JSON"""
+        try:
+            with open(self.fichier_json, 'w', encoding='utf-8') as f:
+                json.dump(self.livres_scraped, f, ensure_ascii=False, indent=2)
+            
+            progres = {
+                'total_livres': len(self.livres_scraped),
+                'derniere_sauvegarde': datetime.now().isoformat()
+            }
+            
+            with open(self.fichier_progres, 'w', encoding='utf-8') as f:
+                json.dump(progres, f, ensure_ascii=False, indent=2)
+            
+            print(f"💾 Sauvegarde: {len(self.livres_scraped)} livres")
+        except Exception as e:
+            print(f"❌ Erreur sauvegarde: {e}")
+    
+    def scraper_livre(self, url):
+        """Scrape un livre Amazon"""
+        try:
+            self.driver.get(url)
+            time.sleep(1)
+            
+            soup = BeautifulSoup(self.driver.page_source, 'html.parser')
+            
+            # Extraction simple du titre
+            titre = ""
+            titre_elem = soup.select_one('#productTitle')
+            if titre_elem:
+                titre = titre_elem.get_text().strip()
+            
+            # Si pas de titre, prendre depuis page title
+            if not titre:
+                page_title = soup.find('title')
+                if page_title:
+                    titre = page_title.get_text().strip()[:100]
+            
+            # Si toujours pas de titre, générer un basique
+            if not titre:
+                titre = f"Livre Amazon {len(self.livres_scraped) + 1}"
+            
+            # Créer l'objet livre
+            livre = {
+                'url': url,
+                'titre': titre,
+                'categorie': self.nom_categorie,
+                'timestamp': datetime.now().isoformat()
+            }
+            
+            return livre
+            
+        except Exception as e:
+            print(f"❌ Erreur scraping {url}: {e}")
+            return None
+    
+    def scraper_page(self, page_num):
+        """Scrape une page de résultats"""
+        url_page = f"{self.url_base}&page={page_num}"
+        
+        try:
+            self.driver.get(url_page)
+            time.sleep(2)
+            
+            soup = BeautifulSoup(self.driver.page_source, 'html.parser')
+            
+            # Trouver liens de livres
+            liens = []
+            for link in soup.select('h3 a'):
+                href = link.get('href')
+                if href and '/dp/' in href:
+                    if href.startswith('/'):
+                        href = 'https://www.amazon.fr' + href
+                    liens.append(href)
+            
+            print(f"📄 Page {page_num}: {len(liens)} liens trouvés")
+            
+            # Scraper chaque livre
+            nouveaux = 0
+            for url in liens[:5]:  # Max 5 par page pour test
+                livre = self.scraper_livre(url)
+                if livre:
+                    # Vérifier si déjà existant
+                    existe = any(l.get('url') == url for l in self.livres_scraped)
+                    if not existe:
+                        self.livres_scraped.append(livre)
+                        nouveaux += 1
+                        print(f"✅ {livre['titre'][:50]}")
+            
+            return nouveaux
+            
+        except Exception as e:
+            print(f"❌ Erreur page {page_num}: {e}")
+            return 0
+    
+    def run(self):
+        """Lance le scraping"""
+        print(f"🚀 SCRAPER SIMPLE - {self.nom_categorie}")
+        print("=" * 50)
+        
+        self.setup_driver()
+        
+        try:
+            page = 1
+            while page <= 3:  # Test sur 3 pages seulement
+                print(f"\n📄 Page {page}")
+                nouveaux = self.scraper_page(page)
+                
+                if nouveaux > 0:
+                    self.sauvegarder()
+                    print(f"Total: {len(self.livres_scraped)} livres")
+                else:
+                    print("Aucun nouveau livre - arrêt")
+                    break
+                
+                page += 1
+                time.sleep(2)
+            
+            print(f"\n🎯 TERMINÉ: {len(self.livres_scraped)} livres total")
+            
+        except KeyboardInterrupt:
+            print("\n⏹️ Arrêt demandé - sauvegarde...")
+            self.sauvegarder()
+        finally:
+            if self.driver:
+                self.driver.quit()
+
+if __name__ == "__main__":
+    scraper = ScraperSimpleAlimentation()
+    scraper.run()

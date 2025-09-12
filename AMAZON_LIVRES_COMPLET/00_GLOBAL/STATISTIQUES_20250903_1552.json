@@ -1,0 +1,24 @@
+{
+  "total_livres": 304,
+  "par_categorie": {
+    "Romans et Littérature Française": 304,
+    "Science-Fiction": 0,
+    "Fantasy": 0,
+    "Thriller et Policier": 0,
+    "Livres pour Enfants": 0,
+    "Bandes Dessinées": 0,
+    "Manga": 0,
+    "Développement Personnel": 0,
+    "Histoire": 0,
+    "Biographies": 0,
+    "Sciences Humaines": 0,
+    "Sciences et Techniques": 0,
+    "Santé et Forme": 0,
+    "Cuisine et Vins": 0,
+    "Religions et Spiritualité": 0,
+    "Sports et Loisirs": 0,
+    "Arts et Photographie": 0
+  },
+  "date_scraping": "2025-09-03T15:52:57.783949",
+  "duree_total_minutes": null
+}

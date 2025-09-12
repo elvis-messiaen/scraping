@@ -1,0 +1,747 @@
+#!/usr/bin/env python3
+"""
+SCRAPER AMAZON ILLIMITÉ - CATÉGORIE: Sciences
+Objectif: 100% du catalogue Amazon disponible - AUCUNE LIMITE
+URL de base: https://www.amazon.fr/s?k=sciences&i=stripbooks
+
+🚀 FONCTIONNALITÉS ULTIMES:
+- Scraping ILLIMITÉ jusqu'à épuisement complet du catalogue
+- Découpage automatique toutes les 1000 livres  
+- Détection infaillible des livres via liens /dp/
+- Mise à jour automatique des livres existants
+- Sauvegarde JSON + CSV après chaque page
+- Reprise automatique depuis la dernière page
+- Détection automatique du nombre total de livres Amazon
+- AUCUNE limite de pages ou de sécurité
+- Système de métriques complet avec temps estimé et progression
+"""
+
+import os
+import sys
+import json
+import time
+import random
+import threading
+import re
+from datetime import datetime, timedelta
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from typing import Optional, List, Dict, Any
+from urllib.parse import urljoin, urlparse
+import requests
+from bs4 import BeautifulSoup
+
+# Import système d'APIs gratuites
+try:
+    from apis_gratuites_optimisation import APIGratuitesOptimiseur, obtenir_config_ultra_rapide
+    APIS_DISPONIBLES = True
+except ImportError:
+    print("⚠️ Module APIs gratuites non trouvé - fonctionnement standard")
+    APIS_DISPONIBLES = False
+
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.common.exceptions import TimeoutException, WebDriverException
+
+import pandas as pd
+
+class ScraperAmazonSciences:
+    def __init__(self):
+        self.nom_categorie = "Sciences"
+        self.nom_fichier = "sciences"
+        self.url_base_recherche = "https://www.amazon.fr/s?k=sciences&i=stripbooks"
+                # LIMITE SUPPRIMÉE: total_amazon_estime = 0  # Sera détecté automatiquement
+        
+        # Configuration optimisée pour scraping illimité
+        self.max_workers = 12         # Performance élevée
+        self.request_delay = 0.2      # Délai réduit
+        self.batch_size = 50         # Pages avant sauvegarde  
+        self.retry_limit = 3
+        self.max_pages_vides = 3     # Arrêt après 3 pages vides consécutives
+        
+        # Métriques et progression
+        self.debut_scraping = None
+        self.pages_vides_consecutives = 0
+        self.derniere_page_traitee = 0
+        
+        # Thread safety
+        self.lock = threading.Lock()
+        
+        # Optimiseur APIs gratuites
+        if APIS_DISPONIBLES:
+            try:
+                self.optimiseur = APIGratuitesOptimiseur()
+                config = obtenir_config_ultra_rapide()
+                print("🚀 Optimisations activées: cache, proxies rotatifs, headers aléatoires")
+            except Exception as e:
+                print(f"⚠️ Erreur optimiseur: {e} - mode standard")
+                self.optimiseur = None
+        else:
+            self.optimiseur = None
+        
+        # Stockage des données
+        self.livres_scraped = []
+        self.urls_traitees = set()
+        self.pages_traitees = set()
+        
+        # Configuration des fichiers et dossiers
+        self.setup_dossiers()
+        
+        # Driver Selenium pour détection du total
+        self.driver = None
+        
+        # Charger données existantes
+        self.charger_donnees_existantes()
+
+    def setup_dossiers(self):
+        """Crée les dossiers nécessaires"""
+        # Dossier principal de la catégorie
+        self.dossier_livres = os.path.join('..', 'LIVRES', self.nom_fichier)
+        os.makedirs(self.dossier_livres, exist_ok=True)
+        
+        # Fichiers de sauvegarde
+        self.fichier_json = os.path.join(self.dossier_livres, f"{self.nom_fichier}_livres.json")
+        self.fichier_csv = os.path.join(self.dossier_livres, f"{self.nom_fichier}_livres.csv")
+        self.fichier_progres = os.path.join(self.dossier_livres, f"{self.nom_fichier}_progres.json")
+        
+        print(f"📁 Dossier: {self.dossier_livres}")
+        print(f"📄 JSON: {os.path.basename(self.fichier_json)}")
+        print(f"📊 CSV: {os.path.basename(self.fichier_csv)}")
+
+    def charger_donnees_existantes(self):
+        """Charge les données existantes depuis les fichiers JSON"""
+        stock_existant = 0
+        try:
+            if os.path.exists(self.fichier_json):
+                with open(self.fichier_json, 'r', encoding='utf-8') as f:
+                    data = json.load(f)
+                    if isinstance(data, list):
+                        self.livres_scraped = data
+                        stock_existant = len(self.livres_scraped)
+                        self.urls_traitees = {livre.get('url', '') for livre in data if livre.get('url')}
+                    elif isinstance(data, dict) and 'livres' in data:
+                        self.livres_scraped = data['livres']
+                        stock_existant = len(self.livres_scraped)
+                        self.urls_traitees = {livre.get('url', '') for livre in data['livres'] if livre.get('url')}
+        except Exception as e:
+            print(f"⚠️ Erreur chargement données: {e}")
+            self.livres_scraped = []
+            
+        print(f"📊 Stock existant: {stock_existant:,} livres")
+        return stock_existant
+
+    def charger_progression_existante(self):
+        """Charge la progression depuis le fichier de progression"""
+        try:
+            if os.path.exists(self.fichier_progres):
+                with open(self.fichier_progres, 'r', encoding='utf-8') as f:
+                    progression = json.load(f)
+                    self.derniere_page_traitee = progression.get('page_actuelle', 0)
+                    print(f"🔄 Reprise depuis la page {self.derniere_page_traitee}")
+                    return self.derniere_page_traitee
+        except Exception as e:
+            print(f"⚠️ Erreur chargement progression: {e}")
+        
+        return 1
+
+    def verifier_presence_livres_robuste(self, soup, page_num: int) -> bool:
+        """DÉTECTION AMÉLIORÉE: Vérifier plusieurs types d'éléments Amazon"""
+        print(f"🔍 Vérification page {page_num}...")
+        
+        # MÉTHODE 1: Liens /dp/ directs
+        liens_dp = soup.find_all('a', href=True)
+        liens_dp_valides = []
+        for link in liens_dp:
+            href = link.get('href', '')
+            if '/dp/' in href and len(href) > 10:
+                liens_dp_valides.append(href)
+        
+        print(f"   🔗 {len(liens_dp_valides)} liens /dp/ trouvés")
+        
+        # MÉTHODE 2: Résultats de recherche Amazon
+        resultats_recherche = soup.find_all(attrs={'data-component-type': 's-search-result'})
+        print(f"   📦 {len(resultats_recherche)} résultats de recherche")
+        
+        # MÉTHODE 3: Conteneurs de produits
+        conteneurs_produits = soup.find_all(['div', 'article'], attrs={'data-asin': True})
+        print(f"   📚 {len(conteneurs_produits)} conteneurs avec ASIN")
+        
+        # MÉTHODE 4: Titres de livres
+        titres_livres = soup.find_all(['h2', 'h3'], class_=re.compile(r'title|name', re.I))
+        print(f"   📖 {len(titres_livres)} titres potentiels")
+        
+        # Critère de succès: au moins 5 liens /dp/ OU 10 résultats de recherche
+        if len(liens_dp_valides) >= 5:
+            print(f"   🎯 Page {page_num}: LIVRES CONFIRMÉS ({len(liens_dp_valides)} liens /dp/)")
+            return True
+        elif len(resultats_recherche) >= 10:
+            print(f"   🎯 Page {page_num}: LIVRES CONFIRMÉS ({len(resultats_recherche)} résultats)")
+            return True
+        elif len(conteneurs_produits) >= 8:
+            print(f"   🎯 Page {page_num}: LIVRES CONFIRMÉS ({len(conteneurs_produits)} ASIN)")
+            return True
+        elif len(liens_dp_valides) >= 2:
+            print(f"   ✅ Page {page_num}: ACCEPTÉE ({len(liens_dp_valides)} liens)")
+            return True
+        
+        # Sinon, probablement fin de catalogue
+        print(f"   ❌ Page {page_num}: PAS ASSEZ DE LIVRES")
+        return False
+    def calculer_metriques_completes(self, page_actuelle: int, total_amazon: int):
+        """Calcule et affiche TOUTES les métriques demandées"""
+        if not self.debut_scraping:
+            self.debut_scraping = datetime.now()
+            self.temps_derniere_metrique = self.debut_scraping
+        
+        maintenant = datetime.now()
+        temps_ecoule = (maintenant - self.debut_scraping).total_seconds()
+        livres_possedes = len(self.livres_scraped)
+        
+        # Vitesse actuelle (livres/seconde)
+        if temps_ecoule > 0:
+            vitesse_moyenne = livres_possedes / temps_ecoule
+            self.historique_vitesse.append(vitesse_moyenne)
+            
+            # Garder seulement les 10 dernières mesures pour vitesse actuelle
+            if len(self.historique_vitesse) > 10:
+                self.historique_vitesse = self.historique_vitesse[-10:]
+            
+            vitesse_actuelle = sum(self.historique_vitesse) / len(self.historique_vitesse)
+        else:
+            vitesse_moyenne = 0
+            vitesse_actuelle = 0
+        
+        # Calcul temps restant
+        if total_amazon > livres_possedes and vitesse_actuelle > 0:
+            livres_restants = total_amazon - livres_possedes
+            secondes_restantes = livres_restants / vitesse_actuelle
+            temps_restant = str(timedelta(seconds=int(secondes_restantes)))
+        else:
+            temps_restant = "Calcul en cours..."
+        
+        # Temps écoulé formaté  
+        temps_ecoule_str = str(timedelta(seconds=int(temps_ecoule)))
+        
+        # Pourcentage de progression
+        if total_amazon > 0:
+            progression_pct = (livres_possedes / total_amazon) * 100
+        else:
+            progression_pct = 0
+        
+        # AFFICHAGE COMPLET DES MÉTRIQUES
+        print(f"   📚 LIVRES AMAZON: {total_amazon:,} livres (estimation)")
+        print(f"   📖 LIVRES POSSÉDÉS: {livres_possedes:,} livres")
+        print(f"   📈 PROGRESSION: {progression_pct:.1f}% ({livres_possedes:,}/{total_amazon:,})")
+        print(f"   ⏱️  TEMPS ÉCOULÉ: {temps_ecoule_str}")
+        print(f"   ⏰ TEMPS RESTANT: {temps_restant}")
+        print(f"   🚀 VITESSE: {vitesse_actuelle:.1f} livres/seconde ({vitesse_actuelle*60:.0f}/minute)")
+        if livres_possedes > 0:
+            print(f"   📊 MOYENNE: {vitesse_moyenne:.1f} livres/seconde depuis le début")
+        print(f"")
+
+    def mise_a_jour_automatique_demarrage(self):
+        """MISE À JOUR AUTOMATIQUE au démarrage de tous les livres existants"""
+        if not self.livres_scraped:
+            print("📚 Aucun livre existant à mettre à jour")
+            return
+        
+        total_existants = len(self.livres_scraped)
+        print(f"🔄 MISE À JOUR AUTOMATIQUE: {total_existants:,} livres existants")
+        print(f"   ⚡ Mise à jour des informations (prix, stock, nouveaux détails)")
+        
+        livres_mis_a_jour = 0
+        batch_size = 20
+        
+        for i in range(0, len(self.livres_scraped), batch_size):
+            batch = self.livres_scraped[i:i + batch_size]
+            print(f"   🔄 Batch {i//batch_size + 1}/{(len(self.livres_scraped) + batch_size - 1)//batch_size}")
+            
+            for j, livre in enumerate(batch):
+                url = livre.get('url')
+                if url:
+                    # Scraper à nouveau ce livre pour mise à jour
+                    try:
+                        nouveau_livre = self.extraire_infos_livre_url(url)
+                        if nouveau_livre:
+                            # Conserver l'ancien timestamp et ajouter timestamp de MAJ
+                            nouveau_livre['date_scraping_initial'] = livre.get('date_scraping', '')
+                            nouveau_livre['date_derniere_maj'] = datetime.now().isoformat()
+                            nouveau_livre['maj_automatique'] = True
+                            
+                            self.livres_scraped[i + j] = nouveau_livre
+                            livres_mis_a_jour += 1
+                            
+                            if livres_mis_a_jour % 50 == 0:
+                                print(f"      ✅ {livres_mis_a_jour} livres mis à jour...")
+                                
+                    except Exception as e:
+                        print(f"      ⚠️ Erreur MAJ {livre.get('titre', 'Livre')[:30]}: {e}")
+            
+            # Pause entre batches
+            time.sleep(0.5)
+        
+        print(f"✅ MISE À JOUR TERMINÉE: {livres_mis_a_jour}/{total_existants} livres mis à jour")
+        self.sauvegarder_progres_complet(1, len(self.livres_scraped))
+        self.derniere_mise_a_jour = datetime.now()
+        print(f"📊 MÉTRIQUES COMPLÈTES - Page {page_actuelle}")
+        print(f"   📚 LIVRES AMAZON: {total_amazon:,} livres (estimation)")
+        print(f"   📖 LIVRES POSSÉDÉS: {livres_possedes:,} livres")
+        print(f"   📈 PROGRESSION: {progression_pct:.1f}% ({livres_possedes:,}/{total_amazon:,})")
+        print(f"   ⏱️  TEMPS ÉCOULÉ: {temps_ecoule_str}")
+        print(f"   ⏰ TEMPS RESTANT: {temps_restant}")
+        print(f"   🚀 VITESSE: {vitesse_actuelle:.1f} livres/seconde ({vitesse_actuelle*60:.0f}/minute)")
+        if livres_possedes > 0:
+            print(f"   📊 MOYENNE: {vitesse_moyenne:.1f} livres/seconde depuis le début")
+        print(f"")
+
+    def detecter_total_amazon_actuel(self, url_recherche: str) -> int:
+        """Détecte le nombre total de livres Amazon pour cette catégorie"""
+        print("🔍 Détection du nombre total de livres Amazon...")
+        
+        try:
+            # Faire plusieurs tests sur différentes pages pour estimer
+            pages_test = [1, 10, 50, 100, 200]
+            resultats = []
+            
+            for page in pages_test:
+                url_test = f"{url_recherche}&page={page}"
+                try:
+                    response = requests.get(url_test, timeout=10)
+                    soup = BeautifulSoup(response.content, 'html.parser')
+                    
+                    if self.verifier_presence_livres_robuste(soup, page):
+                        resultats.append(page)
+                        print(f"   ✅ Page {page}: livres trouvés")
+                    else:
+                        print(f"   ❌ Page {page}: pas de livres")
+                        break
+                        
+                except Exception as e:
+                    print(f"   ⚠️ Erreur page {page}: {e}")
+                    
+                time.sleep(0.5)
+            
+            if resultats:
+                derniere_page_valide = max(resultats)
+                # Estimation conservative basée sur 16 livres par page
+                total_estime = derniere_page_valide * 16
+                print(f"🎯 Estimation basée sur tests réels: {total_estime:,} livres (page {derniere_page_valide} testée)")
+                return total_estime
+            else:
+                print("⚠️ Aucune page avec livres trouvée - estimation par défaut")
+                return 80000
+                
+        except Exception as e:
+            print(f"⚠️ Erreur détection: {e} - utilisation estimation par défaut")
+            return 80000
+
+    def calculer_metriques(self, page_actuelle: int, total_amazon: int):
+        """Calcule et affiche les métriques de progression"""
+        if not self.debut_scraping:
+            return
+            
+        temps_ecoule = datetime.now() - self.debut_scraping
+        livres_actuels = len(self.livres_scraped)
+        
+        if temps_ecoule.total_seconds() > 0 and page_actuelle > 1:
+            # Vitesse de scraping
+            pages_par_seconde = (page_actuelle - 1) / temps_ecoule.total_seconds()
+            livres_par_seconde = livres_actuels / temps_ecoule.total_seconds()
+            
+            # Progression en pourcentage
+            if total_amazon > 0:
+                progression_pct = (livres_actuels / total_amazon) * 100
+            else:
+                progression_pct = 0
+            
+            # Temps restant estimé
+            if pages_par_seconde > 0 and livres_actuels > 0:
+                livres_restants = max(0, total_amazon - livres_actuels)
+                if livres_par_seconde > 0:
+                    secondes_restantes = livres_restants / livres_par_seconde
+                    temps_restant = timedelta(seconds=int(secondes_restantes))
+                else:
+                    temps_restant = "Calcul en cours..."
+            else:
+                temps_restant = "Calcul en cours..."
+            
+            self.calculer_metriques_completes(page_actuelle, total_amazon_actuel)
+            print(f"   📚 Livres: {livres_actuels:,}/{total_amazon:,} ({progression_pct:.1f}%)")
+            print(f"   ⏱️  Vitesse: {livres_par_seconde:.1f} livres/sec, {pages_par_seconde:.2f} pages/sec")
+            print(f"   ⏳ Temps écoulé: {str(temps_ecoule).split('.')[0]}")
+            print(f"   🎯 Temps restant estimé: {temps_restant}")
+
+    def extraire_infos_livre(self, element_livre) -> Optional[Dict[str, Any]]:
+        """Extraction optimisée pour les nouveaux formats Amazon"""
+        try:
+            # Méthode 1: Chercher lien /dp/ dans l'élément
+            lien_element = element_livre.find('a', href=True)
+            if not lien_element:
+                # Méthode alternative: chercher dans les sous-éléments
+                lien_element = element_livre.find(['h2', 'h3']).find('a', href=True) if element_livre.find(['h2', 'h3']) else None
+            
+            if not lien_element:
+                return None
+                
+            url_livre = lien_element.get('href', '')
+            if not url_livre or '/dp/' not in url_livre:
+                return None
+            
+            # URL complète
+            if url_livre.startswith('/'):
+                url_livre = f"https://www.amazon.fr{url_livre}"
+            elif not url_livre.startswith('http'):
+                url_livre = f"https://www.amazon.fr/{url_livre}"
+            
+            # Éviter les doublons
+            if url_livre in self.urls_traitees:
+                return None
+            
+            # Titre - plusieurs méthodes
+            titre = ""
+            # Méthode 1: Dans le lien
+            titre_dans_lien = lien_element.get_text(strip=True)
+            if titre_dans_lien and len(titre_dans_lien) > 5:
+                titre = titre_dans_lien
+            
+            # Méthode 2: Span ou div avec titre
+            if not titre:
+                titre_element = element_livre.find(['span', 'div'], class_=re.compile(r'title|name', re.I))
+                if titre_element:
+                    titre = titre_element.get_text(strip=True)
+            
+            # Méthode 3: H2/H3 avec titre
+            if not titre:
+                titre_element = element_livre.find(['h2', 'h3'])
+                if titre_element:
+                    titre = titre_element.get_text(strip=True)
+            
+            if not titre or len(titre) < 3:
+                titre = "Titre non disponible"
+            
+            # Auteur - recherche flexible
+            auteur = ""
+            auteur_selectors = [
+                '[class*="author"]',
+                '[class*="by"]',
+                'span[class*="a-size-base"]'
+            ]
+            for selector in auteur_selectors:
+                auteur_element = element_livre.select_one(selector)
+                if auteur_element:
+                    auteur_text = auteur_element.get_text(strip=True)
+                    if auteur_text and 'de ' in auteur_text:
+                        auteur = auteur_text
+                        break
+                    elif auteur_text and len(auteur_text) > 2:
+                        auteur = auteur_text
+                        break
+            
+            # Prix - recherche flexible
+            prix = ""
+            prix_selectors = [
+                '[class*="price"]',
+                '[class*="a-price-whole"]',
+                'span[class*="a-offscreen"]'
+            ]
+            for selector in prix_selectors:
+                prix_element = element_livre.select_one(selector)
+                if prix_element:
+                    prix_text = prix_element.get_text(strip=True)
+                    if '€' in prix_text or ',' in prix_text:
+                        prix = prix_text
+                        break
+            
+            # Note/étoiles
+            note = ""
+            note_element = element_livre.find(['span', 'i'], class_=re.compile(r'rating|star', re.I))
+            if note_element:
+                note = note_element.get('aria-label', note_element.get_text(strip=True))
+            
+            livre_info = {
+                'titre': titre,
+                'auteur': auteur if auteur else "Auteur non disponible", 
+                'prix': prix if prix else "Prix non disponible",
+                'note': note if note else "Note non disponible",
+                'url': url_livre,
+                'categorie': self.nom_categorie,
+                'date_scraping': datetime.now().isoformat(),
+                'source': 'Amazon FR'
+            }
+            
+            # Ajouter à la liste des URLs traitées
+            self.urls_traitees.add(url_livre)
+            
+            return livre_info
+            
+        except Exception as e:
+            print(f"⚠️ Erreur extraction livre: {e}")
+            return None
+            
+        except Exception as e:
+            print(f"⚠️ Erreur extraction livre: {e}")
+            return None
+
+    def scraper_page(self, page_num: int) -> List[Dict[str, Any]]:
+        """Scrape optimisé pour Amazon moderne avec sélecteurs multiples"""
+        url_page = f"{self.url_base_recherche}&page={page_num}"
+        livres_page = []
+        
+        try:
+            # Utiliser l'optimiseur si disponible
+            if self.optimiseur:
+                response = self.optimiseur.faire_requete_optimisee(url_page)
+            else:
+                headers = {
+                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+                }
+                response = requests.get(url_page, headers=headers, timeout=10)
+            
+            soup = BeautifulSoup(response.content, 'html.parser')
+            
+            # Vérifier présence de livres AVANT d'essayer d'extraire
+            if not self.verifier_presence_livres_robuste(soup, page_num):
+                return []
+            
+            # Chercher les conteneurs de livres avec plusieurs sélecteurs
+            conteneurs_livres = []
+            
+            # Méthode 1: Résultats de recherche standards
+            resultats_standards = soup.find_all(attrs={'data-component-type': 's-search-result'})
+            conteneurs_livres.extend(resultats_standards)
+            
+            # Méthode 2: Divs avec data-asin
+            conteneurs_asin = soup.find_all('div', attrs={'data-asin': True})
+            conteneurs_livres.extend(conteneurs_asin)
+            
+            # Méthode 3: Articles de produits
+            articles_produits = soup.find_all('article', class_=re.compile(r'product|item', re.I))
+            conteneurs_livres.extend(articles_produits)
+            
+            # Méthode 4: Divs génériques avec classes produits
+            divs_generiques = soup.find_all('div', class_=re.compile(r'result|product|item', re.I))
+            conteneurs_livres.extend(divs_generiques)
+            
+            # Supprimer les doublons
+            conteneurs_uniques = []
+            for conteneur in conteneurs_livres:
+                if conteneur not in conteneurs_uniques:
+                    conteneurs_uniques.append(conteneur)
+            
+            print(f"   📦 {len(conteneurs_uniques)} conteneurs trouvés pour extraction")
+            
+            for conteneur in conteneurs_uniques:
+                livre_info = self.extraire_infos_livre(conteneur)
+                if livre_info:
+                    livres_page.append(livre_info)
+            
+            print(f"   📖 {len(livres_page)} livres extraits de la page {page_num}")
+            
+        except Exception as e:
+            print(f"❌ Erreur scraping page {page_num}: {e}")
+        
+        return livres_page
+
+    def sauvegarder_progres_complet(self, page_actuelle: int, total_amazon: int):
+        """Sauvegarde complète: JSON + CSV + progression"""
+        try:
+            # Sauvegarde JSON
+            with open(self.fichier_json, 'w', encoding='utf-8') as f:
+                json.dump(self.livres_scraped, f, ensure_ascii=False, indent=2)
+            
+            # Sauvegarde CSV si on a des livres
+            if self.livres_scraped:
+                df = pd.DataFrame(self.livres_scraped)
+                df.to_csv(self.fichier_csv, index=False, encoding='utf-8')
+            
+            # Sauvegarde progression
+            progression = {
+                'page_actuelle': page_actuelle,
+                'total_livres_scrapes': len(self.livres_scraped),
+                'total_amazon_estime': total_amazon,
+                'derniere_sauvegarde': datetime.now().isoformat(),
+                'pages_vides_consecutives': self.pages_vides_consecutives,
+                'urls_traitees_count': len(self.urls_traitees)
+            }
+            
+            with open(self.fichier_progres, 'w', encoding='utf-8') as f:
+                json.dump(progression, f, ensure_ascii=False, indent=2)
+                
+            print(f"💾 Sauvegarde: {len(self.livres_scraped):,} livres, page {page_actuelle}")
+            
+        except Exception as e:
+            print(f"❌ Erreur sauvegarde: {e}")
+    def extraire_infos_livre_url(self, url):
+        """Extrait les informations d'un livre à partir de son URL"""
+        try:
+            headers = {
+                'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36'
+            }
+            
+            response = requests.get(url, headers=headers, timeout=10)
+            if response.status_code != 200:
+                return None
+                
+            soup = BeautifulSoup(response.content, 'html.parser')
+            
+            # Extraction des informations de base
+            livre = {
+                'url': url,
+                'date_scraping': datetime.now().isoformat(),
+                'titre': '',
+                'auteur': '',
+                'prix': '',
+                'note': '',
+                'nb_avis': '',
+                'description': '',
+                'stock': ''
+            }
+            
+            # Titre
+            titre_elem = soup.find('span', {'id': 'productTitle'})
+            if titre_elem:
+                livre['titre'] = titre_elem.get_text(strip=True)
+            
+            # Auteur
+            auteur_elem = soup.find('span', class_='author')
+            if not auteur_elem:
+                auteur_elem = soup.find('a', {'data-asin-item-name': 'author'})
+            if auteur_elem:
+                livre['auteur'] = auteur_elem.get_text(strip=True)
+            
+            # Prix
+            prix_elem = soup.find('span', class_='a-price-whole')
+            if not prix_elem:
+                prix_elem = soup.find('span', {'class': 'a-offscreen'})
+            if prix_elem:
+                livre['prix'] = prix_elem.get_text(strip=True)
+            
+            # Note
+            note_elem = soup.find('span', class_='a-icon-alt')
+            if note_elem and 'étoiles' in note_elem.get_text():
+                livre['note'] = note_elem.get_text(strip=True)
+            
+            # Description
+            desc_elem = soup.find('div', {'id': 'feature-bullets'})
+            if desc_elem:
+                livre['description'] = desc_elem.get_text(strip=True)[:500]
+            
+            return livre
+            
+        except Exception as e:
+            print(f"Erreur extraction {url}: {e}")
+            return None
+
+    def run(self):
+        """MÉTHODE PRINCIPALE ILLIMITÉE - Scraping jusqu'à épuisement complet"""
+        print(f"🚀 DÉMARRAGE SCRAPER ILLIMITÉ - {self.nom_categorie}")
+        print(f"🎯 URL: {self.url_base_recherche}")
+        print("=" * 80)
+        
+        # Enregistrer l'heure de début
+        self.debut_scraping = datetime.now()
+        
+        # Détection du total Amazon
+        total_amazon_actuel = self.detecter_total_amazon_actuel(self.url_base_recherche)
+        stock_existant = len(self.livres_scraped)
+        
+        print(f"📊 Estimation Amazon: {total_amazon_actuel:,} livres")
+        print(f"📦 Stock existant: {stock_existant:,} livres")
+        print(f"⏳ Objectif: ÉPUISEMENT COMPLET (aucune limite)")
+        
+        # MISE À JOUR AUTOMATIQUE AU DÉMARRAGE
+        if len(self.livres_scraped) > 0:
+            print(f"🔄 DÉMARRAGE: Mise à jour automatique de {len(self.livres_scraped):,} livres existants")
+            self.mise_a_jour_automatique_demarrage()
+        print("=" * 80)
+        
+        # Reprendre depuis la dernière page
+        page_actuelle = max(1, self.charger_progression_existante())
+        dernier_nombre_livres = len(self.livres_scraped)
+        
+        # BOUCLE PRINCIPALE ILLIMITÉE
+        while True:
+            print(f"\n🔄 Page {page_actuelle} - {len(self.livres_scraped):,}/{total_amazon_actuel:,} livres")
+            
+            try:
+                # Scraper la page
+                livres_nouveaux = self.scraper_page(page_actuelle)
+                
+                if livres_nouveaux:
+                    # Ajouter les nouveaux livres
+                    with self.lock:
+                        self.livres_scraped.extend(livres_nouveaux)
+                    
+                    print(f"   ✅ {len(livres_nouveaux)} nouveaux livres ajoutés")
+                    self.pages_vides_consecutives = 0
+                else:
+                    # Page vide
+                    self.pages_vides_consecutives += 1
+                    print(f"   ⚠️ Page vide ({self.pages_vides_consecutives}/{self.max_pages_vides})")
+                    
+                    if self.pages_vides_consecutives >= self.max_pages_vides:
+                        print(f"🛑 ARRÊT: {self.max_pages_vides} pages vides consécutives - Catalogue épuisé")
+                        break
+                
+                # DÉCOUPAGE AUTOMATIQUE : Sauvegarde toutes les 1000 livres
+                if len(self.livres_scraped) - dernier_nombre_livres >= 1000:
+                    print(f"\n📦 DÉCOUPAGE AUTOMATIQUE: {len(self.livres_scraped):,} livres atteints")
+                    self.sauvegarder_progres_complet(page_actuelle, total_amazon_actuel)
+                    dernier_nombre_livres = len(self.livres_scraped)
+                    print(f"✅ Partie sauvegardée - continuation du scraping...")
+                
+                # Sauvegarde périodique : toutes les 50 pages
+                if page_actuelle % 50 == 0:
+                    self.sauvegarder_progres_complet(page_actuelle, total_amazon_actuel)
+                
+                # Afficher les métriques toutes les 10 pages
+                if page_actuelle % 10 == 0:
+                    self.calculer_metriques(page_actuelle, total_amazon_actuel)
+                
+                page_actuelle += 1
+                time.sleep(self.request_delay)
+                
+            except KeyboardInterrupt:
+                print(f"\n🛑 ARRÊT UTILISATEUR à la page {page_actuelle}")
+                break
+            except Exception as e:
+                print(f"❌ Erreur page {page_actuelle}: {e}")
+                time.sleep(2)
+                continue
+        
+        # Sauvegarde finale
+        print("\n💾 SAUVEGARDE FINALE...")
+        self.sauvegarder_progres_complet(page_actuelle, total_amazon_actuel)
+        
+        # Résultats finaux
+        total_final = len(self.livres_scraped)
+        temps_total = datetime.now() - self.debut_scraping
+        
+        print("\n" + "=" * 80)
+        print("🏁 ÉPUISEMENT COMPLET DU CATALOGUE AMAZON")
+        print(f"📚 TOTAL RÉCUPÉRÉ: {total_final:,} livres")
+        print(f"🎯 Estimation initiale: {total_amazon_actuel:,} livres")
+        
+        if total_final > total_amazon_actuel:
+            print(f"🎉 BONUS: {total_final - total_amazon_actuel:,} livres de plus que prévu!")
+        
+        print(f"📄 Dernière page traitée: {page_actuelle}")
+        print(f"⏱️ Temps total: {str(temps_total).split('.')[0]}")
+        print(f"⚡ Vitesse moyenne: {total_final / temps_total.total_seconds():.1f} livres/seconde")
+        print(f"🛑 Arrêt après {self.pages_vides_consecutives} pages vides consécutives")
+        print("=" * 80)
+
+if __name__ == "__main__":
+    scraper = ScraperAmazonSciences()
+    print("🚀 SCRAPER ILLIMITÉ PRÊT À DÉMARRER")
+    print("⚡ Fonctionnalités: détection infaillible, découpage auto, métriques complètes")
+    print("🔥 AUCUNE LIMITE - Scraping jusqu'à épuisement total du catalogue")
+    
+    try:
+        scraper.run()
+    except KeyboardInterrupt:
+        print("\n🛑 Arrêt demandé par l'utilisateur")
+    except Exception as e:
+        print(f"\n❌ Erreur critique: {e}")

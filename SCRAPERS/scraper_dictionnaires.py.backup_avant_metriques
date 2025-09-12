@@ -1,0 +1,98 @@
+#!/usr/bin/env python3
+"""
+SCRAPER AMAZON OPTIMISÉ - CATÉGORIE: Dictionnaires
+Objectif: 100% du catalogue Amazon disponible
+URL de base: https://www.amazon.fr/s?k=dictionnaires&i=stripbooks
+
+Fonctionnalités:
+- Scraping parallèle optimisé
+- Mise à jour automatique des livres existants  
+- Sauvegarde JSON + CSV après chaque page
+- Reprise automatique depuis la dernière page
+- Détection automatique du nombre total de livres Amazon
+"""
+
+import os
+import sys
+import json
+import time
+import random
+import threading
+import re
+from datetime import datetime
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from typing import Optional, List, Dict, Any
+from urllib.parse import urljoin, urlparse
+import requests
+from bs4 import BeautifulSoup
+# Import système d'APIs gratuites
+try:
+    from apis_gratuites_optimisation import APIGratuitesOptimiseur, obtenir_config_ultra_rapide
+    APIS_DISPONIBLES = True
+except ImportError:
+    print("⚠️ Module APIs gratuites non trouvé - fonctionnement standard")
+    APIS_DISPONIBLES = False
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+import pandas as pd
+
+class ScraperAmazonDictionnaires:
+    def __init__(self):
+        self.nom_categorie = "Dictionnaires"
+        self.nom_fichier = "dictionnaires"
+        self.url_base_recherche = "https://www.amazon.fr/s?k=dictionnaires&i=stripbooks"
+        self.total_amazon_estime = 0  # Sera détecté automatiquement
+        
+        # Configuration réduite pour éviter les crashes ChromeDriver
+        self.max_workers = 8     # Réduit pour éviter les erreurs de connexion
+        self.request_delay = 0.3  # Réduit grâce au cache
+        self.batch_size = 20     # Pages traitées avant sauvegarde
+        self.retry_limit = 3
+        
+        # Thread safety
+        self.lock = threading.Lock()
+        
+        # Optimiseur APIs gratuites
+        if APIS_DISPONIBLES:
+            self.optimiseur = APIGratuitesOptimiseur()
+            config = obtenir_config_ultra_rapide()
+            print("🚀 Optimisations activées: cache, proxies rotatifs, headers aléatoires")
+        else:
+            self.optimiseur = None
+        
+        # Stockage des données
+        self.livres_scraped = []
+        self.urls_traitees = set()
+        self.pages_traitees = set()
+        
+        # Fichiers et dossiers
+        self.setup_dossiers()
+        
+        # Driver Selenium pour la détection du total
+        self.driver = None
+        
+        # Charger les données existantes
+        self.charger_donnees_existantes()
+
+    def setup_dossiers(self):
+        """Crée les dossiers nécessaires"""
+        # Dossier principal de la catégorie
+        self.dossier_livres = os.path.join('..', 'LIVRES', self.nom_fichier)
+        os.makedirs(self.dossier_livres, exist_ok=True)
+        
+        # Fichiers de sauvegarde
+        self.fichier_json = os.path.join(self.dossier_livres, f"{self.nom_fichier}_livres.json")
+        self.fichier_csv = os.path.join(self.dossier_livres, f"{self.nom_fichier}_livres.csv")
+        self.fichier_progres = os.path.join(self.dossier_livres, f"{self.nom_fichier}_progres.json")
+        
+        print(f"📁 Dossier: {self.dossier_livres}")
+        print(f"📄 JSON: {os.path.basename(self.fichier_json)}")
+        print(f"📊 CSV: {os.path.basename(self.fichier_csv)}")
+
+if __name__ == "__main__":
+    scraper = ScraperAmazonDictionnaires()
+    print("🚀 Scraper généré automatiquement - Prêt à l'utilisation!")
+    print("⚠️  Pour lancer le scraping, ajoutez la méthode run() depuis un scraper existant")

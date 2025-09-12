@@ -1,0 +1,321 @@
+[2025-09-11 09:39:03] 🚀 LANCEUR MULTI-APPROCHES
+[2025-09-11 09:39:03] ==================================================
+[2025-09-11 09:39:03] ✅ 103 scrapers chargés
+[2025-09-11 09:39:04] 💻 Système: 14 cores, CPU:9.9%, RAM:64.6%
+[2025-09-11 09:39:04] 🎯 Stratégie choisie: THREADING
+[2025-09-11 09:39:04] 👥 5 workers simultanés (limite anti-ban: 5)
+[2025-09-11 09:39:04] 📦 Batch 1/3 - 50 scrapers
+[2025-09-11 09:39:04] 🧵 Mode THREADING - 5 workers
+[2025-09-11 09:39:04] 🚀 [67460] Lancement: Roman
+[2025-09-11 09:39:04] 🚀 [67460] Lancement: Poésie
+[2025-09-11 09:39:04] 🚀 [67460] Lancement: Théâtre
+[2025-09-11 09:39:04] 🚀 [67460] Lancement: Essai
+[2025-09-11 09:39:04] 🚀 [67460] Lancement: Nouvelle
+[2025-09-11 09:39:30] ✅ [67460] Nouvelle terminé (0.4min)
+[2025-09-11 09:39:30] 🚀 [67460] Lancement: Autobiographie
+[2025-09-11 09:39:31] ✅ [67460] Poésie terminé (0.4min)
+[2025-09-11 09:39:31] 🚀 [67460] Lancement: Biographie
+[2025-09-11 09:39:31] ✅ [67460] Essai terminé (0.4min)
+[2025-09-11 09:39:31] 🚀 [67460] Lancement: Mémoires
+[2025-09-11 09:39:33] ✅ [67460] Roman terminé (0.5min)
+[2025-09-11 09:39:33] 🚀 [67460] Lancement: Journal
+[2025-09-11 09:39:34] ✅ [67460] Théâtre terminé (0.5min)
+[2025-09-11 09:39:34] 🚀 [67460] Lancement: Correspondance
+[2025-09-11 09:39:57] ✅ [67460] Mémoires terminé (0.4min)
+[2025-09-11 09:39:57] 🚀 [67460] Lancement: Science-Fiction
+[2025-09-11 09:39:59] ✅ [67460] Autobiographie terminé (0.5min)
+[2025-09-11 09:39:59] 🚀 [67460] Lancement: Fantasy
+[2025-09-11 09:39:59] ✅ [67460] Biographie terminé (0.5min)
+[2025-09-11 09:39:59] 🚀 [67460] Lancement: Fantastique
+[2025-09-11 09:40:03] ✅ [67460] Journal terminé (0.5min)
+[2025-09-11 09:40:03] 🚀 [67460] Lancement: Thriller
+[2025-09-11 09:40:06] ✅ [67460] Correspondance terminé (0.5min)
+[2025-09-11 09:40:06] 🚀 [67460] Lancement: Policier
+[2025-09-11 09:40:25] ✅ [67460] Science-Fiction terminé (0.5min)
+[2025-09-11 09:40:25] 🚀 [67460] Lancement: Mystère
+[2025-09-11 09:40:27] ✅ [67460] Fantastique terminé (0.5min)
+[2025-09-11 09:40:27] 🚀 [67460] Lancement: Suspense
+[2025-09-11 09:40:27] ✅ [67460] Fantasy terminé (0.5min)
+[2025-09-11 09:40:27] 🚀 [67460] Lancement: Horreur
+[2025-09-11 09:40:33] ✅ [67460] Thriller terminé (0.5min)
+[2025-09-11 09:40:33] 🚀 [67460] Lancement: Romance
+[2025-09-11 09:40:35] ✅ [67460] Policier terminé (0.5min)
+[2025-09-11 09:40:35] 🚀 [67460] Lancement: Historique
+[2025-09-11 09:40:47] ✅ [67460] Mystère terminé (0.4min)
+[2025-09-11 09:40:47] 🚀 [67460] Lancement: Philosophie
+[2025-09-11 09:40:56] ✅ [67460] Suspense terminé (0.5min)
+[2025-09-11 09:40:56] 🚀 [67460] Lancement: Psychologie
+[2025-09-11 09:40:56] ✅ [67460] Historique terminé (0.4min)
+[2025-09-11 09:40:56] 🚀 [67460] Lancement: Sociologie
+[2025-09-11 09:40:57] ✅ [67460] Horreur terminé (0.5min)
+[2025-09-11 09:40:57] 🚀 [67460] Lancement: Anthropologie
+[2025-09-11 09:41:01] ✅ [67460] Romance terminé (0.5min)
+[2025-09-11 09:41:01] 🚀 [67460] Lancement: Histoire
+[2025-09-11 09:43:23] 🚀 LANCEUR MULTI-APPROCHES
+[2025-09-11 09:43:23] ==================================================
+[2025-09-11 09:43:23] ✅ 103 scrapers chargés
+[2025-09-11 09:43:23] 🧪 MODE TEST: Limité à 3 scrapers
+[2025-09-11 09:43:24] 💻 Système: 14 cores, CPU:9.2%, RAM:63.3%
+[2025-09-11 09:43:24] 🎯 Stratégie choisie: THREADING
+[2025-09-11 09:43:24] 👥 5 workers simultanés (limite anti-ban: 5)
+[2025-09-11 09:43:24] 📦 Batch 1/1 - 3 scrapers
+[2025-09-11 09:43:24] 🧵 Mode THREADING - 5 workers
+[2025-09-11 09:43:24] 🚀 [71034] Lancement: Roman
+[2025-09-11 09:43:24] 🚀 [71034] Lancement: Poésie
+[2025-09-11 09:43:24] 🚀 [71034] Lancement: Théâtre
+[2025-09-11 09:43:34] ❌ Thread 6177583104 erreur: 
+[2025-09-11 09:43:34] ❌ Thread 6160756736 erreur: 
+[2025-09-11 09:43:49] ✅ [71034] Théâtre terminé (0.4min)
+[2025-09-11 09:43:50] ✅ [71034] Poésie terminé (0.4min)
+[2025-09-11 09:43:54] ✅ [71034] Roman terminé (0.5min)
+[2025-09-11 09:43:54] ✅ Batch terminé en 0.5min
+[2025-09-11 09:43:54] 
+📊 RAPPORT MULTI-LANCEUR
+========================================
+Total traités: 3
+✅ Succès: 3
+❌ Échecs: 0
+📊 Taux succès: 100.0%
+
+[2025-09-11 09:44:28] 🚀 LANCEUR MULTI-APPROCHES
+[2025-09-11 09:44:28] ==================================================
+[2025-09-11 09:44:28] ✅ 103 scrapers chargés
+[2025-09-11 09:44:29] 💻 Système: 14 cores, CPU:7.9%, RAM:63.9%
+[2025-09-11 09:44:29] 🎯 Stratégie choisie: THREADING
+[2025-09-11 09:44:29] 👥 5 workers simultanés (limite anti-ban: 5)
+[2025-09-11 09:44:29] 📦 Batch 1/3 - 50 scrapers
+[2025-09-11 09:44:29] 🧵 Mode THREADING - 5 workers
+[2025-09-11 09:44:29] 🚀 [71602] Lancement: Roman
+[2025-09-11 09:44:29] 🚀 [71602] Lancement: Nouvelle
+[2025-09-11 09:44:29] 🚀 [71602] Lancement: Théâtre
+[2025-09-11 09:44:29] 🚀 [71602] Lancement: Essai
+[2025-09-11 09:44:29] 🚀 [71602] Lancement: Poésie
+[2025-09-11 09:44:56] ✅ [71602] Essai terminé (0.5min)
+[2025-09-11 09:44:56] 🚀 [71602] Lancement: Autobiographie
+[2025-09-11 09:44:57] ✅ [71602] Théâtre terminé (0.5min)
+[2025-09-11 09:44:57] 🚀 [71602] Lancement: Biographie
+[2025-09-11 09:44:57] ✅ [71602] Roman terminé (0.5min)
+[2025-09-11 09:44:57] 🚀 [71602] Lancement: Mémoires
+[2025-09-11 09:44:57] ✅ [71602] Nouvelle terminé (0.5min)
+[2025-09-11 09:44:57] 🚀 [71602] Lancement: Journal
+[2025-09-11 09:44:58] ⏸️  Arrêt demandé
+[2025-09-11 09:44:58] 
+📊 RAPPORT MULTI-LANCEUR
+========================================
+Total traités: 4
+✅ Succès: 4
+❌ Échecs: 0
+📊 Taux succès: 100.0%
+
+[2025-09-11 09:44:58] ✅ [71602] Poésie terminé (0.5min)
+[2025-09-11 09:44:58] 🚀 [71602] Lancement: Correspondance
+[2025-09-11 09:45:12] 🚀 LANCEUR MULTI-APPROCHES
+[2025-09-11 09:45:12] ==================================================
+[2025-09-11 09:45:12] ✅ 103 scrapers chargés
+[2025-09-11 09:45:12] 🧪 MODE TEST: Limité à 3 scrapers
+[2025-09-11 09:45:13] 💻 Système: 14 cores, CPU:8.8%, RAM:62.4%
+[2025-09-11 09:45:13] 🎯 Stratégie choisie: THREADING
+[2025-09-11 09:45:13] 👥 5 workers simultanés (limite anti-ban: 5)
+[2025-09-11 09:45:13] 📦 Batch 1/1 - 3 scrapers
+[2025-09-11 09:45:13] 🧵 Mode THREADING - 5 workers
+[2025-09-11 09:45:13] 🚀 [73865] Lancement: Roman
+[2025-09-11 09:45:13] 🚀 [73865] Lancement: Poésie
+[2025-09-11 09:45:13] 🚀 [73865] Lancement: Théâtre
+[2025-09-11 09:45:23] ❌ Thread 6212333568 erreur: 
+[2025-09-11 09:45:23] ❌ Thread 6195507200 erreur: 
+[2025-09-11 09:45:40] ✅ [73865] Poésie terminé (0.5min)
+[2025-09-11 09:45:41] ✅ [73865] Roman terminé (0.5min)
+[2025-09-11 09:45:42] ✅ [73865] Théâtre terminé (0.5min)
+[2025-09-11 09:45:42] ✅ Batch terminé en 0.5min
+[2025-09-11 09:45:42] 
+📊 RAPPORT MULTI-LANCEUR
+========================================
+Total traités: 3
+✅ Succès: 3
+❌ Échecs: 0
+📊 Taux succès: 100.0%
+
+[2025-09-11 09:46:36] 🚀 LANCEUR MULTI-APPROCHES
+[2025-09-11 09:46:36] ==================================================
+[2025-09-11 09:46:36] ✅ 103 scrapers chargés
+[2025-09-11 09:46:37] 💻 Système: 14 cores, CPU:6.7%, RAM:63.1%
+[2025-09-11 09:46:37] 🎯 Stratégie choisie: THREADING
+[2025-09-11 09:46:37] 👥 5 workers simultanés (limite anti-ban: 5)
+[2025-09-11 09:46:37] 📦 Batch 1/3 - 50 scrapers
+[2025-09-11 09:46:37] 🧵 Mode THREADING - 5 workers
+[2025-09-11 09:46:37] 🚀 [74570] Lancement: Roman
+[2025-09-11 09:46:37] 🚀 [74570] Lancement: Poésie
+[2025-09-11 09:46:37] 🚀 [74570] Lancement: Théâtre
+[2025-09-11 09:46:37] 🚀 [74570] Lancement: Essai
+[2025-09-11 09:46:37] 🚀 [74570] Lancement: Nouvelle
+[2025-09-11 09:47:03] ✅ [74570] Poésie terminé (0.4min)
+[2025-09-11 09:47:03] 🚀 [74570] Lancement: Autobiographie
+[2025-09-11 09:47:04] ✅ [74570] Essai terminé (0.4min)
+[2025-09-11 09:47:04] 🚀 [74570] Lancement: Biographie
+[2025-09-11 09:47:05] ✅ [74570] Roman terminé (0.5min)
+[2025-09-11 09:47:05] 🚀 [74570] Lancement: Mémoires
+[2025-09-11 09:47:05] ✅ [74570] Nouvelle terminé (0.5min)
+[2025-09-11 09:47:05] 🚀 [74570] Lancement: Journal
+[2025-09-11 09:47:06] ✅ [74570] Théâtre terminé (0.5min)
+[2025-09-11 09:47:06] 🚀 [74570] Lancement: Correspondance
+[2025-09-11 09:47:29] ✅ [74570] Journal terminé (0.4min)
+[2025-09-11 09:47:29] 🚀 [74570] Lancement: Science-Fiction
+[2025-09-11 09:47:29] ✅ [74570] Mémoires terminé (0.4min)
+[2025-09-11 09:47:29] 🚀 [74570] Lancement: Fantasy
+[2025-09-11 09:47:30] ✅ [74570] Correspondance terminé (0.4min)
+[2025-09-11 09:47:30] 🚀 [74570] Lancement: Fantastique
+[2025-09-11 09:47:31] ✅ [74570] Biographie terminé (0.4min)
+[2025-09-11 09:47:31] 🚀 [74570] Lancement: Thriller
+[2025-09-11 09:47:31] ✅ [74570] Autobiographie terminé (0.5min)
+[2025-09-11 09:47:31] 🚀 [74570] Lancement: Policier
+[2025-09-11 09:47:51] ✅ [74570] Fantasy terminé (0.4min)
+[2025-09-11 09:47:51] 🚀 [74570] Lancement: Mystère
+[2025-09-11 09:47:54] ✅ [74570] Fantastique terminé (0.4min)
+[2025-09-11 09:47:54] 🚀 [74570] Lancement: Suspense
+[2025-09-11 09:47:54] ✅ [74570] Thriller terminé (0.4min)
+[2025-09-11 09:47:54] 🚀 [74570] Lancement: Horreur
+[2025-09-11 09:47:55] ✅ [74570] Policier terminé (0.4min)
+[2025-09-11 09:47:55] 🚀 [74570] Lancement: Romance
+[2025-09-11 09:47:56] ✅ [74570] Science-Fiction terminé (0.5min)
+[2025-09-11 09:47:56] 🚀 [74570] Lancement: Historique
+[2025-09-11 09:48:02] ⏸️  Arrêt demandé
+[2025-09-11 09:48:02] 
+📊 RAPPORT MULTI-LANCEUR
+========================================
+Total traités: 15
+✅ Succès: 15
+❌ Échecs: 0
+📊 Taux succès: 100.0%
+
+[2025-09-11 09:48:02] ✅ [74570] Historique terminé (0.1min)
+[2025-09-11 09:48:02] ✅ [74570] Romance terminé (0.1min)
+[2025-09-11 09:48:02] 🚀 [74570] Lancement: Philosophie
+[2025-09-11 09:48:02] ✅ [74570] Horreur terminé (0.1min)
+[2025-09-11 09:48:02] ✅ [74570] Mystère terminé (0.2min)
+[2025-09-11 09:48:02] 🚀 [74570] Lancement: Psychologie
+[2025-09-11 09:48:02] 🚀 [74570] Lancement: Sociologie
+[2025-09-11 09:48:02] 🚀 [74570] Lancement: Anthropologie
+[2025-09-11 09:48:02] ✅ [74570] Suspense terminé (0.1min)
+[2025-09-11 09:48:02] 🚀 [74570] Lancement: Histoire
+[2025-09-11 09:50:13] 🚀 LANCEUR MULTI-APPROCHES
+[2025-09-11 09:50:13] ==================================================
+[2025-09-11 09:50:13] ✅ 103 scrapers chargés
+[2025-09-11 09:50:14] 💻 Système: 14 cores, CPU:9.4%, RAM:62.9%
+[2025-09-11 09:50:14] 🎯 Stratégie choisie: THREADING
+[2025-09-11 09:50:14] 👥 5 workers simultanés (limite anti-ban: 5)
+[2025-09-11 09:50:14] 📦 Batch 1/3 - 50 scrapers
+[2025-09-11 09:50:14] 🧵 Mode THREADING - 5 workers
+[2025-09-11 09:50:14] 🚀 [76982] Lancement: Roman
+[2025-09-11 09:50:14] 🚀 [76982] Lancement: Poésie
+[2025-09-11 09:50:14] 🚀 [76982] Lancement: Théâtre
+[2025-09-11 09:50:14] 🚀 [76982] Lancement: Essai
+[2025-09-11 09:50:14] 🚀 [76982] Lancement: Nouvelle
+[2025-09-11 09:50:40] ✅ [76982] Essai terminé (0.4min)
+[2025-09-11 09:50:40] 🚀 [76982] Lancement: Autobiographie
+[2025-09-11 09:50:40] ✅ [76982] Poésie terminé (0.4min)
+[2025-09-11 09:50:40] 🚀 [76982] Lancement: Biographie
+[2025-09-11 09:50:41] ✅ [76982] Nouvelle terminé (0.5min)
+[2025-09-11 09:50:41] 🚀 [76982] Lancement: Mémoires
+[2025-09-11 09:50:43] ✅ [76982] Théâtre terminé (0.5min)
+[2025-09-11 09:50:43] 🚀 [76982] Lancement: Journal
+[2025-09-11 09:50:45] ✅ [76982] Roman terminé (0.5min)
+[2025-09-11 09:50:45] 🚀 [76982] Lancement: Correspondance
+[2025-09-11 09:51:06] ✅ [76982] Journal terminé (0.4min)
+[2025-09-11 09:51:06] 🚀 [76982] Lancement: Science-Fiction
+[2025-09-11 09:51:08] ✅ [76982] Biographie terminé (0.5min)
+[2025-09-11 09:51:08] 🚀 [76982] Lancement: Fantasy
+[2025-09-11 09:51:09] ✅ [76982] Mémoires terminé (0.5min)
+[2025-09-11 09:51:09] 🚀 [76982] Lancement: Fantastique
+[2025-09-11 09:51:11] ✅ [76982] Correspondance terminé (0.4min)
+[2025-09-11 09:51:11] 🚀 [76982] Lancement: Thriller
+[2025-09-11 09:51:11] ✅ [76982] Autobiographie terminé (0.5min)
+[2025-09-11 09:51:11] 🚀 [76982] Lancement: Policier
+[2025-09-11 09:51:32] ✅ [76982] Science-Fiction terminé (0.4min)
+[2025-09-11 09:51:32] 🚀 [76982] Lancement: Mystère
+[2025-09-11 09:51:32] ✅ [76982] Fantasy terminé (0.4min)
+[2025-09-11 09:51:32] 🚀 [76982] Lancement: Suspense
+[2025-09-11 09:51:33] ⏸️  Arrêt demandé
+[2025-09-11 09:51:33] 
+📊 RAPPORT MULTI-LANCEUR
+========================================
+Total traités: 12
+✅ Succès: 12
+❌ Échecs: 0
+📊 Taux succès: 100.0%
+
+[2025-09-11 09:51:33] ✅ [76982] Fantastique terminé (0.4min)
+[2025-09-11 09:51:33] 🚀 [76982] Lancement: Horreur
+[2025-09-11 09:51:33] ✅ [76982] Policier terminé (0.4min)
+[2025-09-11 09:51:33] 🚀 [76982] Lancement: Romance
+[2025-09-11 09:51:33] ✅ [76982] Thriller terminé (0.4min)
+[2025-09-11 09:51:33] 🚀 [76982] Lancement: Historique
+[2025-09-11 09:51:56] ✅ [76982] Historique terminé (0.4min)
+[2025-09-11 09:51:56] 🚀 [76982] Lancement: Philosophie
+[2025-09-11 09:51:56] ✅ [76982] Mystère terminé (0.4min)
+[2025-09-11 09:51:56] 🚀 [76982] Lancement: Psychologie
+[2025-09-11 09:51:57] ✅ [76982] Romance terminé (0.4min)
+[2025-09-11 09:51:57] 🚀 [76982] Lancement: Sociologie
+[2025-09-11 09:51:57] ✅ [76982] Horreur terminé (0.4min)
+[2025-09-11 09:51:57] 🚀 [76982] Lancement: Anthropologie
+[2025-09-11 09:51:58] ✅ [76982] Suspense terminé (0.4min)
+[2025-09-11 09:51:58] 🚀 [76982] Lancement: Histoire
+[2025-09-11 09:52:21] ✅ [76982] Philosophie terminé (0.4min)
+[2025-09-11 09:52:21] 🚀 [76982] Lancement: Géographie
+[2025-09-11 09:52:23] ✅ [76982] Anthropologie terminé (0.4min)
+[2025-09-11 09:52:23] 🚀 [76982] Lancement: Politique
+[2025-09-11 09:52:23] ✅ [76982] Psychologie terminé (0.5min)
+[2025-09-11 09:52:23] 🚀 [76982] Lancement: Économie
+[2025-09-11 09:52:23] ✅ [76982] Histoire terminé (0.4min)
+[2025-09-11 09:52:23] 🚀 [76982] Lancement: Droit
+[2025-09-11 09:52:24] ✅ [76982] Sociologie terminé (0.4min)
+[2025-09-11 09:52:24] 🚀 [76982] Lancement: Sciences
+[2025-09-11 09:52:43] ✅ [76982] Géographie terminé (0.4min)
+[2025-09-11 09:52:43] 🚀 [76982] Lancement: Mathématiques
+[2025-09-11 09:52:49] ✅ [76982] Économie terminé (0.4min)
+[2025-09-11 09:52:49] 🚀 [76982] Lancement: Physique
+[2025-09-11 09:52:50] ✅ [76982] Sciences terminé (0.4min)
+[2025-09-11 09:52:50] 🚀 [76982] Lancement: Chimie
+[2025-09-11 09:52:50] ✅ [76982] Politique terminé (0.5min)
+[2025-09-11 09:52:50] 🚀 [76982] Lancement: Biologie
+[2025-09-11 09:52:50] ✅ [76982] Droit terminé (0.4min)
+[2025-09-11 09:52:50] 🚀 [76982] Lancement: Médecine
+[2025-09-11 09:53:11] ✅ [76982] Chimie terminé (0.4min)
+[2025-09-11 09:53:11] 🚀 [76982] Lancement: Informatique
+[2025-09-11 09:53:12] ✅ [76982] Mathématiques terminé (0.5min)
+[2025-09-11 09:53:12] 🚀 [76982] Lancement: Technologie
+[2025-09-11 09:53:12] ✅ [76982] Physique terminé (0.4min)
+[2025-09-11 09:53:12] 🚀 [76982] Lancement: Ingénierie
+[2025-09-11 09:53:13] ✅ [76982] Médecine terminé (0.4min)
+[2025-09-11 09:53:13] 🚀 [76982] Lancement: Art
+[2025-09-11 09:53:13] ✅ [76982] Biologie terminé (0.4min)
+[2025-09-11 09:53:13] 🚀 [76982] Lancement: Sculpture
+[2025-09-11 09:53:36] ✅ [76982] Ingénierie terminé (0.4min)
+[2025-09-11 09:53:36] 🚀 [76982] Lancement: Photographie
+[2025-09-11 09:53:37] ✅ [76982] Informatique terminé (0.4min)
+[2025-09-11 09:53:37] 🚀 [76982] Lancement: Cinéma
+[2025-09-11 09:53:38] ✅ [76982] Sculpture terminé (0.4min)
+[2025-09-11 09:53:38] 🚀 [76982] Lancement: Musique
+[2025-09-11 09:53:38] ✅ [76982] Art terminé (0.4min)
+[2025-09-11 09:53:38] 🚀 [76982] Lancement: Danse
+[2025-09-11 09:53:39] ✅ [76982] Technologie terminé (0.4min)
+[2025-09-11 09:53:39] 🚀 [76982] Lancement: Architecture
+[2025-09-11 09:53:56] ✅ [76982] Photographie terminé (0.3min)
+[2025-09-11 09:53:56] 🚀 [76982] Lancement: Design
+[2025-09-11 09:53:58] ✅ [76982] Cinéma terminé (0.4min)
+[2025-09-11 09:53:58] 🚀 [76982] Lancement: Mode
+[2025-09-11 09:54:03] ✅ [76982] Musique terminé (0.4min)
+[2025-09-11 09:54:03] 🚀 [76982] Lancement: Cuisine
+[2025-09-11 09:54:06] ✅ [76982] Danse terminé (0.5min)
+[2025-09-11 09:54:06] 🚀 [76982] Lancement: Jardinage
+[2025-09-11 09:54:09] ✅ [76982] Cuisine terminé (0.1min)
+[2025-09-11 09:54:09] 🚀 [76982] Lancement: Bricolage
+[2025-09-11 09:54:09] ✅ [76982] Architecture terminé (0.5min)
+[2025-09-11 09:54:19] ❌ Thread 6119616512 erreur: 
+[2025-09-11 09:54:22] ✅ [76982] Design terminé (0.4min)
+[2025-09-11 09:54:23] ✅ [76982] Mode terminé (0.4min)
+[2025-09-11 09:54:27] ✅ [76982] Jardinage terminé (0.3min)
+[2025-09-11 09:54:32] ❌ Thread 6153269248 erreur: 
+[2025-09-11 09:54:33] ❌ Thread 6170095616 erreur: 
+[2025-09-11 09:54:35] ✅ [76982] Bricolage terminé (0.4min)
+[2025-09-11 09:54:37] ❌ Thread 6136442880 erreur: 
+[2025-09-11 09:54:45] ❌ Thread 6186921984 erreur: 

@@ -1,0 +1,760 @@
+#!/usr/bin/env python3
+"""
+SCRAPER ULTIME - ASYNCIO + REDIS QUEUE + PROXY ROTATION AVANCÉE
+Utilise les techniques de scraping les plus performantes disponibles:
+- AsyncIO + AIOHTTP pour 10x plus de vitesse que Selenium
+- Redis Queue (RQ) pour distribution des tâches
+- Rotation avancée de proxies gratuits depuis APIs
+- Pool de sessions avec gestion des erreurs
+- Système de métriques et estimation temps complet
+"""
+
+import asyncio
+import aiohttp
+import aiofiles
+import json
+import time
+import random
+import os
+import sys
+from datetime import datetime
+from typing import Dict, List, Optional, Set, Tuple
+import pandas as pd
+from bs4 import BeautifulSoup
+import redis
+from rq import Queue, Worker
+import threading
+from concurrent.futures import ThreadPoolExecutor
+import re
+from urllib.parse import urljoin, urlparse
+import logging
+
+# Configuration d'APIs gratuites intégrée
+try:
+    from apis_gratuites_optimisation import APIGratuitesOptimiseur, obtenir_config_ultra_rapide
+    APIS_DISPONIBLES = True
+    print("✅ Module APIs gratuites chargé")
+except ImportError:
+    print("⚠️ Module APIs gratuites non trouvé - utilisation configuration intégrée")
+    APIS_DISPONIBLES = False
+
+# Configuration du logging pour debug
+logging.basicConfig(level=logging.WARNING)  # Réduire le bruit
+aiohttp_logger = logging.getLogger('aiohttp')
+aiohttp_logger.setLevel(logging.WARNING)
+
+class ScraperUltimeAsyncioRedis:
+    def __init__(self, nom_categorie="Test Ultra Rapide", nom_fichier="test_ultra"):
+        self.nom_categorie = nom_categorie
+        self.nom_fichier = nom_fichier
+        self.url_base_recherche = "https://www.amazon.fr/s?k=python+programming&i=stripbooks"
+        
+        # CONFIGURATION ULTRA-PERFORMANTE
+        self.config = self.charger_config_ultra_rapide()
+        
+        # Sessions AsyncIO pool
+        self.session_pool = []
+        self.max_sessions = self.config['performance']['pool_size']  # 50 sessions simultanées
+        self.max_concurrent = self.config['performance']['max_workers']  # 100 tâches simultanées
+        
+        # Redis Queue pour distribution
+        self.setup_redis_queue()
+        
+        # Proxy rotation avancée
+        self.proxies_pool = self.config['proxies']
+        self.user_agents = self.config['user_agents']
+        self.proxy_index = 0
+        self.proxy_failures = {}
+        
+        # Collections thread-safe avec AsyncIO
+        self.livres_scraped = []
+        self.urls_scrapees = set()
+        self.index_by_url = {}
+        
+        # Métriques et timing
+        self.temps_debut_scraping = None
+        self.temps_debut_mise_a_jour = None
+        self.temps_par_livre_scraping = []
+        self.temps_par_livre_mise_a_jour = []
+        
+        # Sémaphore pour limiter concurrence
+        self.semaphore = asyncio.Semaphore(self.max_concurrent)
+        
+        # Statistiques en temps réel
+        self.stats = {
+            'total_requests': 0,
+            'success_requests': 0,
+            'failed_requests': 0,
+            'proxy_rotations': 0,
+            'livres_per_second': 0.0,
+            'start_time': time.time()
+        }
+        
+        # Créer dossiers
+        self.creer_dossiers()
+        self.charger_progres()
+        
+        print(f"🚀 SCRAPER ULTIME INITIALISÉ")
+        print(f"   📊 Config: {len(self.proxies_pool)} proxies, {self.max_concurrent} workers max")
+        print(f"   ⚡ AsyncIO + Redis Queue activé")
+
+    def charger_config_ultra_rapide(self) -> Dict:
+        """Charge la configuration ultra-rapide optimale"""
+        if APIS_DISPONIBLES:
+            print("🔧 Chargement config APIs gratuites...")
+            try:
+                config = obtenir_config_ultra_rapide()
+                print(f"✅ Config APIs: {len(config['proxies'])} proxies chargés")
+                return config
+            except Exception as e:
+                print(f"❌ Erreur config APIs: {e}")
+        
+        # Configuration intégrée de fallback
+        print("🔧 Utilisation config intégrée...")
+        return {
+            'proxies': [],  # Pas de proxy par défaut (plus fiable)
+            'user_agents': [
+                'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+                'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+                'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+                'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:120.0) Gecko/20100101 Firefox/120.0',
+                'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Safari/605.1.15'
+            ],
+            'delais_optimaux': {
+                'min_delay': 0.05,
+                'max_delay': 0.2,
+                'proxy_rotation': 10
+            },
+            'performance': {
+                'max_workers': 50,  # Réduit pour éviter les erreurs
+                'pool_size': 25,    # 25 sessions simultanées
+                'batch_size_multiplier': 2
+            }
+        }
+
+    def setup_redis_queue(self):
+        """Configure Redis et les queues de tâches"""
+        try:
+            # Connexion Redis locale
+            self.redis_conn = redis.Redis(host='localhost', port=6379, db=0, decode_responses=True)
+            self.redis_conn.ping()  # Test connexion
+            
+            # Créer les queues
+            self.scraping_queue = Queue('scraping_tasks', connection=self.redis_conn)
+            self.update_queue = Queue('update_tasks', connection=self.redis_conn)
+            
+            print("✅ Redis Queue configuré")
+            self.redis_available = True
+        except Exception as e:
+            print(f"⚠️ Redis non disponible: {e}")
+            print("   Fonctionnement sans queue distribuée")
+            self.redis_available = False
+
+    def get_next_proxy_and_ua(self) -> Tuple[Optional[str], str]:
+        """Rotation intelligente des proxies et user-agents"""
+        if not self.proxies_pool:
+            # Sans proxy - juste user-agent aléatoire
+            return None, random.choice(self.user_agents)
+        
+        # Avec proxies - rotation intelligente
+        proxy = None
+        max_attempts = len(self.proxies_pool)
+        
+        for _ in range(max_attempts):
+            current_proxy = self.proxies_pool[self.proxy_index % len(self.proxies_pool)]
+            proxy_key = current_proxy.get('http', '')
+            
+            # Vérifier si ce proxy a échoué récemment
+            if proxy_key not in self.proxy_failures or \
+               time.time() - self.proxy_failures[proxy_key] > 300:  # 5 min de cooldown
+                proxy = proxy_key
+                break
+            
+            self.proxy_index = (self.proxy_index + 1) % len(self.proxies_pool)
+        
+        # Rotation user-agent
+        user_agent = random.choice(self.user_agents)
+        
+        # Incrémenter pour prochaine fois
+        self.proxy_index = (self.proxy_index + 1) % len(self.proxies_pool)
+        self.stats['proxy_rotations'] += 1
+        
+        return proxy, user_agent
+
+    def marquer_proxy_echec(self, proxy_url: str):
+        """Marque un proxy comme défaillant"""
+        if proxy_url:
+            self.proxy_failures[proxy_url] = time.time()
+
+    async def create_session_pool(self):
+        """Crée un pool de sessions HTTP optimisées"""
+        print(f"🔄 Création pool de {self.max_sessions} sessions AsyncIO...")
+        
+        for i in range(self.max_sessions):
+            # Configuration optimale pour chaque session
+            timeout = aiohttp.ClientTimeout(
+                total=15,      # Timeout total de 15s
+                connect=5,     # Timeout connexion de 5s
+                sock_read=10   # Timeout lecture de 10s
+            )
+            
+            # Headers anti-détection
+            proxy, user_agent = self.get_next_proxy_and_ua()
+            headers = {
+                'User-Agent': user_agent,
+                'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+                'Accept-Language': 'fr-FR,fr;q=0.9,en;q=0.8',
+                'Accept-Encoding': 'gzip, deflate, br',
+                'DNT': '1',
+                'Connection': 'keep-alive',
+                'Upgrade-Insecure-Requests': '1',
+                'Sec-Fetch-Dest': 'document',
+                'Sec-Fetch-Mode': 'navigate',
+                'Sec-Fetch-Site': 'none',
+                'Cache-Control': 'max-age=0'
+            }
+            
+            # Configuration avancée SSL et connexions
+            connector = aiohttp.TCPConnector(
+                limit=30,           # Max 30 connexions par session
+                limit_per_host=10,  # Max 10 par host
+                keepalive_timeout=30,
+                enable_cleanup_closed=True,
+                ssl=False  # Désactiver SSL pour plus de vitesse si nécessaire
+            )
+            
+            session = aiohttp.ClientSession(
+                timeout=timeout,
+                headers=headers,
+                connector=connector,
+                trust_env=True  # Utiliser variables d'environnement pour proxies
+            )
+            
+            self.session_pool.append({
+                'session': session,
+                'proxy': proxy,
+                'user_agent': user_agent,
+                'requests_count': 0
+            })
+        
+        print(f"✅ Pool créé: {len(self.session_pool)} sessions avec rotation proxy/UA")
+
+    async def get_session(self) -> Dict:
+        """Récupère une session optimale du pool avec rotation"""
+        if not self.session_pool:
+            await self.create_session_pool()
+        
+        # Prendre la session avec le moins de requêtes
+        session_info = min(self.session_pool, key=lambda x: x['requests_count'])
+        session_info['requests_count'] += 1
+        
+        # Rotation périodique des proxies/UA
+        if session_info['requests_count'] % self.config['delais_optimaux']['proxy_rotation'] == 0:
+            new_proxy, new_ua = self.get_next_proxy_and_ua()
+            session_info['proxy'] = new_proxy
+            session_info['user_agent'] = new_ua
+            # Mise à jour du header User-Agent
+            session_info['session']._default_headers['User-Agent'] = new_ua
+        
+        return session_info
+
+    async def scraper_livre_async(self, url: str) -> Optional[Dict]:
+        """Scrape un livre avec AsyncIO ultra-rapide"""
+        async with self.semaphore:  # Limite la concurrence
+            debut = time.time()
+            session_info = await self.get_session()
+            session = session_info['session']
+            proxy = session_info['proxy']
+            
+            try:
+                # Délai minimal aléatoire pour éviter détection
+                await asyncio.sleep(random.uniform(
+                    self.config['delais_optimaux']['min_delay'],
+                    self.config['delais_optimaux']['max_delay']
+                ))
+                
+                # Configuration proxy pour cette requête
+                proxy_config = None
+                if proxy:
+                    proxy_config = proxy
+                
+                # Headers anti-503 Amazon
+                headers_request = {
+                    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+                    'Accept-Language': 'fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7',
+                    'Accept-Encoding': 'gzip, deflate, br',
+                    'Cache-Control': 'no-cache',
+                    'Pragma': 'no-cache',
+                    'Sec-Fetch-Dest': 'document',
+                    'Sec-Fetch-Mode': 'navigate',
+                    'Sec-Fetch-Site': 'none',
+                    'Upgrade-Insecure-Requests': '1'
+                }
+                
+                # Requête HTTP avec retry automatique
+                for attempt in range(3):  # 3 tentatives max
+                    try:
+                        async with session.get(url, proxy=proxy_config, headers=headers_request, timeout=15) as response:
+                            if response.status == 200:
+                                html = await response.text()
+                                break
+                            elif response.status == 503:
+                                # Service unavailable - attendre plus longtemps
+                                wait_time = random.uniform(2, 5) * (attempt + 1)  # Backoff exponentiel
+                                print(f"⚠️ Status 503 - attente {wait_time:.1f}s (tentative {attempt+1})")
+                                await asyncio.sleep(wait_time)
+                                continue
+                            elif response.status == 429:
+                                # Rate limit - attendre plus longtemps
+                                wait_time = random.uniform(5, 10) * (attempt + 1)
+                                print(f"⚠️ Rate limit 429 - attente {wait_time:.1f}s (tentative {attempt+1})")
+                                await asyncio.sleep(wait_time)
+                                continue
+                            else:
+                                print(f"❌ Status {response.status} pour {url[:50]}")
+                                return None
+                    except asyncio.TimeoutError:
+                        print(f"⏱️ Timeout {url[:50]} (tentative {attempt+1})")
+                        if attempt == 0:
+                            await asyncio.sleep(1)
+                            continue
+                        return None
+                    except Exception as e:
+                        if "proxy" in str(e).lower() and proxy:
+                            self.marquer_proxy_echec(proxy)
+                        print(f"❌ Erreur réseau {url[:50]}: {e}")
+                        return None
+                
+                self.stats['total_requests'] += 1
+                self.stats['success_requests'] += 1
+                
+                # Parse HTML avec BeautifulSoup
+                soup = BeautifulSoup(html, 'html.parser')
+                
+                # Extraction des données (même logique que le scraper de base)
+                donnees_livre = await self.extraire_donnees_livre(soup, url)
+                
+                # Statistiques de performance
+                temps_livre = time.time() - debut
+                self.temps_par_livre_scraping.append(temps_livre)
+                
+                # Calcul vitesse en temps réel
+                temps_total = time.time() - self.stats['start_time']
+                if temps_total > 0:
+                    self.stats['livres_per_second'] = self.stats['success_requests'] / temps_total
+                
+                return donnees_livre
+                
+            except Exception as e:
+                self.stats['failed_requests'] += 1
+                if proxy:
+                    self.marquer_proxy_echec(proxy)
+                print(f"❌ Erreur scraping {url[:50]}: {e}")
+                return None
+
+    async def extraire_donnees_livre(self, soup: BeautifulSoup, url: str) -> Dict:
+        """Extraction ultra-complète et rapide des données livre"""
+        donnees_livre = {
+            'url': url,
+            'timestamp': datetime.now().isoformat(),
+            'categorie': self.nom_categorie,
+            'titre': '',
+            'auteur': '',
+            'isbn': '',
+            'editeur': '',
+            'date_publication': '',
+            'langue': '',
+            'pages': '',
+            'prix_actuel': '',
+            'prix_barre': '',
+            'description_longue': '',
+            'note_moyenne': '',
+            'nombre_avis': '',
+            'image_url': '',
+            'disponibilite': '',
+            'categories_breadcrumb': []
+        }
+        
+        # Titre - multiple sélecteurs
+        titre_selectors = [
+            '#productTitle',
+            'h1[data-automation="product-title"]',
+            '.a-size-large',
+            'h1.a-size-large'
+        ]
+        for sel in titre_selectors:
+            elem = soup.select_one(sel)
+            if elem and elem.get_text().strip():
+                donnees_livre['titre'] = elem.get_text().strip()
+                break
+        
+        # Auteur
+        auteur_selectors = [
+            '.author a',
+            '[data-automation="byline"] a',
+            '.a-link-normal[data-automation="byline"]',
+            '#bylineInfo a'
+        ]
+        auteurs = []
+        for sel in auteur_selectors:
+            for a in soup.select(sel):
+                texte = a.get_text().strip()
+                if texte and texte not in auteurs and len(texte) > 1:
+                    auteurs.append(texte)
+        donnees_livre['auteur'] = ', '.join(auteurs[:3])  # Max 3 auteurs
+        
+        # Prix
+        prix_selectors = [
+            '.a-price .a-offscreen',
+            '.a-price-whole',
+            '#priceblock_dealprice',
+            '.a-color-price'
+        ]
+        for sel in prix_selectors:
+            elem = soup.select_one(sel)
+            if elem and elem.get_text().strip():
+                prix_text = elem.get_text().strip()
+                if '€' in prix_text or 'EUR' in prix_text:
+                    donnees_livre['prix_actuel'] = prix_text
+                    break
+        
+        # Description
+        desc_selectors = [
+            '#feature-bullets ul',
+            '#bookDescription_feature_div',
+            '.a-expander-content',
+            '[data-feature-name="bookDescription"] .a-expander-content'
+        ]
+        for sel in desc_selectors:
+            elem = soup.select_one(sel)
+            if elem:
+                desc_text = elem.get_text().strip()
+                if len(desc_text) > 20:  # Description valide
+                    donnees_livre['description_longue'] = desc_text[:500]  # Limiter taille
+                    break
+        
+        # ISBN depuis détails produit
+        details_text = soup.get_text()
+        isbn_match = re.search(r'ISBN[^:]*:\s*([A-Z0-9-]{10,17})', details_text, re.IGNORECASE)
+        if isbn_match:
+            donnees_livre['isbn'] = isbn_match.group(1)
+        
+        # Image
+        img_selectors = ['#landingImage', '.a-dynamic-image', '#main-image']
+        for sel in img_selectors:
+            img = soup.select_one(sel)
+            if img and img.get('src'):
+                donnees_livre['image_url'] = img.get('src')
+                break
+        
+        # Note moyenne
+        note_selectors = [
+            '[data-hook="average-star-rating"] .a-offscreen',
+            '.a-icon-alt',
+            '.reviewCountTextLinkedHistogram .a-offscreen'
+        ]
+        for sel in note_selectors:
+            elem = soup.select_one(sel)
+            if elem:
+                texte = elem.get_text().strip()
+                if ('sur 5' in texte.lower() or 'out of 5' in texte.lower()) and any(c.isdigit() for c in texte):
+                    donnees_livre['note_moyenne'] = texte
+                    break
+        
+        # Affichage rapide du livre
+        titre_court = donnees_livre['titre'][:30] + "..." if len(donnees_livre['titre']) > 30 else donnees_livre['titre']
+        print(f"⚡ ASYNC: {titre_court}")
+        
+        return donnees_livre
+
+    async def scraper_page_async(self, page_num: int) -> List[str]:
+        """Scrape une page pour récupérer les URLs des livres"""
+        url_page = f"{self.url_base_recherche}&page={page_num}"
+        
+        session_info = await self.get_session()
+        session = session_info['session']
+        proxy = session_info['proxy']
+        
+        try:
+            # Headers spéciaux pour les pages de recherche
+            headers_search = {
+                'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+                'Accept-Language': 'fr-FR,fr;q=0.9',
+                'Cache-Control': 'no-cache',
+                'Pragma': 'no-cache'
+            }
+            
+            async with session.get(url_page, proxy=proxy, headers=headers_search, timeout=20) as response:
+                if response.status != 200:
+                    print(f"❌ Page {page_num}: Status {response.status}")
+                    return []
+                
+                html = await response.text()
+                soup = BeautifulSoup(html, 'html.parser')
+                
+                # Extraction des liens livres
+                liens_livres = []
+                liens_vus = set()
+                
+                selectors_livres = [
+                    'a[href*="/dp/"]',
+                    '.s-result-item a[href*="/dp/"]',
+                    '[data-component-type="s-search-result"] a[href*="/dp/"]'
+                ]
+                
+                for selector in selectors_livres:
+                    for lien in soup.select(selector):
+                        href = lien.get('href')
+                        if href:
+                            if href.startswith('/'):
+                                url_complete = urljoin('https://www.amazon.fr', href)
+                            else:
+                                url_complete = href
+                            
+                            # Nettoyer URL
+                            if '/dp/' in url_complete:
+                                dp_index = url_complete.find('/dp/')
+                                if dp_index != -1:
+                                    base_url = url_complete[:dp_index + 14]  # /dp/ + 10 chars
+                                    if base_url not in liens_vus and 'amazon.fr' in base_url:
+                                        liens_livres.append(url_complete)
+                                        liens_vus.add(base_url)
+                
+                print(f"📄 Page {page_num}: {len(liens_livres)} livres trouvés")
+                return liens_livres
+                
+        except Exception as e:
+            print(f"❌ Erreur page {page_num}: {e}")
+            return []
+
+    async def scraper_batch_async(self, urls: List[str]) -> List[Dict]:
+        """Scrape un batch d'URLs en parallèle"""
+        tasks = []
+        for url in urls:
+            if url not in self.urls_scrapees:
+                task = asyncio.create_task(self.scraper_livre_async(url))
+                tasks.append((task, url))
+        
+        resultats = []
+        if tasks:
+            # Attendre tous les résultats
+            for task, url in tasks:
+                try:
+                    resultat = await task
+                    if resultat:
+                        resultats.append(resultat)
+                        self.urls_scrapees.add(url)
+                except Exception as e:
+                    print(f"❌ Erreur task {url[:30]}: {e}")
+        
+        return resultats
+
+    def creer_dossiers(self):
+        """Crée les dossiers nécessaires"""
+        base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        dossier_livres = os.path.join(base_dir, 'LIVRES', self.nom_fichier)
+        os.makedirs(dossier_livres, exist_ok=True)
+
+    def charger_progres(self):
+        """Charge les livres existants"""
+        base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        dossier_livres = os.path.join(base_dir, 'LIVRES', self.nom_fichier)
+        
+        if os.path.exists(dossier_livres):
+            fichiers_json = [f for f in os.listdir(dossier_livres) if f.endswith('.json') and 'progres' not in f]
+            for fichier in fichiers_json:
+                chemin = os.path.join(dossier_livres, fichier)
+                try:
+                    with open(chemin, 'r', encoding='utf-8') as f:
+                        livres = json.load(f)
+                        if isinstance(livres, list):
+                            for livre in livres:
+                                url = livre.get('url')
+                                if url and livre.get('titre'):
+                                    self.livres_scraped.append(livre)
+                                    self.urls_scrapees.add(url)
+                                    self.index_by_url[url] = len(self.livres_scraped) - 1
+                            print(f"📚 Chargé: {len(livres)} livres depuis {fichier}")
+                except Exception as e:
+                    print(f"❌ Erreur lecture {chemin}: {e}")
+        
+        print(f"📚 Total chargé: {len(self.livres_scraped)} livres existants")
+
+    async def sauvegarder_progres_async(self, page_actuelle: int = 1):
+        """Sauvegarde asynchrone des données"""
+        base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        dossier_livres = os.path.join(base_dir, 'LIVRES', self.nom_fichier)
+        
+        # Sauvegarde JSON
+        fichier_json = os.path.join(dossier_livres, f"{self.nom_fichier}_livres.json")
+        try:
+            async with aiofiles.open(fichier_json, 'w', encoding='utf-8') as f:
+                await f.write(json.dumps(self.livres_scraped, ensure_ascii=False, indent=2))
+            print(f"💾 JSON sauvé: {len(self.livres_scraped)} livres")
+        except Exception as e:
+            print(f"❌ Erreur sauvegarde JSON: {e}")
+        
+        # Sauvegarde CSV
+        if self.livres_scraped:
+            fichier_csv = os.path.join(dossier_livres, f"{self.nom_fichier}_livres.csv")
+            try:
+                df = pd.DataFrame(self.livres_scraped)
+                df.to_csv(fichier_csv, index=False)
+                print(f"💾 CSV sauvé: {len(self.livres_scraped)} livres")
+            except Exception as e:
+                print(f"❌ Erreur sauvegarde CSV: {e}")
+
+    def detecter_total_amazon_actuel(self) -> int:
+        """Estimation rapide du total sans selenium"""
+        # Pour le mode test, estimer basé sur les données chargées
+        if len(self.livres_scraped) > 0:
+            # Si on a déjà des données, estimer 20% de plus pour nouveaux livres
+            return int(len(self.livres_scraped) * 1.2)
+        else:
+            # Estimation par défaut pour test réduite
+            return 50
+
+    def formater_duree(self, secondes: float) -> str:
+        """Formate une durée en format lisible"""
+        if secondes < 60:
+            return f"{secondes:.1f}s"
+        elif secondes < 3600:
+            minutes = int(secondes // 60)
+            sec_restantes = secondes % 60
+            return f"{minutes}m {sec_restantes:.0f}s"
+        else:
+            heures = int(secondes // 3600)
+            minutes = int((secondes % 3600) // 60)
+            return f"{heures}h {minutes}m"
+
+    def calculer_estimation_temps(self, livres_traites: int, total_livres: int, temps_historique: List[float]) -> Tuple[str, str]:
+        """Calcule l'estimation de temps restant"""
+        if not temps_historique or livres_traites == 0:
+            return "Calcul...", "Calcul..."
+        
+        # Temps moyen des 20 derniers livres pour plus de précision
+        derniers_temps = temps_historique[-20:]
+        temps_moyen = sum(derniers_temps) / len(derniers_temps)
+        
+        temps_ecoule = time.time() - self.stats['start_time']
+        livres_restants = total_livres - livres_traites
+        temps_restant = livres_restants * temps_moyen
+        
+        return self.formater_duree(temps_ecoule), self.formater_duree(temps_restant)
+
+    def afficher_stats_temps_reel(self):
+        """Affiche les statistiques en temps réel"""
+        temps_total = time.time() - self.stats['start_time']
+        taux_succes = (self.stats['success_requests'] / self.stats['total_requests'] * 100) if self.stats['total_requests'] > 0 else 0
+        
+        print(f"\033[92m⚡ STATS ULTRA-RAPIDE:\033[0m")
+        print(f"   📊 Requêtes: {self.stats['total_requests']} | Succès: {taux_succes:.1f}%")
+        print(f"   🚀 Vitesse: {self.stats['livres_per_second']:.1f} livres/seconde")
+        print(f"   🔄 Rotations proxy: {self.stats['proxy_rotations']}")
+        print(f"   ⏱️ Temps total: {self.formater_duree(temps_total)}")
+
+    async def run_async(self):
+        """Fonction principale asynchrone"""
+        print("🚀 DÉMARRAGE SCRAPER ULTIME ASYNCIO + REDIS")
+        print("=" * 60)
+        
+        self.stats['start_time'] = time.time()
+        self.temps_debut_scraping = time.time()
+        
+        # 1. Détection du total
+        total_amazon = self.detecter_total_amazon_actuel()
+        print(f"🎯 Objectif: {total_amazon:,} livres")
+        print(f"📚 Existants: {len(self.livres_scraped):,} livres")
+        
+        # 2. Créer le pool de sessions
+        await self.create_session_pool()
+        
+        # 3. Scraping par pages avec AsyncIO
+        page_actuelle = 1
+        nouveaux_livres_session = 0
+        
+        try:
+            while nouveaux_livres_session < (total_amazon - len(self.livres_scraped)) and page_actuelle <= 10:  # Test sur 10 pages max
+                # Récupérer les URLs de la page
+                urls_page = await self.scraper_page_async(page_actuelle)
+                
+                if not urls_page:
+                    print(f"❌ Page {page_actuelle}: Aucun livre trouvé")
+                    break
+                
+                # Scraper les livres en parallèle
+                nouveaux_livres = await self.scraper_batch_async(urls_page)
+                
+                if nouveaux_livres:
+                    self.livres_scraped.extend(nouveaux_livres)
+                    nouveaux_livres_session += len(nouveaux_livres)
+                    
+                    # Mise à jour des index
+                    for livre in nouveaux_livres:
+                        url = livre.get('url')
+                        if url:
+                            self.index_by_url[url] = len(self.livres_scraped) - 1
+                    
+                    # Calcul des estimations
+                    temps_ecoule, temps_restant = self.calculer_estimation_temps(
+                        len(self.livres_scraped), total_amazon, self.temps_par_livre_scraping
+                    )
+                    
+                    # Statistiques
+                    pourcentage = (len(self.livres_scraped) / total_amazon * 100) if total_amazon > 0 else 0
+                    
+                    print(f"\n📊 PAGE {page_actuelle} TERMINÉE:")
+                    print(f"   ✅ +{len(nouveaux_livres)} nouveaux livres")
+                    print(f"   📚 Total: {len(self.livres_scraped):,} livres ({pourcentage:.1f}%)")
+                    print(f"   ⏱️ Temps: {temps_ecoule} | Restant: {temps_restant}")
+                    
+                    # Affichage stats temps réel
+                    self.afficher_stats_temps_reel()
+                    
+                    # Sauvegarde asynchrone
+                    await self.sauvegarder_progres_async(page_actuelle)
+                
+                page_actuelle += 1
+                
+                # Délai entre pages
+                await asyncio.sleep(random.uniform(0.5, 1.5))
+        
+        except KeyboardInterrupt:
+            print("\n🛑 Arrêt demandé par l'utilisateur")
+        
+        finally:
+            # Sauvegarde finale
+            await self.sauvegarder_progres_async(page_actuelle)
+            
+            # Fermeture des sessions
+            for session_info in self.session_pool:
+                await session_info['session'].close()
+            
+            # Stats finales
+            temps_total = time.time() - self.stats['start_time']
+            print(f"\n🏁 SCRAPING TERMINÉ:")
+            print(f"   📚 Total final: {len(self.livres_scraped):,} livres")
+            print(f"   ⏱️ Temps total: {self.formater_duree(temps_total)}")
+            print(f"   🚀 Vitesse moyenne: {len(self.livres_scraped) / temps_total * 60:.1f} livres/minute")
+            taux_succes = (self.stats['success_requests'] / self.stats['total_requests'] * 100) if self.stats['total_requests'] > 0 else 0
+            print(f"   ✅ Taux de succès: {taux_succes:.1f}%")
+
+    def run(self):
+        """Point d'entrée synchrone"""
+        try:
+            # Lancer l'event loop AsyncIO
+            asyncio.run(self.run_async())
+        except KeyboardInterrupt:
+            print("\n🛑 Arrêt du scraper")
+        except Exception as e:
+            print(f"❌ Erreur critique: {e}")
+            import traceback
+            traceback.print_exc()
+
+if __name__ == "__main__":
+    # Configuration pour test
+    scraper = ScraperUltimeAsyncioRedis(
+        nom_categorie="Test Ultra Rapide",
+        nom_fichier="test_ultra_rapide"
+    )
+    scraper.run()

@@ -1,0 +1,12 @@
+{
+  "total_livres": 91,
+  "par_categorie": {
+    "Romans et Littérature Française": 91,
+    "Science-Fiction": 0,
+    "Fantasy": 0,
+    "Thriller et Policier": 0,
+    "Livres pour Enfants": 0
+  },
+  "date_scraping": "2025-09-03T16:41:36.794809",
+  "duree_total_minutes": null
+}

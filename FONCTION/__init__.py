@@ -1,0 +1,1 @@
+# Package de fonctions utilitaires pour les scrapers Amazon

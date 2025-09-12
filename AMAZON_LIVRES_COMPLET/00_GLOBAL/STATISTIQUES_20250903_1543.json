@@ -1,0 +1,13 @@
+{
+  "total_livres": 304,
+  "par_categorie": {
+    "Romans et Littérature Française": 304,
+    "Science-Fiction": 0,
+    "Fantasy": 0,
+    "Thriller et Policier": 0,
+    "Livres pour Enfants": 0,
+    "Bandes Dessinées": 0
+  },
+  "date_scraping": "2025-09-03T15:43:46.640803",
+  "duree_total_minutes": null
+}

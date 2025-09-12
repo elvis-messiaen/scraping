@@ -1,0 +1,235 @@
+
+📊 RAPPORT FINAL DU LANCEUR DE SCRAPERS
+==================================================
+Début session: 2025-09-11T09:21:50.544305
+Fin session: 2025-09-12T16:16:23.349252
+
+📈 STATISTIQUES:
+   Total scrapers: 1104
+   ✅ Terminés avec succès: 30
+   ❌ En échec: 142
+   📊 Taux de succès: 2.7%
+
+✅ SCRAPERS TERMINÉS:
+   - Poésie
+   - Livre en Langues Etrangères
+   - Livres
+   - Livres pour enfants
+   - Livres de cuisine, cuisine et vins
+   - Livres de cuisine pour régimes spéciaux
+   - Le livre autrement
+   - Livres en Langues Etrangères
+   - Arts et photographie
+   - Bandes dessinées
+   - Calendriers et Agendas
+   - Référence
+   - Droit
+   - Entreprise et Bourse
+   - Science-fiction et Fantasy
+   - Histoire
+   - Humour
+   - Manga
+   - Religions et Spiritualités
+   - Romans et littérature
+   - Mystère et suspense
+   - Santé, Forme et Diététique
+   - Science-Fiction
+   - Sciences humaines
+   - Scolaire et Parascolaire
+   - Sports et loisirs
+   - Tourisme et voyages
+   - Informatique
+   - Mode
+
+❌ SCRAPERS EN ÉCHEC:
+   - Portugais (1 échecs)
+   - Claire McGowan (1 échecs)
+   - Takeru Hokazono (1 échecs)
+   - Sports & Activités en plein-air (1 échecs)
+   - D'auteurs Collectif
+
+
+D'auteurs Collectif (1 échecs)
+   - Serbe (1 échecs)
+   - Érotisme (1 échecs)
+   - Adolescents (1 échecs)
+   - Bébé (1 échecs)
+   - BD et Mangas (1 échecs)
+   - Livre audio (1 échecs)
+   - Basque (1 échecs)
+   - Français (1 échecs)
+   - Tchèque (1 échecs)
+   - Sciences, Techniques et Médecine (1 échecs)
+   - Premier de la série (1 échecs)
+   - Coréen (1 échecs)
+   - Santé et bien-être (1 échecs)
+   - Virginie Grimaldi (1 échecs)
+   - Poche (1 échecs)
+   - Ai Hibiki (1 échecs)
+   - Polonais (1 échecs)
+   - Cuisine et maison (1 échecs)
+   - Collectif d'auteurs (1 échecs)
+   - Produits personnalisés (1 échecs)
+   - Nature et animaux (1 échecs)
+   - 15 EUR et plus (1 échecs)
+   - D'occasion
+
+
+D'occasion (1 échecs)
+   - 20 à 50 EUR
+
+
+20 à 50 EUR (1 échecs)
+   - D'occasion (1 échecs)
+   - 4 Stars
+& plus (1 échecs)
+   - Catalan (1 échecs)
+   - Recevez-le aujourd'hui
+
+
+Recevez-le aujourd'hui (1 échecs)
+   - Recherche détaillée (1 échecs)
+   - de 5 à 10 EUR (1 échecs)
+   - Anglais (1 échecs)
+   - Koyoharu Gotouge (1 échecs)
+   - Dans les 3 mois à venir (1 échecs)
+   - Titres dans Prime Reading (1 échecs)
+   - Livraison gratuite (1 échecs)
+   - Neuf
+
+
+Neuf (1 échecs)
+   - Nouveautés (1 échecs)
+   - Itsuki Nanao (1 échecs)
+   - Malais (1 échecs)
+   - Vietnamien (1 échecs)
+   - René Goscinny (1 échecs)
+   - Recyclage (y compris les équipements électriques et électroniques) (1 échecs)
+   - Roumain (1 échecs)
+   - Italien (1 échecs)
+   - Jeux et Jouets (1 échecs)
+   - Turc (1 échecs)
+   - Jeux vidéo (1 échecs)
+   - 5 à 10 EUR
+
+
+5 à 10 EUR (1 échecs)
+   - Auteurs Collectif (1 échecs)
+   - Irlandais (1 échecs)
+   - High-Tech (1 échecs)
+   - Inclus dans une série (1 échecs)
+   - Audible (1 échecs)
+   - Beauté (1 échecs)
+   - Shelley Read (1 échecs)
+   - Collectif Michelin (1 échecs)
+   - Albanais (1 échecs)
+   - Islandais (1 échecs)
+   - Scolaire et études (1 échecs)
+   - Allemand (1 échecs)
+   - Espagnol (1 échecs)
+   - Tous les rabais (1 échecs)
+   - Broché
+
+
+Broché (1 échecs)
+   - Recharge en point de vente (1 échecs)
+   - Collectif d'auteurs
+
+
+Collectif d'auteurs (1 échecs)
+   - Ventes Flash (1 échecs)
+   - Poche
+
+
+Poche (1 échecs)
+   - Enfants et ados (1 échecs)
+   - Norvégien (1 échecs)
+   - de 10 à 20 EUR (1 échecs)
+   - Disney Collectif (1 échecs)
+   - Romance et littérature sentimentale (1 échecs)
+   - Freida McFadden (1 échecs)
+   - Lituanien (1 échecs)
+   - Informatique et internet (1 échecs)
+   - Auto et moto (2 échecs)
+   - Loisirs et culture (1 échecs)
+   - Livre audio
+
+
+Livre audio (1 échecs)
+   - Depuis 3 mois (1 échecs)
+   - Recevez-le aujourd'hui (1 échecs)
+   - Depuis 1 mois (1 échecs)
+   - Relié
+
+
+Relié (1 échecs)
+   - Tamil (1 échecs)
+   - Carrières (1 échecs)
+   - Estonien (1 échecs)
+   - Danielle Steel (1 échecs)
+   - Ukrainien (1 échecs)
+   - Bulgare (1 échecs)
+   - Collectif Michelin
+
+
+Collectif Michelin (1 échecs)
+   - Mario Escobar (1 échecs)
+   - Romans et polars (1 échecs)
+   - Études supérieures (1 échecs)
+   - Néerlandais (1 échecs)
+   - 10 à 20 EUR
+
+
+10 à 20 EUR (1 échecs)
+   - Beaux livres (1 échecs)
+   - D'auteurs Collectif (1 échecs)
+   - D'illustrateurs Collectif (1 échecs)
+   - Famille et bien-être (1 échecs)
+   - Non inclus dans une série (1 échecs)
+   - Recevez-le d'ici demain
+
+
+Recevez-le d'ici demain (1 échecs)
+   - Hibiki Ai (1 échecs)
+   - Japonais (1 échecs)
+   - 20 EUR et plus (1 échecs)
+   - Jusqu’à 5 EUR (1 échecs)
+   - Grec (1 échecs)
+   - Suédois (1 échecs)
+   - Créer un compte professionnel gratuit (1 échecs)
+   - Actualité, Politique et Société (1 échecs)
+   - Tous les Livres Audio (1 échecs)
+   - Prime Video (1 échecs)
+   - Disney Collectif
+
+
+Disney Collectif (1 échecs)
+   - Amazon Global Store (1 échecs)
+   - Swahili (1 échecs)
+   - Collectif Collectif (1 échecs)
+   - Jusqu'à 5 EUR
+
+
+Jusqu'à 5 EUR (1 échecs)
+   - Guide de l’acheteur (1 échecs)
+   - Santé et produits d’hygiène (1 échecs)
+   - Broché (1 échecs)
+   - Russe (1 échecs)
+   - Ebook Kindle (1 échecs)
+   - Loisirs créatifs, décoration et maison (1 échecs)
+   - David Collectif (1 échecs)
+   - Danois (1 échecs)
+   - Latin (1 échecs)
+   - Toshikazu Kawaguchi (1 échecs)
+   - Naoya Matsumoto (1 échecs)
+   - Slovène (1 échecs)
+   - Arabe (1 échecs)
+   - Collectif (1 échecs)
+   - Yûki Tabata (1 échecs)
+   - Finnois (1 échecs)
+   - Chinois (1 échecs)
+   - Recevez-le d'ici demain (1 échecs)
+   - Cartes cadeaux (1 échecs)
+   - Neuf (1 échecs)
+   - Relié (1 échecs)
+   - de 10 à 15 EUR (1 échecs)

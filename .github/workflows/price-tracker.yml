@@ -1,0 +1,275 @@
+name: 📈 Daily Price Tracking & Historical Analysis
+on:
+  schedule:
+    # Tous les jours à 2h00 UTC (3h/4h en France)
+    - cron: '0 2 * * *'
+  # Permettre le déclenchement manuel
+  workflow_dispatch:
+    inputs:
+      books_limit:
+        description: 'Nombre de livres à tracker (max 100)'
+        required: false
+        default: '50'
+        type: string
+
+jobs:
+  track-prices:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: 🔄 Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: 🐍 Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+        
+    - name: 📦 Cache dependencies
+      uses: actions/cache@v3
+      with:
+        path: ~/.cache/pip
+        key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+        restore-keys: |
+          ${{ runner.os }}-pip-
+          
+    - name: 🔧 Install dependencies
+      run: |
+        pip install -r requirements.txt
+        pip install aiohttp asyncio
+        
+    - name: 📊 Run comprehensive price tracking
+      run: |
+        python -c "
+        import asyncio
+        from advanced_price_tracker import AdvancedPriceTracker
+        import json
+        import os
+        
+        async def daily_tracking():
+            tracker = AdvancedPriceTracker('github_price_history.db')
+            books_limit = int(os.environ.get('BOOKS_LIMIT', '50'))
+            
+            # Charger les livres depuis les résultats de scraping
+            try:
+                with open('amazon_progress_170.json', 'r', encoding='utf-8') as f:
+                    books = json.load(f)[:books_limit]
+            except FileNotFoundError:
+                print('❌ Aucun fichier de livres trouvé')
+                return
+                
+            tracked_count = 0
+            results_summary = []
+            
+            for book in books:
+                isbn = book.get('isbn') or book.get('asin', '')
+                asin = book.get('asin', isbn)
+                title = book.get('titre', '')
+                
+                if isbn:
+                    try:
+                        results = await tracker.track_book_comprehensive(isbn, asin)
+                        if results:
+                            tracked_count += 1
+                            best_price = min([r.get('price', float('inf')) for r in results if r.get('price')])
+                            sources = [r.get('source') for r in results]
+                            
+                            results_summary.append({
+                                'isbn': isbn,
+                                'title': title,
+                                'best_price': best_price if best_price != float('inf') else None,
+                                'sources_count': len(sources),
+                                'sources': sources
+                            })
+                            
+                        await asyncio.sleep(5)  # Anti-detection
+                        
+                    except Exception as e:
+                        print(f'❌ Erreur pour {title}: {e}')
+                        
+            # Sauvegarder le résumé
+            summary = {
+                'date': datetime.now().isoformat(),
+                'books_tracked': tracked_count,
+                'total_books': len(books),
+                'results': results_summary[:10]  # Top 10
+            }
+            
+            with open('daily_tracking_summary.json', 'w', encoding='utf-8') as f:
+                json.dump(summary, f, ensure_ascii=False, indent=2)
+                
+            print(f'✅ Tracking terminé: {tracked_count} livres trackés')
+            
+        asyncio.run(daily_tracking())
+        "
+      env:
+        BOOKS_LIMIT: ${{ github.event.inputs.books_limit || '50' }}
+        
+    - name: 🗂️ Organize results
+      run: |
+        mkdir -p tracking_results
+        mv github_price_history.db tracking_results/ 2>/dev/null || true
+        mv daily_tracking_summary.json tracking_results/ 2>/dev/null || true
+        
+        # Créer un rapport HTML
+        python -c "
+        import json
+        import sqlite3
+        from datetime import datetime
+        
+        # Génération du rapport HTML
+        html_report = '''
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <title>📈 Rapport de Tracking des Prix</title>
+            <meta charset='utf-8'>
+            <style>
+                body { font-family: Arial, sans-serif; margin: 20px; }
+                .summary { background: #f0f8ff; padding: 15px; border-radius: 5px; }
+                .book { border: 1px solid #ddd; margin: 10px 0; padding: 10px; }
+                .price { color: green; font-weight: bold; }
+                .sources { color: #666; font-size: 0.9em; }
+            </style>
+        </head>
+        <body>
+            <h1>📈 Rapport de Tracking - {date}</h1>
+            <div class='summary'>
+                <h3>📊 Résumé</h3>
+                <p><strong>Livres trackés:</strong> {books_tracked}</p>
+                <p><strong>Sources utilisées:</strong> Amazon, Fnac, Cultura, Google Books, Wayback Machine</p>
+                <p><strong>Prochaine exécution:</strong> Demain 2h00 UTC</p>
+            </div>
+            <h3>🔝 Top 10 des résultats</h3>
+            {books_html}
+        </body>
+        </html>
+        '''
+        
+        try:
+            with open('tracking_results/daily_tracking_summary.json', 'r') as f:
+                data = json.load(f)
+                
+            books_html = ''
+            for book in data.get('results', []):
+                price_display = f\"{book.get('best_price', 'N/A')}€\" if book.get('best_price') else 'Prix non trouvé'
+                sources_display = ', '.join(book.get('sources', []))
+                
+                books_html += f'''
+                <div class='book'>
+                    <h4>{book.get('title', 'Titre inconnu')}</h4>
+                    <p><strong>ISBN:</strong> {book.get('isbn', 'N/A')}</p>
+                    <p class='price'><strong>Meilleur prix:</strong> {price_display}</p>
+                    <p class='sources'><strong>Sources:</strong> {sources_display}</p>
+                </div>
+                '''
+                
+            final_html = html_report.format(
+                date=datetime.now().strftime('%Y-%m-%d %H:%M'),
+                books_tracked=data.get('books_tracked', 0),
+                books_html=books_html
+            )
+            
+            with open('tracking_results/rapport.html', 'w', encoding='utf-8') as f:
+                f.write(final_html)
+                
+        except Exception as e:
+            print(f'Erreur génération rapport: {e}')
+        "
+        
+    - name: 📤 Commit and push results
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "Price Tracker Bot"
+        git add tracking_results/
+        git commit -m "📈 Daily price tracking - $(date +'%Y-%m-%d')" || exit 0
+        git push
+        
+    - name: 📧 Create issue with summary (on failure)
+      if: failure()
+      uses: actions/github-script@v6
+      with:
+        script: |
+          github.rest.issues.create({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            title: '❌ Échec du tracking quotidien des prix',
+            body: `Le tracking automatique des prix a échoué le ${new Date().toISOString()}.
+            
+            **Détails:**
+            - Workflow: ${{ github.workflow }}
+            - Run: ${{ github.run_id }}
+            - Commit: ${{ github.sha }}
+            
+            Veuillez vérifier les logs pour plus d'informations.`,
+            labels: ['bug', 'automation']
+          })
+
+  generate-weekly-report:
+    runs-on: ubuntu-latest
+    if: github.event.schedule == '0 2 * * 0'  # Dimanche uniquement
+    needs: track-prices
+    
+    steps:
+    - name: 🔄 Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: 🐍 Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+        
+    - name: 📊 Generate weekly trend analysis
+      run: |
+        python -c "
+        import sqlite3
+        import json
+        from datetime import datetime, timedelta
+        import matplotlib.pyplot as plt
+        import pandas as pd
+        
+        # Analyser les tendances hebdomadaires
+        conn = sqlite3.connect('tracking_results/github_price_history.db')
+        
+        # Récupérer les données de la semaine
+        query = '''
+        SELECT isbn, title, source, price, date_tracked
+        FROM price_history 
+        WHERE date_tracked >= date('now', '-7 days')
+        ORDER BY date_tracked DESC
+        '''
+        
+        try:
+            df = pd.read_sql_query(query, conn)
+            
+            # Générer des graphiques de tendance
+            top_books = df.groupby('isbn').agg({
+                'price': ['min', 'max', 'mean', 'count'],
+                'title': 'first'
+            }).head(10)
+            
+            # Créer un rapport de tendances
+            weekly_report = {
+                'week_ending': datetime.now().isoformat(),
+                'total_price_points': len(df),
+                'unique_books': df['isbn'].nunique(),
+                'price_trends': 'Analyse en cours...',
+                'top_deals': []
+            }
+            
+            with open('tracking_results/weekly_report.json', 'w') as f:
+                json.dump(weekly_report, f, indent=2)
+                
+        except Exception as e:
+            print(f'Erreur analyse hebdomadaire: {e}')
+        finally:
+            conn.close()
+        "
+        
+    - name: 📤 Commit weekly report
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "Weekly Report Bot"
+        git add tracking_results/weekly_report.json
+        git commit -m "📊 Weekly price trends report - $(date +'%Y-%m-%d')" || exit 0
+        git push

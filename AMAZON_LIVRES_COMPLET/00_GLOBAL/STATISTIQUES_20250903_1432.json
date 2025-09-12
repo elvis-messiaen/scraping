@@ -1,0 +1,11 @@
+{
+  "total_livres": 295,
+  "par_categorie": {
+    "Romans et Littérature Française": 98,
+    "Science-Fiction": 124,
+    "Fantasy": 73,
+    "duree_heures": 0.738675076034334
+  },
+  "date_scraping": "2025-09-03T14:32:28.785630",
+  "duree_total_minutes": null
+}

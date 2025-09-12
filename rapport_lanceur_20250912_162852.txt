@@ -1,0 +1,83 @@
+
+📊 RAPPORT FINAL DU LANCEUR DE SCRAPERS
+==================================================
+Début session: 2025-09-11T09:21:50.544305
+Fin session: 2025-09-12T16:28:52.580042
+
+📈 STATISTIQUES:
+   Total scrapers: 254
+   ✅ Terminés avec succès: 38
+   ❌ En échec: 142
+   📊 Taux de succès: 15.0%
+
+✅ SCRAPERS TERMINÉS:
+   - Roman
+   - Poesie
+   - Livre En Langues Etrangeres
+   - Livres
+   - Livres Pour Enfants
+   - Livres De Cuisine Cuisine Et V
+   - Livres De Cuisine Pour Regimes
+   - Le Livre Autrement
+   - Livres En Langues Etrangeres
+   - Arts Et Photographie
+   - Bandes Dessinees
+   - Calendriers Et Agendas
+   - Reference
+   - Droit
+   - Entreprise Et Bourse
+   - Science Fiction Et Fantasy
+   - Histoire
+   - Humour
+   - Manga
+   - Religions Et Spiritualites
+   - Romans Et Litterature
+   - Mystere Et Suspense
+   - Sante Forme Et Dietetique
+   - Science Fiction
+   - Sciences Humaines
+   - Scolaire Et Parascolaire
+   - Sports Et Loisirs
+   - Tourisme Et Voyages
+   - Informatique
+   - Mode
+   - Philosophie
+   - Photographie
+   - Photographie Et Video
+   - Physique
+   - Physique Sciences De La Matiere
+   - Polar Et Thriller
+   - Policier
+   - Politique
+
+❌ SCRAPERS EN ÉCHEC:
+   - Titres Dans Prime Reading (1 échecs)
+   - Catalan (1 échecs)
+   - Tous Les Rabais (1 échecs)
+   - Ebook Kindle (1 échecs)
+   - Nature Et Animaux (1 échecs)
+   - Disney Collectif (1 échecs)
+   - Collectif Collectif (1 échecs)
+   - Portugais (1 échecs)
+   - Collectif (1 échecs)
+   - Anglais (1 échecs)
+   - Poche (2 échecs)
+   - Collectif Michelin (1 échecs)
+   - Chinois (1 échecs)
+   - Depuis 3 Mois (1 échecs)
+   - Allemand (1 échecs)
+   - Depuis 1 Mois (1 échecs)
+   - Livre Audio (1 échecs)
+   - Japonais (1 échecs)
+   - Adolescents (1 échecs)
+   - Informatique Et Internet (1 échecs)
+   - Neuf (1 échecs)
+   - David Collectif (1 échecs)
+   - Arabe (1 échecs)
+   - Italien (1 échecs)
+   - Auteurs Collectif (1 échecs)
+   - Ventes Flash (1 échecs)
+   - Espagnol (1 échecs)
+   - Beaux Livres (1 échecs)
+   - Freida Mcfadden (1 échecs)
+   - Amazon Global Store (1 échecs)
