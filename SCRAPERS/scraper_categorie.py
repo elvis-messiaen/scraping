@@ -278,31 +278,24 @@ class ScraperAmazonCategories:
         return sous_categories
     
     def est_categorie_valide(self, url: str, text: str) -> bool:
-        """Vérifier si c'est une catégorie de livre valide"""
+        """Vérifier si c'est une catégorie de livre valide - SEULEMENT dans l'arborescence 301061"""
         url_lower = url.lower()
-        text_lower = text.lower()
         
-        # Exclusions
-        exclusions = [
-            '/dp/', '/gp/', 'help', 'account', 'cart', 'wishlist',
-            'prime', 'music', 'video', 'alexa', 'echo', 'kindle-device',
-            'automotive', 'baby', 'beauty', 'clothing', 'computers',
-            'electronics', 'grocery', 'health', 'jewelry', 'movies',
-            'patio', 'shoes', 'sports', 'tools', 'toys', 'watches'
-        ]
+        # RÈGLE SIMPLE: Doit contenir stripbooks OU être un lien /b/ avec node= dans l'arborescence livres
+        est_livre = (
+            'stripbooks' in url_lower or 
+            ('i=stripbooks' in url_lower) or
+            ('/b/' in url_lower and 'node=' in url_lower)
+        )
         
-        for exclusion in exclusions:
-            if exclusion in url_lower:
-                return False
+        # Exclure les liens non-livres évidents
+        exclusions_evidentes = ['/dp/', '/gp/', 'help', 'account', 'cart', 'sign']
+        est_exclu = any(ex in url_lower for ex in exclusions_evidentes)
         
-        # Doit être lié aux livres
-        inclusions = [
-            'stripbooks', '/b/', 'node=', 'livres', 'books',
-            'roman', 'fiction', 'bd', 'manga', 'enfant',
-            'littérature', 'histoire', 'science', 'scolaire'
-        ]
+        # Texte valide
+        texte_ok = len(text.strip()) > 2 and len(text.strip()) < 100
         
-        return any(inc in url_lower for inc in inclusions) and len(text) > 2
+        return est_livre and not est_exclu and texte_ok
     
     def est_sous_categorie_valide(self, url: str, text: str, url_parent: str) -> bool:
         """Vérifier si c'est une sous-catégorie valide"""
