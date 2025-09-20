@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """
-SCRAPER AMAZON OPTIMISÉ - CATÉGORIE: Jeux vidéo
+SCRAPER AMAZON OPTIMISÉ - CATÉGORIE:
+Jeux vidéo
 URL de base: https://www.amazon.fr/jeux-video-consoles-portables-accessoires-pc/b/?ie=UTF8&node=530490&ref_=nav_cs_video_games
 """
 

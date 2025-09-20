@@ -7,3 +7,9 @@
 # Ignorer les fichiers JSON et CSV dans tous les sous-dossiers
 **/*.json
 **/*.csv
+
+# Ignorer tous les scrapers de livres (garder seulement les scrapers de catégories et sous-catégories)
+SCRAPERS/scraper_*.py
+!SCRAPERS/scraper_category_principal.py
+!SCRAPERS/scraper_sous_categories.py
+!SCRAPERS/lancer_*.py
