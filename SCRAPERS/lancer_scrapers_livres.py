@@ -99,15 +99,15 @@ class GestionnaireScrapersLivres:
 
         cpu_count = multiprocessing.cpu_count()
 
-        # Stratégie conservative pour éviter la surcharge Amazon
+        # Stratégie ultra-conservative pour éviter la détection Amazon (503)
         if cpu_count <= 2:
-            workers = 2
+            workers = 1
         elif cpu_count <= 4:
-            workers = 3
+            workers = 2
         elif cpu_count <= 8:
-            workers = 4
+            workers = 2
         else:
-            workers = 6  # Maximum pour éviter la détection
+            workers = 2  # Maximum réduit suite aux erreurs 503
 
         return workers
 
@@ -205,34 +205,40 @@ class GestionnaireScrapersLivres:
             return stats
 
         try:
-            # Patterns pour extraire les statistiques des scrapers v3
+            # Patterns pour extraire les statistiques des scrapers v3 (basés sur l'historique réel)
             patterns = {
                 'nouveaux_livres': [
-                    r'(\d+)\s+nouveaux livres ajoutés',
-                    r'Nouveaux livres trouvés:\s*(\d+)',
-                    r'🆕 Nouveaux livres trouvés:\s*(\d+)',
-                    r'SUCCÈS:\s*(\d+)\s+nouveaux livres',
+                    r'📚 Nouveaux livres totaux:\s*(\d+)',
                     r'nouveaux livres totaux:\s*(\d+)',
-                    r'📚 Nouveaux livres totaux:\s*(\d+)'
+                    r'🆕 Nouveaux livres trouvés:\s*(\d+)',
+                    r'Nouveaux livres trouvés:\s*(\d+)',
+                    r'(\d+)\s+nouveaux livres ajoutés',
+                    r'SUCCÈS:\s*(\d+)\s+nouveaux livres',
+                    r'nouveaux_livres.*?:\s*(\d+)',
+                    r'livres_nouveaux.*?:\s*(\d+)'
                 ],
                 'livres_mis_a_jour': [
-                    r'(\d+)\s+livres mis à jour',
-                    r'Livres mis à jour:\s*(\d+)',
                     r'🔄 MISE À JOUR FORCÉE:.*?(\d+)',
+                    r'📝 Livres mis à jour:\s*(\d+)',
+                    r'Livres mis à jour:\s*(\d+)',
+                    r'(\d+)\s+livres mis à jour',
                     r'livres_mis_a_jour.*?:\s*(\d+)',
-                    r'📝 Livres mis à jour:\s*(\d+)'
+                    r'MISE À JOUR:.*?(\d+)'
                 ],
                 'doublons_evites': [
-                    r'(\d+)\s+doublons évités',
-                    r'Doublons évités:\s*(\d+)',
                     r'🔄 Doublons évités:\s*(\d+)',
-                    r'doublons_evites.*?:\s*(\d+)'
+                    r'Doublons évités:\s*(\d+)',
+                    r'(\d+)\s+doublons évités',
+                    r'doublons_evites.*?:\s*(\d+)',
+                    r'doublons.*?:\s*(\d+)'
                 ],
                 'total_livres': [
-                    r'Total livres dans la base:\s*(\d+)',
                     r'📊 Total livres:\s*(\d+)',
+                    r'Total livres dans la base:\s*(\d+)',
                     r'total_livres_apres.*?:\s*(\d+)',
-                    r'Total dans la base:\s*(\d+)'
+                    r'Total dans la base:\s*(\d+)',
+                    r'base de données.*?(\d+)',
+                    r'fichier principal.*?(\d+)'
                 ]
             }
 
@@ -280,14 +286,44 @@ class GestionnaireScrapersLivres:
             # Toujours utiliser le scraper directement
             commande.append(str(chemin_scraper))
 
-            # Exécuter le scraper
-            resultat = subprocess.run(
+            # Ajouter l'argument mode forcé si activé
+            if self.mode_mise_a_jour_forcee:
+                commande.append("--force")
+
+            # Exécuter le scraper avec affichage en temps réel
+            print(f"🔍 Exécution détaillée: {nom_scraper}")
+            process = subprocess.Popen(
                 commande,
-                capture_output=True,
+                stdout=subprocess.PIPE,
+                stderr=subprocess.STDOUT,
                 text=True,
-                timeout=300,  # 5 minutes timeout par scraper
-                cwd=self.repertoire_scrapers
+                cwd=self.repertoire_scrapers,
+                bufsize=1,
+                universal_newlines=True
             )
+
+            output_lines = []
+            while True:
+                line = process.stdout.readline()
+                if line:
+                    line = line.strip()
+                    output_lines.append(line)
+                    # Afficher chaque ligne en temps réel
+                    print(f"    {line}")
+                elif process.poll() is not None:
+                    break
+
+            return_code = process.wait()
+            output_text = '\n'.join(output_lines)
+
+            # Créer un objet resultat similaire à subprocess.run
+            class MockResult:
+                def __init__(self, returncode, stdout):
+                    self.returncode = returncode
+                    self.stdout = stdout
+                    self.stderr = ""
+
+            resultat = MockResult(return_code, output_text)
 
 
             # Extraire les statistiques de livres depuis la sortie

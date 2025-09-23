@@ -154,12 +154,26 @@ def extraire_infos_livre_url(url: str):
         if auteur_elem:
             livre['auteur'] = auteur_elem.get_text(strip=True)
         
-        # Prix
-        prix_elem = soup.find('span', class_='a-price-whole')
+        # Prix - avec regex amélioré pour capturer prix complets
+        prix_elem = soup.find('span', {'class': 'a-offscreen'})  # Priorité à a-offscreen
         if not prix_elem:
-            prix_elem = soup.find('span', {'class': 'a-offscreen'})
+            prix_elem = soup.find('span', class_='a-price-whole')
+
         if prix_elem:
-            livre['prix'] = prix_elem.get_text(strip=True)
+            prix_text = prix_elem.get_text(strip=True)
+            livre['prix'] = prix_text
+        else:
+            # Fallback: chercher avec regex amélioré dans tout le HTML
+            texts = soup.find_all(string=True)
+            for text in texts:
+                text_clean = str(text).strip()
+                if '€' in text_clean and any(c.isdigit() for c in text_clean):
+                    import re
+                    # Chercher patterns comme: 19,90 € ou 19€90 ou 19.90€
+                    match = re.search(r'(\d+[,.]\d+\s*€|\d+\s*€\s*\d+|\d+\s*€)', text_clean)
+                    if match:
+                        livre['prix'] = match.group(1)
+                        break
         
         # Note
         note_elem = soup.find('span', class_='a-icon-alt')

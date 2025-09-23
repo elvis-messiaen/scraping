@@ -562,8 +562,8 @@ class ScraperBaseAmeliore:
                 desc_elem = item.select_one(selector)
                 if desc_elem:
                     text = desc_elem.get_text(strip=True)
-                    if text and len(text) > 20:
-                        return text[:500]  # Limiter à 500 caractères
+                    if text and len(text) > 10:
+                        return text
 
             return "Description non trouvée"
         except:

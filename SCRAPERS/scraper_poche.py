@@ -84,4 +84,7 @@ def main(mode_forcee: bool = False):
         print(f"\n✅ TERMINÉ: Base de données à jour pour Poche")
 
 if __name__ == "__main__":
-    main()
+    import sys
+    # Vérifier si l'argument --force est passé
+    mode_forcee = "--force" in sys.argv
+    main(mode_forcee=mode_forcee)

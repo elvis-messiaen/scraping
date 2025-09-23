@@ -68,18 +68,34 @@ class ScraperAmazonAmeliore:
         self.mode_mise_a_jour_forcee = mode_mise_a_jour_forcee
 
         # Configuration anti-détection comme l'ancien scraper qui marche
-        self.delay_min = 1.0
-        self.delay_max = 3.0
+        self.delay_min = 8.0
+        self.delay_max = 15.0
         self.timeout = 10
 
-        # Headers simples comme l'ancien scraper qui marche
-        self.headers = {
-            'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36',
-            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-            'Accept-Language': 'fr-FR,fr;q=0.5',
-            'Accept-Encoding': 'gzip, deflate',
-            'Connection': 'keep-alive',
-        }
+        # Pool de headers rotatifs pour éviter la détection (basé sur scraper_base_ameliore.py)
+        self.headers_pool = [
+            {
+                'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+                'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+                'Accept-Language': 'fr-FR,fr;q=0.5',
+                'Accept-Encoding': 'gzip, deflate',
+                'Connection': 'keep-alive',
+            },
+            {
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+                'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+                'Accept-Language': 'en-US,en;q=0.5',
+                'Accept-Encoding': 'gzip, deflate',
+                'Connection': 'keep-alive',
+            },
+            {
+                'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+                'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+                'Accept-Language': 'fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7',
+                'Accept-Encoding': 'gzip, deflate, br',
+                'Connection': 'keep-alive',
+            }
+        ]
 
         # Configuration des chemins avec structure organisée
         self.setup_chemins_complets()
@@ -272,8 +288,17 @@ class ScraperAmazonAmeliore:
                     delai *= (tentative + 1)  # Délai croissant en cas de retry
                 time.sleep(delai)
 
-                # Headers simples qui marchent
-                headers = self.headers
+                # Rotation des headers anti-détection (basé sur scraper_base_ameliore.py)
+                headers = random.choice(self.headers_pool)
+
+                # Validation de l'URL avec ValidateurContexteAmazon si disponible
+                if validateur_contexte_amazon:
+                    try:
+                        if not validateur_contexte_amazon.valider_url_livre(url):
+                            print(f"⚠️  URL rejetée par le validateur: {url[:60]}...")
+                            return None
+                    except Exception as e:
+                        print(f"⚠️  Erreur validation URL: {e}")
 
                 # Requête avec timeout
                 response = requests.get(
@@ -290,7 +315,11 @@ class ScraperAmazonAmeliore:
                 elif response.status_code == 503:
                     print(f"⚠️  Anti-bot détecté (503) - Tentative {tentative+1}/{retry_count}")
                     if tentative < retry_count - 1:
-                        time.sleep(random.uniform(10, 20))  # Attente plus longue
+                        # Attente adaptative basée sur scraper_base_ameliore.py
+                        attente_base = random.uniform(15, 30)  # Plus long
+                        attente_progressive = attente_base * (tentative + 1)  # Progression exponentielle
+                        print(f"⏳ Attente anti-détection: {attente_progressive:.1f}s")
+                        time.sleep(attente_progressive)
                         continue
 
                 elif response.status_code in [404, 403]:
